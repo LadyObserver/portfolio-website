@@ -1,0 +1,48 @@
+/*
+Colors used:
+Background color (white): #000000;
+
+Primary Color (yellow): #e5bd01;
+Primary Color's first variant: #e7cb00;
+Primary Color's second variant: #f3e13e;
+
+Secondary Color (magenta): #f4038c;
+Secondary Color's first variant: #f61bd2;
+Secondary Color's second variant: #f61bd2;
+
+Tertiary Color (blue): 01e5f5;
+*/
+
+body  {
+    background-color: #f3e13e;
+    font-family:'Roboto Slab',sans-serif;
+    font-size:17px;
+    font-weight:400;
+    line-height:1.5;
+    color:#560591;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    font-weight:900;
+    color: #f4038c;
+}
+h2 {
+    font-size: 2.75em;
+    font-weight:800;
+}
+
+h3 {font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #f4038c;
+    font-weight:800;
+}
+
+#vitala {
+    background-color: white;
+}
+
+img {
+    width: 100%;
+  }
