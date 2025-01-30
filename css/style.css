@@ -78,29 +78,6 @@ a:hover, a:focus {
 }
 a:active { color: limegreen;}
 
-@media screen and (max-width: 767px) {
-    body { font-size: 16px; }
-  }
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    body { font-size: 17px; }
-    h1 { font-size: 3.8em; }
-    h2 { font-size: 2.5em; }
-    h3 { font-size: 1.8em; }
-    h4 { font-size: 1.5em; }
-    h5, li { font-size: 1.2em; }
-  }
-
-@media screen and (min-width: 1024px) {
-    body { font-size: 20px; }
-    h1 { font-size: 3.8em; }
-    h2 { font-size: 2.5em; }
-    h3 { font-size: 1.8em; }
-    h4 { font-size: 1.5em; }
-    h5, li { font-size: 1.2em; }
-}
-
-
 a.button {
     display: inline-block;
     background-color: #f4038c;
@@ -122,13 +99,6 @@ a.button:active {
     background-color:#fb76cf;
     box-shadow: 2px 5px #fb76cf;
       }
-
-a.button.contact {
-    background-color: whitesmoke;
-    color:#f4038c;
-    border: 1px solid #f4038c;
-    box-shadow: 2px 5px #f4038c;
-    }
 
 a.contact:hover,a.contact:focus {  
     color: whitesmoke;
