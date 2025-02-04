@@ -12,7 +12,10 @@ Secondary Color's second variant: #fb76cf;
 
 Tertiary Color (blue): 01e5f5;
 */
-
+* {
+    box-sizing: border-box;
+  }
+  
 body  {
     background-color: #f3e13e;
     font-family:'Roboto Slab',sans-serif;
