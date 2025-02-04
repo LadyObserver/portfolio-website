@@ -15,7 +15,7 @@ Tertiary Color (blue): 01e5f5;
 * {
     box-sizing: border-box;
   }
-  
+
 body  {
     background-color: #f3e13e;
     font-family:'Roboto Slab',sans-serif;
@@ -85,12 +85,13 @@ a.button {
     display: inline-block;
     background-color: #f4038c;
     text-decoration: none;
-    color: white;
+    color: whitesmoke;
     font-weight: 500;
     padding: 10px 20px;
     border-radius: 16px;
     box-shadow: 2px 5px blueviolet;
 }
+
 
 a.button:hover,a.button:focus {
     color: whitesmoke;
@@ -103,14 +104,31 @@ a.button:active {
     box-shadow: 2px 5px #fb76cf;
       }
 
-a.contact:hover,a.contact:focus {  
+a.button.contact {
+        display: inline-block;
+        background-color: whitesmoke;
+        text-decoration: none;
+        color: #f4038c;
+        font-weight: 500;
+        padding: 10px 20px;
+        border-radius: 16px;
+        box-shadow: 2px 5px #f4038c;
+    }
+
+a.button.contact:hover,a.button.contact:focus {  
     color: whitesmoke;
     background: rgba(246, 27, 210, .5);
     box-shadow: 2px 5px #f4038c;
 }
 
 a.button.contact:active {
-    color: white;
+    color: whitesmoke;
     background-color:#f4038c;
     box-shadow: 2px 5px #f4038c;
-      }
+}
+
+ /* Layout styling */
+
+ .container {
+    padding: 0 15px;
+  }
