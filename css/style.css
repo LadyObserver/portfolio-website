@@ -129,6 +129,10 @@ a.button.contact:active {
 
  /* Layout styling */
 
- .container {
+.container {
     padding: 0 15px;
-  }
+}
+.row {
+    margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+#projects .row { padding-bottom: 15px; border-bottom: 1px solid #f4038c; }
