@@ -1,5 +1,5 @@
-/*
-Colors used:
+/*Colors used:
+
 Background color (white): #000000;
 
 Primary Color (yellow): #e5bd01;
@@ -12,127 +12,320 @@ Secondary Color's second variant: #fb76cf;
 
 Tertiary Color (blue): 01e5f5;
 */
+
 * {
     box-sizing: border-box;
-  }
-
-body  {
-    background-color: #f3e13e;
-    font-family:'Roboto Slab',sans-serif;
-    font-size:16px;
-    font-weight:400;
-    line-height:1.6;
-    color:#560591;
 }
 
-h1, h2, h3, h4, h5, li {
-    line-height:1.3;
+body {
+    background-color: #f3e13e;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #560591;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+    line-height: 1.3;
 }
 
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 3em;
-    font-weight:900;
+    font-weight: 900;
     color: #f4038c;
-}
-h2 {
-    font-size: 2em;
-    font-weight:900;
 }
 
-h3 {font-family: 'Montserrat', sans-serif;
-    font-size: 1.75em;
-    font-weight:800;
-    letter-spacing:1px;
+h2 {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    font-weight: 800;
+    letter-spacing: 1px;
     color: #f4038c;
+    margin-bottom: 0;
 }
 
 h4 {
-    font-size: 1.5em;
-    font-weight:700;
+    font-size: 1.35em;
+    font-weight: 700;
 }
 
-h5, li {
-    font-size: 1.2em;
-    font-weight:400;
+h5,
+li {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 0.5em 0;
 }
 
 .description {
-    font-weight:600;
+    font-weight: 600;
 }
 
 .cover-text {
-    letter-spacing:2px;
+    letter-spacing: 2px;
 }
 
 #vitala {
     background-color: white;
 }
 
-img {width: 100%;}
-
-a {color:royalblue;}
-
-a:visited { color: purple;}
-
-a:hover, a:focus {
-    color: #f61bd2;
-    text-decoration:none;
+img {
+    width: 100%;
 }
-a:active { color: limegreen;}
+
+a:link {
+    color: #f8e8ff;
+}
+
+a:visited {
+    color: #4f005f;
+}
+
+a:hover,
+a:focus {
+    color: #f8e8ff;
+    background-color: #f61bd2;
+    border-radius: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+a:active {
+    color: #f8e8ff;
+    background-color: #fb76cf;
+    border-radius: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.social {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.linkedin {
+    margin-right: 5px;
+}
+
+.behance {
+    margin-left: 5px;
+}
+
+.linkedin:hover,
+.behance:hover,
+.linkedin:focus,
+.linkedin:focus {
+    background-color: #f61bd2;
+    border-radius: 50px;
+    padding-top: 35px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 4px;
+}
+
+.linkedin:active,
+.behance:active {
+    background-color: blueviolet;
+    border-radius: 50px;
+    padding-top: 35px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 4px;
+}
 
 a.button {
     display: inline-block;
     background-color: #f4038c;
     text-decoration: none;
-    color: whitesmoke;
+    color: #f8e8ff;
     font-weight: 500;
     padding: 10px 20px;
     border-radius: 16px;
     box-shadow: 2px 5px blueviolet;
+    margin-top: 8px;
 }
 
-
-a.button:hover,a.button:focus {
-    color: whitesmoke;
-    background-color:#f61bd2;
-      }
+a.button:hover,
+a.button:focus {
+    color: #f8e8ff;
+    background-color: #f61bd2;
+}
 
 a.button:active {
-    color: whitesmoke;
-    background-color:#fb76cf;
+    color: #f8e8ff;
+    background-color: #fb76cf;
     box-shadow: 2px 5px #fb76cf;
-      }
+}
 
 a.button.contact {
-        display: inline-block;
-        background-color: whitesmoke;
-        text-decoration: none;
-        color: #f4038c;
-        font-weight: 500;
-        padding: 10px 20px;
-        border-radius: 16px;
-        box-shadow: 2px 5px #f4038c;
-    }
+    color: #f4038c;
+    display: inline-block;
+    background-color: #f8e8ff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 16px;
+    box-shadow: 2px 5px #f4038c;
+}
 
-a.button.contact:hover,a.button.contact:focus {  
-    color: whitesmoke;
+a.button.contact:hover,
+a.button.contact:focus {
+    color: #f8e8ff;
     background: rgba(246, 27, 210, .5);
     box-shadow: 2px 5px #f4038c;
 }
 
 a.button.contact:active {
-    color: whitesmoke;
-    background-color:#f4038c;
+    color: #f8e8ff;
+    background-color: #f4038c;
     box-shadow: 2px 5px #f4038c;
 }
 
- /* Layout styling */
+a.phone:link {
+    color:#f4038c;
+    text-decoration:none;
+}
+
+a.phone:hover, a.phone:focus {
+    color:#f8e8ff;
+    text-decoration:none;
+    background-color:#f61bd2;
+}
+
+a.phone:active {
+    color: #f8e8ff;
+    background-color: #fb76cf;
+    text-decoration:none;
+}
+
+a.phone:visited {
+    color:#4f005f;
+}
+
+/* Layout styling */
 
 .container {
     padding: 0 15px;
 }
+
 .row {
-    margin: 25px 0; /* 25px top and bottom, 0 left and right */
+    margin: 25px 0;
+    /* 25px top and bottom, 0 left and right */
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f4038c;
 }
-#projects .row { padding-bottom: 15px; border-bottom: 1px solid #f4038c; }
+
+/* Text Alignment */
+
+#hero h1 {
+    text-align: center;
+}
+
+/* NavBar */
+
+.logo {
+    max-width: 250px;
+    text-decoration: none;
+    font-size: 1.35em;
+    font-weight: bolder;
+}
+
+header {
+    background-color: #f4038c;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    box-shadow: 1px 3px 6px #e7cb00;
+}
+
+nav {
+    display: inline-block;
+    width: 100%;
+}
+
+nav>ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav>ul>li {
+    display: inline-block;
+}
+
+nav>ul>li>a {
+    padding: 0 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#hero {
+    background-color: #f3e13e;
+    padding: 20px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.display {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+footer>div>h2 {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 10px;
+}
+
+.social {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.linkedin:hover,
+.behance:hover,
+.linkedin:focus,
+.linkedin:focus {
+    background-color: #f61bd2;
+    border-radius: 50px;
+    padding-top: 35px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 4px;
+}
+
+.linkedin:active,
+.behance:active {
+    background-color: blueviolet;
+    border-radius: 50px;
+    padding-top: 35px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 4px;
+}
+
+#projects {
+    margin: -30px 0;
+    /* space between hero and projects sections was enourmous */
+}
+
+.icon {
+    max-width: 8%;
+    max-height: 8%;
+    vertical-align: text-super;
+}
