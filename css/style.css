@@ -61,9 +61,14 @@ h4 {
     font-weight: 700;
 }
 
-h5,
-li {
-    font-size: 1.1em;
+h5 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0.5em 0;
+}
+
+h6 {
+    font-size: 1em;
     font-weight: 400;
     margin: 0.5em 0;
 }
@@ -76,8 +81,33 @@ li {
     letter-spacing: 2px;
 }
 
-#vitala {
+/** Specific for vitala and cassette pages**/
+
+#vitala,
+#cassette {
     background-color: white;
+}
+
+footer h2, footer p
+{
+    color: #560591;
+}
+
+.recipe h1,
+.recipe h2,
+.recipe h4
+ {
+    color: #f56550;
+}
+
+.recipe h3,
+.recipe h5,
+.recipe h6,
+.recipe p,
+.recipe li,
+.recipe th,
+.recipe td {
+    color: #333f79;
 }
 
 img {
@@ -193,24 +223,25 @@ a.button.contact:active {
 }
 
 a.phone:link {
-    color:#f4038c;
-    text-decoration:none;
+    color: #f4038c;
+    text-decoration: none;
 }
 
-a.phone:hover, a.phone:focus {
-    color:#f8e8ff;
-    text-decoration:none;
-    background-color:#f61bd2;
+a.phone:hover,
+a.phone:focus {
+    color: #f8e8ff;
+    text-decoration: none;
+    background-color: #f61bd2;
 }
 
 a.phone:active {
     color: #f8e8ff;
     background-color: #fb76cf;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 a.phone:visited {
-    color:#4f005f;
+    color: #4f005f;
 }
 
 /* Layout styling */
@@ -219,10 +250,13 @@ a.phone:visited {
     padding: 0 15px;
 }
 
+.container {
+    padding: 0 px 50px;
+}
 .row {
     margin: 25px 0;
     /* 25px top and bottom, 0 left and right */
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #f4038c;
 }
 
@@ -230,6 +264,10 @@ a.phone:visited {
 
 #hero h1 {
     text-align: center;
+}
+
+#health{
+    text-align: right;
 }
 
 /* NavBar */
@@ -246,7 +284,6 @@ header {
     text-align: center;
     padding: 10px 0;
     position: relative;
-    box-shadow: 1px 3px 6px #e7cb00;
 }
 
 nav {
@@ -270,7 +307,9 @@ nav>ul>li>a {
     font-weight: 600;
 }
 
-#hero {
+#hero,
+footer,
+.top {
     background-color: #f3e13e;
     padding: 20px 0;
     display: inline-block;
