@@ -24,8 +24,7 @@
         <div>
             <div>
                 <p>
-                    <a href="index.html"><img class="icon" src="img/sun-logo.png" alt="sun-shaped logo"></a>
-                    <a href="index.html" class="logo">Nikolett Muller</a>
+                    <a href="index.html" class="logo">NIKOLETT MULLER</a>
                 </p>
             </div>
             <nav>
@@ -43,9 +42,9 @@
                 <div>
                     <h3>UX/UI Case Study for a Recipe Web App</h3>
                 </div>
-                <div>
+                <div class="image-container">
                     <div>
-                        <h1 class="cover-text">VITALA</h1><!--I want to place this text on the image-->
+                        <h1 class="overlay-text-hero">VITALA</h1><!--I want to place this text on the image-->
                     </div>
                     <div>
                         <picture>
@@ -116,22 +115,25 @@
             </ul>
         </div>
         <div class="container">
-            <div>
-                <h1>Small efforts.</h1>
+            <div class="image-container">
+                <div>
+                    <h1>Small efforts.</h1>
+                </div>
+                <div>
+                    <h1 class="overlay-text-image">Change.</h1>
+                    <!--I want to place this text on the image; its color will be white then-->
+                </div>
+                <div>
+                    <picture>
+                        <source srcset="img/vitala/mobile-mockup_@1x.png" media="(max-width:767px)">
+                        <img src="img/vitala/mobile-mockup_@2x.png"
+                            alt="woman is holding a mobile phone showing a recipe's ingredients list">
+                    </picture>
+                </div>
             </div>
-            <div>
-                <h1>Change.</h1><!--I want to place this text on the image; its color will be white then-->
-            </div>
-            <div>
-                <picture>
-                    <source srcset="img/vitala/mobile-mockup_@1x.png" media="(max-width:767px)">
-                    <img src="img/vitala/mobile-mockup_@2x.png"
-                        alt="woman is holding a mobile phone showing a recipe's ingredients list">
-                </picture>
-            </div>
-            <div>
-                <h1 id="health">Health.</h1>
-            </div>
+        </div>
+        <div>
+            <h1 id="health">Health.</h1>
         </div>
         <div class="container">
             <div>
@@ -188,35 +190,34 @@
             <div>
                 <h3>Synthesis of the interview findings</h3>
             </div>
-            <div>
+            <div class="table-container">
                 <table><!--I want create a table here that visually appealing as in my case study-->
-                    <colgroup>
-                        <col span="1">
-                        <col span="1">
-                        <col span="1">
-                    </colgroup>
-                    <tr>
-                        <th>Patterns</th>
-                        <th>Surprises</th>
-                        <th>Frustrations</th>
-                    </tr>
-                    <tr>
-                        <td> All of them want to eat
-                            a healthier diet</td>
-                        <td rowspan="2"> There is a difference in preference for
-                            the type of video content according to
-                            the diverse age groups
-                            (older people: long format,
-                            younger people: short format)</td>
-                        <td> Advertisements shown
-                            in the app
-                            (distracting, slow page loading,
-                            more mobile data usage)</td>
-                    </tr>
-                    <tr>
-                        <td> Younger generation is more motivated</td>
-                        <td> Unlocking phone constantly</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Patterns</th>
+                            <th>Surprises</th>
+                            <th>Frustrations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> All of them want to eat
+                                a healthier diet</td>
+                            <td rowspan="2" class="middle"> There is a difference in preference for
+                                the type of video content according to
+                                the diverse age groups
+                                (older people: long format,
+                                younger people: short format)</td>
+                            <td> Advertisements shown
+                                in the app
+                                (distracting, slow page loading,
+                                more mobile data usage)</td>
+                        </tr>
+                        <tr>
+                            <td> Younger generation is more motivated</td>
+                            <td> Unlocking phone constantly</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -345,10 +346,10 @@
         </div>
         <div class="recipe container">
             <picture>
-            <source srcset="img/vitala/tablet-mockup_@1x.png" media="(max-width:767px)">
-            <img src="img/vitala/tablet-mockup_@2x.png" alt="tablet mockup laying on a dining table">
-        </picture>
-</div>
+                <source srcset="img/vitala/tablet-mockup_@1x.png" media="(max-width:767px)">
+                <img src="img/vitala/tablet-mockup_@2x.png" alt="tablet mockup laying on a dining table">
+            </picture>
+        </div>
     </main>
     <footer id="contact">
         <div class="container">
