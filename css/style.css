@@ -13,9 +13,33 @@ Secondary Color's second variant: #fb76cf;
 Tertiary Color (blue): 01e5f5;
 */
 
+/* Layout styling */
+
+.container {
+    padding: 0 15px;
+}
+
+.container {
+    padding: 0 px 50px;
+}
+
+.row {
+    margin: 25px 0;
+    /* 25px top and bottom, 0 left and right */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f4038c;
+}
+
 * {
     box-sizing: border-box;
 }
+
+#projects {
+    margin: -30px 0;
+    /* space between hero and projects sections was enourmous */
+}
+
+/** Text **/
 
 body {
     background-color: #f3e13e;
@@ -77,26 +101,101 @@ h6 {
     font-weight: 600;
 }
 
-.cover-text {
-    letter-spacing: 2px;
+/** Text-overlay**/
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
 }
 
-/** Specific for vitala and cassette pages**/
+.image-container picture,
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay-text-hero {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 10vw;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+}
+
+.overlay-text-image {
+    position: absolute;
+    bottom: 150px;
+    left: 20px;
+    color: white !important;
+    font-size: 10vw;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+}
+
+/* Text Alignment */
+
+#hero h1 {
+    text-align: center;
+}
+
+#health {
+    text-align: right;
+}
+
+/** Table**/
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    /* on smaller screens */
+}
+
+th {
+font-weight:700;}
+
+th,
+td {
+    border: 1px solid #333f79;
+    text-align: center;
+    padding: 12px;
+}
+
+thead {
+    background-color: #a8b1db;
+}
+
+.middle {
+    background-color: #fce9e5;
+}
+
+/** Gif and masks**/
+
+/** Specifics for vitala and cassette pages**/
 
 #vitala,
 #cassette {
     background-color: white;
 }
 
-footer h2, footer p
-{
+footer h2,
+footer p {
     color: #560591;
 }
 
 .recipe h1,
 .recipe h2,
-.recipe h4
- {
+.recipe h4 {
     color: #f56550;
 }
 
@@ -110,9 +209,16 @@ footer h2, footer p
     color: #333f79;
 }
 
+.music {
+
+    color: #560591;
+}
+
 img {
     width: 100%;
 }
+
+/** Links, buttons, pseudos **/
 
 a:link {
     color: #f8e8ff;
@@ -244,33 +350,7 @@ a.phone:visited {
     color: #4f005f;
 }
 
-/* Layout styling */
-
-.container {
-    padding: 0 15px;
-}
-
-.container {
-    padding: 0 px 50px;
-}
-.row {
-    margin: 25px 0;
-    /* 25px top and bottom, 0 left and right */
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f4038c;
-}
-
-/* Text Alignment */
-
-#hero h1 {
-    text-align: center;
-}
-
-#health{
-    text-align: right;
-}
-
-/* NavBar */
+/* NavBar and Footer */
 
 .logo {
     max-width: 250px;
@@ -334,37 +414,4 @@ footer>div>h2 {
 .social {
     display: inline-block;
     margin-top: 30px;
-}
-
-.linkedin:hover,
-.behance:hover,
-.linkedin:focus,
-.linkedin:focus {
-    background-color: #f61bd2;
-    border-radius: 50px;
-    padding-top: 35px;
-    padding-bottom: 0px;
-    padding-left: 5px;
-    padding-right: 4px;
-}
-
-.linkedin:active,
-.behance:active {
-    background-color: blueviolet;
-    border-radius: 50px;
-    padding-top: 35px;
-    padding-bottom: 0px;
-    padding-left: 5px;
-    padding-right: 4px;
-}
-
-#projects {
-    margin: -30px 0;
-    /* space between hero and projects sections was enourmous */
-}
-
-.icon {
-    max-width: 8%;
-    max-height: 8%;
-    vertical-align: text-super;
 }
