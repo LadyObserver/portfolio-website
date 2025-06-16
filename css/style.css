@@ -19,10 +19,6 @@ Tertiary Color (blue): 01e5f5;
     padding: 0 15px;
 }
 
-.container {
-    padding: 0 px 50px;
-}
-
 .row {
     margin: 25px 0;
     /* 25px top and bottom, 0 left and right */
@@ -44,7 +40,7 @@ Tertiary Color (blue): 01e5f5;
 body {
     background-color: #f3e13e;
     font-family: 'Roboto Slab', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
     color: #560591;
@@ -97,6 +93,10 @@ h6 {
     margin: 0.5em 0;
 }
 
+.greet {
+    font-size: 2.5em;
+}
+
 .description {
     font-weight: 600;
 }
@@ -139,7 +139,7 @@ h6 {
 
 /* Text Alignment */
 
-#hero h1 {
+#hero {
     text-align: center;
 }
 
@@ -162,7 +162,8 @@ table {
 }
 
 th {
-font-weight:700;}
+    font-weight: 700;
+}
 
 th,
 td {
@@ -355,8 +356,10 @@ a.phone:visited {
 .logo {
     max-width: 250px;
     text-decoration: none;
-    font-size: 1.35em;
-    font-weight: bolder;
+    font-size: 1.2em;
+    font-weight: bold;
+    border:3px double white;
+    padding: 3px;
 }
 
 header {
@@ -415,3 +418,51 @@ footer>div>h2 {
     display: inline-block;
     margin-top: 30px;
 }
+
+/** Media queries **/
+
+@media only screen and (min-width: 640px) {
+    header {
+        text-align: unset;
+        padding: 20px 0 13px;
+    }
+
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+
+    body {
+        font-size: 17px;
+    }
+
+    .greet {
+        font-size: 3em;
+    }
+
+    .work {
+
+        text-align: center;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (min-width: 1440px) {}
