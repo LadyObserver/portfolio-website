@@ -28,7 +28,6 @@ Tertiary Color (blue): 01e5f5;
     margin: 25px 0;
     /* 25px top and bottom, 0 left and right */
     padding-bottom: 20px;
-    border-bottom: 1px solid #f4038c;
 }
 
 * {
@@ -417,6 +416,14 @@ footer,
     margin-top: 0;
 }
 
+hr {
+    background-color:#f4038c;
+    width:100%;
+    margin: 4px auto;
+    border:none; 
+    height:2px; 
+}
+
 /** Media queries **/
 
 @media only screen and (min-width: 640px) {
@@ -460,6 +467,9 @@ footer,
     }
 }
 
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+
+
+}
 
 @media only screen and (min-width: 1440px) {}
