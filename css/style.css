@@ -19,6 +19,11 @@ Tertiary Color (blue): 01e5f5;
     padding: 0 15px;
 }
 
+.container-social {
+
+    margin-top: 80px;
+}
+
 .row {
     margin: 25px 0;
     /* 25px top and bottom, 0 left and right */
@@ -28,11 +33,6 @@ Tertiary Color (blue): 01e5f5;
 
 * {
     box-sizing: border-box;
-}
-
-#projects {
-    margin: -30px 0;
-    /* space between hero and projects sections was enourmous */
 }
 
 /** Text **/
@@ -106,7 +106,6 @@ h6 {
 .image-container {
     position: relative;
     width: 100%;
-    max-width: 800px;
 }
 
 .image-container picture,
@@ -116,7 +115,7 @@ h6 {
     display: block;
 }
 
-.overlay-text-hero {
+.overlay-text {
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -126,16 +125,16 @@ h6 {
     letter-spacing: 1px;
 }
 
-.overlay-text-image {
-    position: absolute;
+#change {
     bottom: 150px;
     left: 20px;
     color: white !important;
-    font-size: 10vw;
-    font-weight: 800;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-    letter-spacing: 1px;
 }
+
+#cassette-hero {
+    color: white !important;
+}
+
 
 /* Text Alignment */
 
@@ -211,7 +210,6 @@ footer p {
 }
 
 .music {
-
     color: #560591;
 }
 
@@ -358,7 +356,7 @@ a.phone:visited {
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
-    border:3px double white;
+    border: 3px double white;
     padding: 3px;
 }
 
@@ -392,7 +390,8 @@ nav>ul>li>a {
 
 #hero,
 footer,
-.top {
+.top,
+#about-me {
     background-color: #f3e13e;
     padding: 20px 0;
     display: inline-block;
@@ -404,10 +403,6 @@ footer,
     margin-bottom: 25px;
 }
 
-footer>div>h2 {
-    text-align: center;
-}
-
 .center {
     text-align: center;
     padding: 10px 0;
@@ -416,7 +411,10 @@ footer>div>h2 {
 
 .social {
     display: inline-block;
-    margin-top: 30px;
+}
+
+#about-me h3 {
+    margin-top: 0;
 }
 
 /** Media queries **/
@@ -441,25 +439,24 @@ footer>div>h2 {
         font-size: 3em;
     }
 
-    .work {
-
-        text-align: center;
-    }
-
     .col-md-6 {
-        width: 50%;
+        width: 46%;
+        margin-right: 4%
     }
 
     [class*="col-"] {
         float: left;
-        padding-left: 10px;
-        padding-right: 10px;
     }
 
     .row::after {
         content: "";
         clear: both;
         display: table;
+    }
+
+    #work,
+    #skills-and-tools {
+        text-align: center;
     }
 }
 
