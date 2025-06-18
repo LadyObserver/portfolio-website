@@ -31,11 +31,17 @@ Tertiary Color (blue): 01e5f5;
 }
 
 .container-social {
-    margin-top: 80px;
+    margin-top: 48px;
 }
 
 * {
     box-sizing: border-box;
+}
+
+.margin{
+    margin-top: 48px;
+    margin-bottom:32px;
+
 }
 
 /** Text **/
@@ -95,7 +101,8 @@ h6 {
     font-weight: 400;
 }
 
-.greet, #me {
+.greet,
+#me {
     font-size: 2.5em;
 }
 
@@ -119,17 +126,30 @@ h6 {
 
 .overlay-text {
     position: absolute;
+    font-size: 3em;
     bottom: 20px;
     left: 20px;
     font-weight: 800;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 5px #333f79;
     letter-spacing: 1px;
+}
+
+#effort,
+#change,
+#health {
+    font-size: 2.5em;
 }
 
 #change {
     bottom: 150px;
     left: 20px;
     color: white !important;
+    text-shadow: 1px 1px 4px #f56550
+}
+
+#health {
+    text-align: right;
+
 }
 
 #cassette-hero {
@@ -140,11 +160,7 @@ h6 {
 
 #hero {
     text-align: center;
-    padding:32px 0;
-}
-
-#health {
-    text-align: right;
+    padding: 32px 0;
 }
 
 /** Table**/
@@ -233,7 +249,7 @@ a:visited {
 .page:hover,
 .page:focus {
     color: #f8e8ff;
-    font-size:1.1em;
+    font-size: 1.1em;
     background-color: #f61bd2;
     border-radius: 0px;
     padding-top: 4px;
@@ -265,19 +281,18 @@ a:visited {
 .linkedin:focus,
 .linkedin:focus {
     background-color: #f61bd2;
-    border-radius: 30px;
-    padding-top: 27px;
+    border-radius: 50px;
+    padding-top: 26px;
     padding-bottom: 0px;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .linkedin:active,
 .behance:active {
     background-color: #fb76cf;
     border-radius: 30px;
-    padding-top: 27px;
-    padding-bottom: 0px;
+    padding-top: 26px;
 }
 
 .button {
@@ -385,7 +400,8 @@ nav>ul>li>a {
 
 #hero,
 footer,
-#about-me {
+#about-me,
+.top {
     background-color: #f3e13e;
     display: inline-block;
     width: 100%;
@@ -395,7 +411,11 @@ footer,
     display: inline-block;
 }
 
-.center {
+.center-all {
+    text-align: center;
+}
+
+.center-small {
     text-align: center;
 }
 
@@ -420,9 +440,10 @@ hr {
     border-top: 2px solid #f4038c;
     margin: 5px auto;
 }
+
 .copy {
 
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 
 /** Media queries **/
@@ -443,17 +464,33 @@ hr {
         font-size: 18px;
     }
 
-    .greet, #me {
+    .greet,
+    #me {
         font-size: 2.7em;
     }
 
-    .col-md-6 {
-        width: 46%;
-        margin-right: 4%
+    .col-md-6-left {
+        width: 48%;
+        margin-right: 8px;
+        float: left;
     }
 
-    [class*="col-"] {
+    .col-md-6-right {
+        width: 48%;
+        margin-left: 8px;
+        float: right;
+    }
+
+    .column-left {
+        width: 48%;
+        margin-right: 8px;
         float: left;
+    }
+
+    .column-right {
+        width: 48%;
+        margin-left: 8px;
+        float: right;
     }
 
     .row::after {
@@ -466,33 +503,89 @@ hr {
     #skills-and-tools {
         text-align: center;
     }
-}
 
-@media only screen and (min-width: 1024px) {
-
-    .col-lg-7{
-    width: 52%;
-    float: left;
+    .overlay-text {
+        font-size: 4em;
     }
 
-    .col-lg-5{
-    width:38%;
+    #effort,
+    #change,
+    #health {
+        font-size: 3em;
     }
 
-    .container {
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-}
+    @media only screen and (min-width: 1024px) {
 
-@media only screen and (min-width: 1440px) {
+        .col-lg-7 {
+            width: 52%;
+            float: left;
+        }
 
-    .container {
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-      }
+        .col-lg-5 {
+            width: 38%;
+            float: right;
+        }
 
+        .col-md-6-left,
+        .col-md-6-right {
+            float: none !important;
+            width: auto !important;
+            margin: 0 !important;
+        }
+        .column-left {
+            width: 48%;
+            margin-right: 8px;
+            float: left;
+        }
+    
+        .column-right {
+            width: 48%;
+            margin-left: 8px;
+            float: right;
+        }
+       
 
-}
+        .center-small {
+            text-align: left;
+        }
+
+        .separator {
+            display: none;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .overlay-text {
+            font-size: 5em;
+        }
+
+        #effort,
+        #change,
+        #health {
+            font-size: 3.5em;
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
+
+        .container {
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .overlay-text {
+            font-size: 6em;
+        }
+
+        #effort,
+        #change,
+        #health {
+            font-size: 4em;
+        }
+
+    }
