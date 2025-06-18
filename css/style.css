@@ -18,10 +18,18 @@ Tertiary Color (blue): 01e5f5;
 .container {
     padding: 0 16px;
 }
+
+.photo-container {
+    display: block;
+    margin: 0 auto;
+    padding: 0 15%;
+}
+
 .row {
-    margin: 25px 0;
+    margin: 24px 0;
     /* 25px top and bottom, 0 left and right */
 }
+
 .container-social {
     margin-top: 80px;
 }
@@ -52,19 +60,19 @@ li {
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 900;
     color: #f4038c;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 900;
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 800;
     letter-spacing: 1px;
     color: #f4038c;
@@ -72,23 +80,22 @@ h3 {
 }
 
 h4 {
-    font-size: 1.35em;
+    font-size: 1.25em;
     font-weight: 700;
 }
 
 h5 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 600;
     margin: 0.5em 0;
 }
 
 h6 {
-    font-size: 1em;
+    font-size: 1.05em;
     font-weight: 400;
-    margin: 0.5em 0;
 }
 
-.greet {
+.greet, #me {
     font-size: 2.5em;
 }
 
@@ -114,7 +121,6 @@ h6 {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    font-size: 10vw;
     font-weight: 800;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     letter-spacing: 1px;
@@ -130,11 +136,11 @@ h6 {
     color: white !important;
 }
 
-
 /* Text Alignment */
 
 #hero {
     text-align: center;
+    padding:32px 0;
 }
 
 #health {
@@ -212,31 +218,34 @@ img {
     width: 100%;
 }
 
+
 /** Links, buttons, pseudos **/
 
 a:link {
     color: #f8e8ff;
 }
+
 /**
 a:visited {
     color: #4f005f;
 }**/
 
-a:hover,
-a:focus {
+.page:hover,
+.page:focus {
     color: #f8e8ff;
+    font-size:1.1em;
     background-color: #f61bd2;
     border-radius: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
-a:active {
+.page:active {
     color: #f8e8ff;
     background-color: #fb76cf;
     border-radius: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .social {
@@ -256,22 +265,22 @@ a:active {
 .linkedin:focus,
 .linkedin:focus {
     background-color: #f61bd2;
-    border-radius: 50px;
-    padding-top: 36px;
+    border-radius: 30px;
+    padding-top: 27px;
     padding-bottom: 0px;
-    padding-left: 5px;
-    padding-right: 4px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 .linkedin:active,
 .behance:active {
-    background-color: blueviolet;
-    border-radius: 50px;
-    padding-top: 36px;
+    background-color: #fb76cf;
+    border-radius: 30px;
+    padding-top: 27px;
     padding-bottom: 0px;
 }
 
-a.button {
+.button {
     display: inline-block;
     background-color: #f4038c;
     text-decoration: none;
@@ -283,19 +292,18 @@ a.button {
     margin-top: 8px;
 }
 
-a.button:hover,
-a.button:focus {
-    color: #f8e8ff;
+.button:hover,
+.button:focus {
     background-color: #f61bd2;
 }
 
-a.button:active {
+.button:active {
     color: #f8e8ff;
     background-color: #fb76cf;
     box-shadow: 2px 5px #fb76cf;
 }
 
-a.button.contact {
+.button.contact {
     color: #f4038c;
     display: inline-block;
     background-color: #f8e8ff;
@@ -306,36 +314,32 @@ a.button.contact {
     box-shadow: 2px 5px #f4038c;
 }
 
-a.button.contact:hover,
-a.button.contact:focus {
+.button.contact:hover,
+.button.contact:focus {
     color: #f8e8ff;
     background: rgba(246, 27, 210, .5);
-    box-shadow: 2px 5px #f4038c;
 }
 
-a.button.contact:active {
+.button.contact:active {
     color: #f8e8ff;
     background-color: #f4038c;
     box-shadow: 2px 5px #f4038c;
 }
 
-a.phone:link {
+.phone:link {
     color: #f4038c;
     text-decoration: none;
 }
 
-a.phone:hover,
-a.phone:focus {
-    color: #f8e8ff;
-    text-decoration: none;
-    background-color: #f61bd2;
+.phone:hover,
+.phone:focus {
+    text-decoration: underline;
 }
 
-a.phone:active {
-    color: #f8e8ff;
-    background-color: #fb76cf;
-    text-decoration: none;
+.phone:active {
+    color: #fb76cf;
 }
+
 /**
 a.phone:visited {
     color: #4f005f;
@@ -344,12 +348,11 @@ a.phone:visited {
 /* NavBar and Footer */
 
 .logo {
-    max-width: 250px;
+    display: inline-block;
+    padding-left: 16px;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
-    border: 3px double white;
-    padding: 3px;
 }
 
 header {
@@ -374,15 +377,14 @@ nav>ul>li {
 }
 
 nav>ul>li>a {
-    padding: 0 15px;
-    text-transform: uppercase;
+    padding: 0 16px;
+    text-transform: lowercase;
     text-decoration: none;
     font-weight: 600;
 }
 
 #hero,
 footer,
-.top,
 #about-me {
     background-color: #f3e13e;
     display: inline-block;
@@ -395,12 +397,17 @@ footer,
 
 .center {
     text-align: center;
+}
+
+.center-social {
+    text-align: center;
     padding: 10px 0;
     margin: 0 10px;
 }
 
 .social {
     display: inline-block;
+
 }
 
 #about-me h3 {
@@ -408,11 +415,14 @@ footer,
 }
 
 hr {
-    border:0; 
-    width:100%;
+    border: 0;
+    width: 100%;
     border-top: 2px solid #f4038c;
     margin: 5px auto;
-    
+}
+.copy {
+
+    margin-bottom: 30px;
 }
 
 /** Media queries **/
@@ -430,11 +440,11 @@ hr {
     }
 
     body {
-        font-size: 17px;
+        font-size: 18px;
     }
 
-    .greet {
-        font-size: 3em;
+    .greet, #me {
+        font-size: 2.7em;
     }
 
     .col-md-6 {
@@ -460,7 +470,29 @@ hr {
 
 @media only screen and (min-width: 1024px) {
 
+    .col-lg-7{
+    width: 52%;
+    float: left;
+    }
 
+    .col-lg-5{
+    width:38%;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 }
 
-@media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {
+
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+
+}
