@@ -1,50 +1,6 @@
-/*Colors used:
-
-Background color (white): #000000;
-
-Primary Color (yellow): #e5bd01;
-Primary Color's first variant: #e7cb00;
-Primary Color's second variant: #f3e13e;
-
-Secondary Color (magenta): #f4038c;
-Secondary Color's first variant: #f61bd2;
-Secondary Color's second variant: #fb76cf;
-
-Tertiary Color (blue): 01e5f5;
-*/
-
-/* Layout styling */
-
-.container {
-    padding: 0 16px;
-}
-
-.photo-container {
-    display: block;
-    margin: 0 auto;
-    padding: 0 15%;
-}
-
-.row {
-    margin: 24px 0;
-    /* 25px top and bottom, 0 left and right */
-}
-
-.container-social {
-    margin-top: 48px;
-}
-
 * {
     box-sizing: border-box;
 }
-
-.margin {
-    margin-top: 48px;
-    margin-bottom: 32px;
-
-}
-
-/** Text **/
 
 body {
     background-color: #f3e13e;
@@ -59,26 +15,26 @@ h1,
 h2,
 h3,
 h4,
-h5,
-li {
-    line-height: 1.3;
+h5 {
+    line-height: 1.4;
 }
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
+    font-size: 2.4em;
     font-weight: 900;
     color: #f4038c;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.9em;
     font-weight: 900;
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: 800;
     letter-spacing: 1px;
     color: #f4038c;
@@ -86,12 +42,12 @@ h3 {
 }
 
 h4 {
-    font-size: 1.25em;
+    font-size: 1.3em;
     font-weight: 700;
 }
 
 h5 {
-    font-size: 1.1em;
+    font-size: 1.15em;
     font-weight: 600;
     margin: 0.5em 0;
 }
@@ -101,16 +57,137 @@ h6 {
     font-weight: 400;
 }
 
-.greet,
-#me {
-    font-size: 2.5em;
-}
-
 .description {
     font-weight: 600;
 }
 
-/** Text-overlay**/
+
+/* Layout styling */
+
+img {
+    width: 100%;
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.photo-container {
+    display: block;
+    margin: 0 auto;
+
+    max-width:600px;
+    opacity:0.9
+}
+
+.row {
+    margin: 24px 0;
+}
+
+#projects .row {
+    padding-bottom: 14px;
+    padding-top: 14px;
+}
+
+#projects h3 {
+    margin: 0 auto;
+}
+
+.container-social {
+    margin-top: 48px;
+}
+
+#resume {
+    margin-bottom: 32px
+}
+
+/* NavBar and Footer */
+
+header {
+    background-color: #f4038c;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+
+}
+
+header .logo {
+    max-width: 250px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav>ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+nav>ul>li {
+    display: inline-block;
+}
+
+nav>ul>li>a {
+    padding: 0 15px;
+    text-transform: lowercase;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer,
+.top {
+    background-color: #f3e13e;
+    display: inline-block;
+    width: 100%;
+}
+
+.center-all {
+    text-align: center;
+}
+
+.center-only-small {
+
+    text-align: center;
+}
+
+.center-social {
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 10px;
+}
+
+.social {
+    display: inline-block;
+
+}
+
+hr {
+    border: 0;
+    width: 100%;
+    border-top: 2px solid #f4038c;
+    margin: 5px auto;
+}
+
+.copy {
+
+    margin-bottom: 38px;
+}
+
+#hero {
+    padding: 40px 0;
+}
+
+#hero,
+.top {
+    text-align: center;
+    padding: 32px 0;
+}
+
+/** Overlay-text**/
 
 .image-container {
     position: relative;
@@ -126,18 +203,11 @@ h6 {
 
 .overlay-text {
     position: absolute;
-    font-size: 3em;
     bottom: 20px;
     left: 20px;
     font-weight: 800;
     text-shadow: 1px 1px 5px #333f79;
     letter-spacing: 1px;
-}
-
-#effort,
-#change,
-#health {
-    font-size: 2.5em;
 }
 
 #change {
@@ -156,12 +226,6 @@ h6 {
     color: white !important;
 }
 
-/* Text Alignment */
-
-#hero {
-    text-align: center;
-    padding: 32px 0;
-}
 
 /** Table**/
 
@@ -210,7 +274,7 @@ thead {
     height: auto;
     clip-path: polygon(0.98% 2.19%, 0.98% 2.65%, 0.74% 2.65%, 0.74% 15.88%, 0.98% 15.88%, 0.98% 16.11%, 0.74% 16.11%, 0.74% 59.61%, 0.98% 59.61%, 0.98% 59.84%, 0.74% 59.84%, 0.74% 72.15%, 0.98% 72.15%, 0.98% 72.38%, 0.74% 72.38%, 0.74% 96.32%, 0.98% 96.32%, 0.98% 96.66%, 1.23% 96.66%, 1.23% 96.89%, 1.47% 96.89%, 1.72% 97.35%, 1.96% 97.35%, 1.96% 97.58%, 2.21% 97.58%, 2.21% 97.70%, 2.45% 97.70%, 2.45% 97.81%, 2.70% 97.81%, 2.70% 97.93%, 2.94% 97.93%, 2.94% 98.04%, 3.19% 98.04%,
             3.19% 98.16%, 3.68% 98.27%, 3.68% 98.39%, 4.17% 98.39%, 4.17% 98.50%, 4.66% 98.50%, 4.66% 98.62%, 5.15% 98.62%, 5.15% 98.73%, 5.64% 98.73%, 5.64% 98.85%, 6.62% 98.85%, 6.62% 98.96%, 13.97% 98.96%, 13.97% 98.85%, 14.46% 98.85%, 14.46% 98.96%, 55.15% 98.96%, 55.15% 98.85%, 55.64% 98.85%, 55.64% 98.96%, 92.40% 98.96%, 92.40% 98.85%, 93.38% 98.85%, 93.38% 98.73%, 93.87% 98.73%, 93.87% 98.62%, 94.85% 98.50%, 95.10% 98.27%, 95.59% 98.27%, 95.59% 98.16%, 95.83% 98.16%,
-             95.83% 98.04%, 96.08% 98.04%, 96.08% 97.93%, 96.32% 97.93%, 96.32% 97.81%, 96.57% 97.81%, 96.57% 97.70%, 97.06% 97.58%, 97.06% 97.35%, 97.30% 97.35%, 97.30% 97.12%, 97.55% 97.12%, 97.55% 96.89%, 97.79% 96.89%, 97.79% 96.66%, 98.04% 96.66%, 98.04% 96.20%, 98.28% 96.20%, 98.28% 67.78%, 98.04% 67.78%, 98.04% 67.55%, 98.28% 67.55%, 98.28% 43.61%, 98.04% 43.61%, 98.04% 43.38%, 98.28% 43.38%, 98.28% 2.65%, 98.04% 2.65%, 98.04% 2.19%, 97.79% 2.19%, 97.55% 1.73%, 97.30% 1.73%, 97.06% 1.27%, 96.81% 1.27%, 96.81% 1.15%, 96.57% 1.15%, 96.57% 1.04%, 96.32% 1.04%, 96.32% 0.92%, 96.08% 0.92%, 96.08% 0.81%, 95.83% 0.81%, 95.83% 0.69%, 95.34% 0.58%, 95.34% 0.46%, 94.85% 0.46%, 94.85% 0.35%, 93.87% 0.23%, 93.87% 0.00%, 91.42% 0.00%, 91.42% 0.12%, 91.67% 0.12%, 91.67% 0.58%, 86.27% 0.58%, 86.27% 0.69%, 85.78% 0.69%, 85.78% 0.58%, 84.07% 0.58%, 84.07% 0.69%, 83.58% 0.69%, 83.58% 0.58%, 77.70% 0.58%, 77.70% 0.69%, 76.96% 0.69%, 76.96% 0.58%, 40.20% 0.58%, 40.20% 0.69%, 39.71% 0.69%, 39.71% 0.58%, 33.82% 0.58%, 33.82% 0.69%, 33.09% 0.69%, 33.09% 0.58%, 14.95% 0.58%, 14.95% 0.69%, 14.46% 0.69%, 14.46% 0.58%, 7.35% 0.58%, 7.35% 0.00%, 5.15% 0.00%, 5.15% 0.23%, 4.66% 0.23%, 4.66% 0.35%, 3.68% 0.46%, 3.68% 0.58%, 3.43% 0.58%, 3.43% 0.69%, 3.19% 0.69%, 3.19% 0.81%, 2.94% 0.81%, 2.94% 0.92%, 2.70% 0.92%, 2.70% 1.04%, 2.45% 1.04%, 2.21% 1.27%, 1.96% 1.27%, 1.96% 1.50%, 1.72% 1.50%, 1.72% 1.73%, 1.47% 1.73%, 1.23% 2.19%, 0.98% 2.19%)
+            95.83% 98.04%, 96.08% 98.04%, 96.08% 97.93%, 96.32% 97.93%, 96.32% 97.81%, 96.57% 97.81%, 96.57% 97.70%, 97.06% 97.58%, 97.06% 97.35%, 97.30% 97.35%, 97.30% 97.12%, 97.55% 97.12%, 97.55% 96.89%, 97.79% 96.89%, 97.79% 96.66%, 98.04% 96.66%, 98.04% 96.20%, 98.28% 96.20%, 98.28% 67.78%, 98.04% 67.78%, 98.04% 67.55%, 98.28% 67.55%, 98.28% 43.61%, 98.04% 43.61%, 98.04% 43.38%, 98.28% 43.38%, 98.28% 2.65%, 98.04% 2.65%, 98.04% 2.19%, 97.79% 2.19%, 97.55% 1.73%, 97.30% 1.73%, 97.06% 1.27%, 96.81% 1.27%, 96.81% 1.15%, 96.57% 1.15%, 96.57% 1.04%, 96.32% 1.04%, 96.32% 0.92%, 96.08% 0.92%, 96.08% 0.81%, 95.83% 0.81%, 95.83% 0.69%, 95.34% 0.58%, 95.34% 0.46%, 94.85% 0.46%, 94.85% 0.35%, 93.87% 0.23%, 93.87% 0.00%, 91.42% 0.00%, 91.42% 0.12%, 91.67% 0.12%, 91.67% 0.58%, 86.27% 0.58%, 86.27% 0.69%, 85.78% 0.69%, 85.78% 0.58%, 84.07% 0.58%, 84.07% 0.69%, 83.58% 0.69%, 83.58% 0.58%, 77.70% 0.58%, 77.70% 0.69%, 76.96% 0.69%, 76.96% 0.58%, 40.20% 0.58%, 40.20% 0.69%, 39.71% 0.69%, 39.71% 0.58%, 33.82% 0.58%, 33.82% 0.69%, 33.09% 0.69%, 33.09% 0.58%, 14.95% 0.58%, 14.95% 0.69%, 14.46% 0.69%, 14.46% 0.58%, 7.35% 0.58%, 7.35% 0.00%, 5.15% 0.00%, 5.15% 0.23%, 4.66% 0.23%, 4.66% 0.35%, 3.68% 0.46%, 3.68% 0.58%, 3.43% 0.58%, 3.43% 0.69%, 3.19% 0.69%, 3.19% 0.81%, 2.94% 0.81%, 2.94% 0.92%, 2.70% 0.92%, 2.70% 1.04%, 2.45% 1.04%, 2.21% 1.27%, 1.96% 1.27%, 1.96% 1.50%, 1.72% 1.50%, 1.72% 1.73%, 1.47% 1.73%, 1.23% 2.19%, 0.98% 2.19%)
 }
 
 .overlay {
@@ -256,35 +320,28 @@ footer p {
     color: #560591;
 }
 
-img {
-    width: 100%;
-}
-
 
 /** Links, buttons, pseudos **/
 
 a:link {
-    color: #f8e8ff;
+    color: white;
 }
 
-/**
-a:visited {
-    color: #4f005f;
-}**/
-
-.page:hover,
-.page:focus {
-    color: #f8e8ff;
-    font-size: 1.1em;
-    background-color: #f61bd2;
+.page.active {
+    color: white;
+    background-color: #fb76cf;
     border-radius: 0px;
     padding-top: 4px;
     padding-bottom: 4px;
 }
 
 .page:active {
-    color: #f8e8ff;
-    background-color: #fb76cf;
+    background-color: #f61bd2;
+}
+
+.page:hover {
+    color: white;
+    background-color: blueviolet;
     border-radius: 0px;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -294,54 +351,59 @@ a:visited {
     display: inline-block;
 }
 
-.linkedin {
-    margin-right: 4px;
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 8px;
 }
 
-.behance {
-    margin-left: 4px;
+.icon-circle.linkedin {
+    background-color: transparent;
 }
+
+.icon-circle.behance {
+    background-color: transparent;
+}
+
 
 .linkedin:hover,
-.behance:hover,
-.linkedin:focus,
-.linkedin:focus {
-    background-color: #f61bd2;
-    border-radius: 50px;
-    padding-top: 26px;
-    padding-bottom: 0px;
-    padding-left: 5px;
-    padding-right: 5px;
+.behance:hover {
+    background-color: #fb76cf;
+
 }
 
 .linkedin:active,
 .behance:active {
-    background-color: #fb76cf;
-    border-radius: 30px;
-    padding-top: 26px;
+    background-color: transparent;
 }
 
 .button {
     display: inline-block;
     background-color: #f4038c;
     text-decoration: none;
-    color: #f8e8ff;
+    color: white;
     font-weight: 500;
     padding: 10px 20px;
     border-radius: 16px;
     box-shadow: 2px 5px blueviolet;
     margin-top: 8px;
+    transition-duration: 0.5s opacity;
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
     background-color: #f61bd2;
+    opacity: 0.8;
 }
 
 .button:active {
-    color: #f8e8ff;
-    background-color: #fb76cf;
-    box-shadow: 2px 5px #fb76cf;
+    color: white;
+    background-color: #f4038c;
+    box-shadow: 1px 1px #f4038c;
+    opacity: 0.8;
 }
 
 .button.contact {
@@ -353,18 +415,21 @@ a:visited {
     padding: 10px 20px;
     border-radius: 16px;
     box-shadow: 2px 5px #f4038c;
+    transition-duration: 0.5s opacity;
 }
 
-.button.contact:hover,
-.button.contact:focus {
-    color: #f8e8ff;
-    background: rgba(246, 27, 210, .5);
+.button.contact:hover {
+    color: white;
+    background: rgba(246, 27, 210, .6);
+    opacity: 0.8;
 }
 
 .button.contact:active {
-    color: #f8e8ff;
-    background-color: #f4038c;
-    box-shadow: 2px 5px #f4038c;
+    color: #f4038c;
+    background-color: #f8e8ff;
+    box-shadow: 1px 1px #f8e8ff;
+    opacity: 0.8;
+
 }
 
 .phone:link {
@@ -372,104 +437,20 @@ a:visited {
     text-decoration: none;
 }
 
-.phone:hover,
-.phone:focus {
+.phone:hover {
     text-decoration: underline;
+    color: #f61bd2;
 }
 
 .phone:active {
-    color: #fb76cf;
+    color: #f4038c;
 }
 
-/**
-a.phone:visited {
-    color: #4f005f;
-}**/
+/** Animation **/
 
-/* NavBar and Footer */
 
-.logo {
-    display: inline-block;
-    padding-left: 16px;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-header {
-    background-color: #f4038c;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-}
-
-nav {
-    display: inline-block;
-    width: 100%;
-}
-
-nav>ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav>ul>li {
-    display: inline-block;
-}
-
-nav>ul>li>a {
-    padding: 0 16px;
-    text-transform: lowercase;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-#hero,
-footer,
-#about-me,
-.top {
-    background-color: #f3e13e;
-    display: inline-block;
-    width: 100%;
-}
-
-.display {
-    display: inline-block;
-}
-
-.center-all {
-    text-align: center;
-}
-
-.center-small {
-    text-align: center;
-}
-
-.center-social {
-    text-align: center;
-    padding: 10px 0;
-    margin: 0 10px;
-}
-
-.social {
-    display: inline-block;
-
-}
-
-#about-me h3 {
-    margin-top: 0;
-}
-
-hr {
-    border: 0;
-    width: 100%;
-    border-top: 2px solid #f4038c;
-    margin: 5px auto;
-}
-
-.copy {
-
-    margin-bottom: 32px;
+#svg-logo path {
+    fill: white;
 }
 
 /** Media queries **/
@@ -477,22 +458,16 @@ hr {
 @media only screen and (min-width: 640px) {
     header {
         text-align: unset;
-        padding: 20px 0 13px;
+        padding: 10px 0 13px;
     }
 
     nav {
         width: auto;
         float: right;
-        margin-top: 4px;
     }
 
     body {
         font-size: 18px;
-    }
-
-    .greet,
-    #me {
-        font-size: 2.7em;
     }
 
     .col-md-6-left {
@@ -525,22 +500,30 @@ hr {
         display: table;
     }
 
-    #work,
-    #skills-and-tools {
-        text-align: center;
+    h1 {
+        font-size: 2.8em;
     }
 
-    .overlay-text {
-        font-size: 4em;
+    h2 {
+        font-size: 2.2em;
     }
 
-    #effort,
-    #change,
-    #health {
-        font-size: 3em;
+    h3 {
+        font-size: 1.8em;
     }
+
+    h4 {
+        font-size: 1.4em;
+    }
+
 
     @media only screen and (min-width: 1024px) {
+
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         .col-lg-7 {
             width: 52%;
@@ -571,7 +554,7 @@ hr {
             float: right;
         }
 
-        .center-small {
+        .center-only-small {
             text-align: left;
         }
 
@@ -579,39 +562,19 @@ hr {
             display: none;
         }
 
-        .container {
-            max-width: 1024px;
-            margin-left: auto;
-            margin-right: auto;
+        h1 {
+            font-size: 3.2em;
         }
 
-        .overlay-text {
-            font-size: 5em;
-        }
-
-        #effort,
-        #change,
-        #health {
-            font-size: 3.5em;
+        h2 {
+            font-size: 2.6em;
         }
     }
 
     @media only screen and (min-width: 1440px) {
 
-        .container {
-            max-width: 1024px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .overlay-text {
-            font-size: 6em;
-        }
-
-        #effort,
-        #change,
-        #health {
-            font-size: 4em;
+        h1 {
+            font-size: 3.6em;
         }
 
     }
