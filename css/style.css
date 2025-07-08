@@ -21,20 +21,20 @@ h5 {
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.4em;
+    font-size: 2.3em;
     font-weight: 900;
     color: #f4038c;
 }
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.9em;
+    font-size: 1.7em;
     font-weight: 900;
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-weight: 800;
     letter-spacing: 1px;
     color: #f4038c;
@@ -47,7 +47,7 @@ h4 {
 }
 
 h5 {
-    font-size: 1.15em;
+    font-size: 1.1em;
     font-weight: 600;
     margin: 0.5em 0;
 }
@@ -76,8 +76,8 @@ img {
     display: block;
     margin: 0 auto;
 
-    max-width:600px;
-    opacity:0.9
+    max-width: 600px;
+    opacity: 0.9
 }
 
 .row {
@@ -323,7 +323,8 @@ footer p {
 
 /** Links, buttons, pseudos **/
 
-a:link, a:visited {
+a:link,
+a:visited {
     color: white;
 }
 
@@ -451,23 +452,31 @@ a:link, a:visited {
 
 #svg-logo path {
     fill: none;
-    stroke:white;
+    stroke: white;
     stroke-width: 2px;
     stroke-dasharray: 400px;
     stroke-dashoffset: 400px;
-    stroke-linejoin:round;
-    stroke-linecap:round;
-    animation: draw-stroke 14s  linear forwards;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    animation: draw-stroke 14s linear forwards;
 }
 
 @keyframes draw-stroke {
-100% { stroke-dashoffset:0;}
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
 
 /** Media queries **/
 
 @media only screen and (min-width: 640px) {
+    .container {
+        max-width: 870px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     header {
         text-align: unset;
         padding: 10px 0 13px;
@@ -513,80 +522,75 @@ a:link, a:visited {
     }
 
     h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.9em;
+    }
+
+    h3 {
+        font-size: 1.7em;
+    }
+c
+    h4 {
+        font-size: 1.5em;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .col-lg-7 {
+        width: 52%;
+        float: left;
+    }
+
+    .col-lg-5 {
+        width: 38%;
+        float: right;
+    }
+
+    .col-md-6-left,
+    .col-md-6-right {
+        float: none !important;
+        width: auto !important;
+        margin: 0 !important;
+    }
+
+    .column-left {
+        width: 48%;
+        margin-right: 8px;
+        float: left;
+    }
+
+    .column-right {
+        width: 48%;
+        margin-left: 8px;
+        float: right;
+    }
+
+    .center-only-small {
+        text-align: left;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    h1 {
         font-size: 2.8em;
     }
 
     h2 {
-        font-size: 2.2em;
+        font-size: 2.1em;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    h1 {
+        font-size: 3.2em;
     }
 
-    h3 {
-        font-size: 1.8em;
-    }
-
-    h4 {
-        font-size: 1.4em;
-    }
-
-
-    @media only screen and (min-width: 1024px) {
-
-        .container {
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .col-lg-7 {
-            width: 52%;
-            float: left;
-        }
-
-        .col-lg-5 {
-            width: 38%;
-            float: right;
-        }
-
-        .col-md-6-left,
-        .col-md-6-right {
-            float: none !important;
-            width: auto !important;
-            margin: 0 !important;
-        }
-
-        .column-left {
-            width: 48%;
-            margin-right: 8px;
-            float: left;
-        }
-
-        .column-right {
-            width: 48%;
-            margin-left: 8px;
-            float: right;
-        }
-
-        .center-only-small {
-            text-align: left;
-        }
-
-        .separator {
-            display: none;
-        }
-
-        h1 {
-            font-size: 3.2em;
-        }
-
-        h2 {
-            font-size: 2.6em;
-        }
-    }
-
-    @media only screen and (min-width: 1440px) {
-
-        h1 {
-            font-size: 3.6em;
-        }
-
-    }
+}
