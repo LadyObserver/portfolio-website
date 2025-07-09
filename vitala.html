@@ -19,7 +19,7 @@
     <link href="img/favicon.ico" rel="shortcut icon">
 </head>
 
-<body id="vitala">
+<body>
     <header>
         <div class="container">
             <a href="index.html"><svg id="svg-logo" class="logo" width="210" height="16" viewBox="0 0 210 16"
@@ -65,334 +65,359 @@
             </nav>
         </div>
     </header>
-    <main class="recipe">
-        <div class="top">
-            <div>
-                <div>
-                    <hr>
-                </div>
-                <div>
-                    <hr>
-                </div>
-                <div>
-                    <hr>
-                </div>
-                <div>
-                    <hr>
-                </div>
-                <div>
-                    <hr>
-                </div>
-                <div>
-                    <hr>
-                </div>
-            </div>
-            <div id="vitala-case-study" class="container">
-                <div class="image-container">
-                    <div>
-                        <h1 class="overlay-text">VITALA</h1><!--I want to place this text on the image-->
-                    </div>
-                    <div class="margin">
-                        <picture>
-                            <source srcset="img/vitala/vitala-gif.gif" width="600" height="auto"
-                                media="(max-width:767px)">
-                            <img src="img/vitala/vitala-gif.gif" width="1200" height="auto"
-                                alt="homepage shown on a laptop">
-                        </picture><!--I want to resize gif using CSS-->
-                    </div>
-                </div>
+    <main id="vitala">
+        <div class="recipe">
+            <div class="top">
                 <div>
                     <div>
-                        <h5>DESIGNER</h5>
-                        <p>Nikolett Muller</p>
+                        <hr>
                     </div>
                     <div>
-                        <h5>ROLE</h5>
-                        <p>UX Research, UX Design, UI Design</p>
+                        <hr>
                     </div>
                     <div>
-                        <h5>TOOLS</h5>
-                        <p>Figma, Lyssna, Canva, Draw.io, Unsplash, Mockuuups Studio</p>
+                        <hr>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                </div>
+                <div id="vitala-case-study" class="container">
+                    <div class="image-container">
+                        <div>
+                            <h1 class="overlay-text">Vitala</h1><!--I want to place this text on the image-->
+                        </div>
+                        <div>
+                            <picture class="margin-gif">
+                                <source srcset="img/vitala/vitala-gif.gif" width="600" height="auto"
+                                    media="(max-width:767px)">
+                                <img src="img/vitala/vitala-gif.gif" width="1200" height="auto"
+                                    alt="homepage shown on a laptop">
+                            </picture><!--I want to resize gif using CSS-->
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="column-left col-1">
+                                <div>
+                                    <h5>DESIGNER</h5>
+                                    <p>Nikolett Muller</p>
+                                </div>
+                            </div>
+                            <div class="column-right col-2">
+                                <div>
+                                    <h5>ROLE</h5>
+                                    <p>UX Research, UX Design, UI Design</p>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div>
+                                    <h5>TOOLS</h5>
+                                    <p>Figma, Lyssna, Canva, Draw.io, Unsplash, Mockuuups Studio</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div>
-                <h4>PROBLEM STATEMENT</h4>
+            <div class="container">
+                <ul class="jump_links">
+                    <li><a class="jump" href="#problem">Problem Statement</a></li>
+                    <li><a class="jump" href="#solution">Solution</a></li>
+                    <li><a class="jump" href="#goals">Goals</a></li>
+                    <li><a class="jump" href="#research">Research & Analysis</a></li>
+                    <li><a class="jump" href="#userflows">Userflows & Features</a></li>
+                    <li><a class="jump" href="#takeaways">Takeaways</a></li>
+                </ul>
             </div>
             <div>
-                <h3>“Take care of your body. It’s the only place
-                    you have to live.”
-                </h3>
-            </div>
-            <p> Let’s start with a motivational quote by Jim Rohn that says: “Take care of your body. It’s
-                the only place you have to live.” Why is this statement so revelational? Nowadays, we are
-                forced to live in a very fast-paced world that drains us immensely. We are taught that
-                things are easily replaceable, however, we cannot purchase a new body to keep up with
-                this rapid pace. We must cherish the body what we already have and try to fix it by
-                fueling it properly.
-            </p>
-        </div>
-        <div class="container">
-            <div>
-                <h4>SOLUTION</h4>
-            </div>
-            <div>
-                <h3> Disrupting old eating habits
-                </h3>
-            </div>
-            <p> The solution is a recipe website that provides continuous help in disrupting people’s old
-                eating habits and creating new ones that will improve their overall health. In summary, by
-                following the various instructions, the targeted users will be able to adapt faster and gain
-                confidence in their capabilities to create a well-balanced diet in the long run according to
-                their needs.
-            </p>
-        </div>
-        <div class="container">
-            <div>
-                <h4>GOALS</h4>
-            </div>
-            <p>Our users’ main achievements thanks to the web app:</p>
-            <ul>
-                <li>Acquiring advanced cooking skills</li>
-                <li>Being in control of their health</li>
-                <li>Sharing their health journey</li>
-            </ul>
-        </div>
-        <div class="container">
-            <div class="image-container">
-                <div>
-                    <h1 id="effort">Small efforts.</h1>
+                <div class="container">
+                    <div id="problem">
+                        <h4>PROBLEM STATEMENT</h4>
+                    </div>
+                    <div>
+                        <h3>“Take care of your body. It’s the only place
+                            you have to live.”
+                        </h3>
+                    </div>
+                    <p> Let’s start with a motivational quote by Jim Rohn that says: “Take care of your body. It’s
+                        the only place you have to live.” Why is this statement so revelational? Nowadays, we are
+                        forced to live in a very fast-paced world that drains us immensely. We are taught that
+                        things are easily replaceable, however, we cannot purchase a new body to keep up with
+                        this rapid pace. We must cherish the body what we already have and try to fix it by
+                        fueling it properly.
+                    </p>
                 </div>
-                <div>
-                    <h1 id="change" class="overlay-text">Change.</h1>
-                    <!--I want to place this text on the image; its color will be white then-->
+                <div class="container">
+                    <div id="solution">
+                        <h4>SOLUTION</h4>
+                    </div>
+                    <div>
+                        <h3> Disrupting old eating habits
+                        </h3>
+                    </div>
+                    <p> The solution is a recipe website that provides continuous help in disrupting people’s old
+                        eating habits and creating new ones that will improve their overall health. In summary, by
+                        following the various instructions, the targeted users will be able to adapt faster and gain
+                        confidence in their capabilities to create a well-balanced diet in the long run according to
+                        their needs.
+                    </p>
                 </div>
-                <div>
+                <div class="container">
+                    <div id="goals">
+                        <h4>GOALS</h4>
+                    </div>
+                    <p>Our users’ main achievements thanks to the web app:</p>
+                    <ul>
+                        <li>Acquiring advanced cooking skills</li>
+                        <li>Being in control of their health</li>
+                        <li>Sharing their health journey</li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <div class="image-container">
+                        <div>
+                            <h1 id="effort">Small efforts.</h1>
+                        </div>
+                        <div>
+                            <h1 id="change" class="overlay-text">Change.</h1>
+                            <!--I want to place this text on the image; its color will be white then-->
+                        </div>
+                        <div>
+                            <picture>
+                                <source srcset="img/vitala/mobile-mockup_@1x.png" media="(max-width:767px)">
+                                <img src="img/vitala/mobile-mockup_@2x.png"
+                                    alt="woman is holding a mobile phone showing a recipe's ingredients list">
+                            </picture>
+                        </div>
+                    </div>
+                    <div>
+                        <h1 id="health">Health.</h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="research">
+                        <h4>RESEARCH &amp; ANALYSIS</h4>
+                    </div>
+                    <div>
+                        <h3>Objectives
+                        </h3>
+                    </div>
+                    <div class="column-left">
+                        <h5>Who?</h5>
+                        <p> People who need guidance to learn
+                            cooking techniques and methods in
+                            order to eat healthy or keep a specific
+                            diet.
+                        </p>
+                        <h5>When?</h5>
+                        <p> The website will be used before/during
+                            purchasing groceries and kitchen tools
+                            and during/after cooking the dishes.
+                        </p>
+                        <h5>What?</h5>
+                        <p> The target users will be able to find/
+                            save/share recipes, to follow preparation
+                            instructions, to get meal plans/grocery
+                            list of each recipe/kitchen tips and to
+                            adjust recipes according to
+                            user preferences.
+                        </p>
+                    </div>
+                    <div class="column-right">
+                        <h5>Why?</h5>
+                        <p> Committing to a new lifestyle is a hard
+                            task to do, therefore this website would
+                            be an optimal choice for those who want
+                            to go through this adjustment phase
+                            easier and more efficiently.
+                        </p>
+                        <h5>Where?</h5>
+                        <p> The recipe website will be used in stores
+                            and in the kitchen of the users.​
+                        </p>
+                        <h5>How?</h5>
+                        <p> By selecting their preferences like a
+                            specific diet, an allergen, portion size or
+                            kitchen measurement, users can choose
+                            from the recommended meal plans, then
+                            they can go grocery shopping and cook
+                            the customized recipes in their home.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Synthesis of the interview findings</h3>
+                    </div>
+                    <div class="table-container">
+                        <table><!--I want create a table here that visually appealing as in my case study-->
+                            <thead>
+                                <tr>
+                                    <th>Patterns</th>
+                                    <th>Surprises</th>
+                                    <th>Frustrations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> All of them want to eat
+                                        a healthier diet</td>
+                                    <td rowspan="2" class="middle"> There is a difference in preference for
+                                        the type of video content according to
+                                        the diverse age groups
+                                        (older people: long format,
+                                        younger people: short format)</td>
+                                    <td> Advertisements shown
+                                        in the app
+                                        (distracting, slow page loading,
+                                        more mobile data usage)</td>
+                                </tr>
+                                <tr>
+                                    <td> Younger generation is more motivated</td>
+                                    <td> Unlocking phone constantly</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="container">
                     <picture>
-                        <source srcset="img/vitala/mobile-mockup_@1x.png" media="(max-width:767px)">
-                        <img src="img/vitala/mobile-mockup_@2x.png"
-                            alt="woman is holding a mobile phone showing a recipe's ingredients list">
+                        <source srcset="img/vitala/wireframes_@1x.png" media="(max-width:767px)">
+                        <img src="img/vitala/wireframes_@2x.png" alt="floating medium-fidelity wireframes">
+                    </picture>
+                </div>
+                <div class="container">
+                    <div id="userflows">
+                        <h4>USERFLOWS &amp; FEATURES</h4>
+                    </div>
+                    <div>
+                        <h3>Key features of the initial MVP
+                        </h3>
+                    </div>
+                    <p> During the first iteration of the MVP, the goal was to create a recipe website which will
+                        allow our target users to find/save/share recipes and to follow preparation instructions in
+                        order to achieve a healthier diet.
+                    </p>
+                    <div>
+                        <h5>Browsing recipes</h5>
+                        <p><i>“When I have time to cook something new, I want to browse recipes so I can easily find a
+                                new meal to cook."</i></p>
+                    </div>
+                    <picture>
+                        <source srcset="img/vitala/user-flow_1_@1x.png" media="(max-width:767px)">
+                        <!--I would like to keep this image somewhat small in each scenario-->
+                        <img src="img/vitala/user-flow_1_@2x.png" alt="userflow about how to browse in the app">
+                    </picture>
+                    <div>
+                        <h6>Home</h6>
+                        <h6>Search with categories</h6>
+                        <h6>Results</h6>
+                        <picture>
+                            <source srcset="img/vitala/browsing_@1x.png" media="(max-width:767px)">
+                            <img src="img/vitala/browsing_@2x.png" alt="showing step by step how search works">
+                        </picture>
+                    </div>
+                    <div>
+                        <h5>Following instructions</h5>
+                        <p><i>“When I try to learn a complicated cooking method, I want to get easy-to-follow
+                                instructions
+                                (textual description,images, and video) so that I can master the technique.”</i></p>
+                    </div>
+                    <picture>
+                        <source srcset="img/vitala/user-flow_3_@1x.png" media="(max-width:767px)">
+                        <!--I would like to keep this image somewhat small in each scenario-->
+                        <img src="img/vitala/user-flow_3_@2x.png" alt="userflow about accessing instructions">
+                    </picture>
+                    <div>
+                        <div>
+                            <h5>Method 1</h5><!--I want to place these texts on the image-->
+                            <h6>Scrolling down or Internal link</h6>
+                        </div>
+                        <div>
+                            <h5>Method 2</h5>
+                            <h6>Tabs</h6>
+                        </div>
+                        <picture>
+                            <source srcset="img/vitala/instructions_@1x.png" media="(max-width:767px)">
+                            <img src="img/vitala/instructions_@2x.png"
+                                alt="how to access instructions in the app - 2 methods">
+                        </picture>
+                    </div>
+                    <div>
+                        <h5>Saving recipes</h5>
+                        <p><i>“When I browse recipes, I want to save the recipe I like so that I can find it easily
+                                later.</i>
+                        </p>
+                    </div>
+                    <picture>
+                        <source srcset="img/vitala/user-flow_2_@1x.png" media="(max-width:767px)">
+                        <!--I would like to keep this image somewhat small in each scenario-->
+                        <img src="img/vitala/user-flow_2_@2x.png" alt="userflow about how to save a recipe">
+                    </picture>
+                    <div>
+                        <h6>Recipe</h6>
+                        <h6>Sign In</h6>
+                        <h6>Save Recipe</h6>
+                        <h6>Saved Recipes</h6><!--I want to place these texts on the image-->
+                        <picture>
+                            <source srcset="img/vitala/Saving_@1x.png" media="(max-width:767px)">
+                            <img src="img/vitala/Saving_@2x.png" alt="showing step by step how to save a recipe">
+                        </picture>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="takeaways">
+                        <h4>TAKEAWAYS</h4>
+                    </div>
+                    <div>
+                        <h3> Reflection on the project
+                        </h3>
+                    </div>
+                    <p> My goal was to ease the pain which comes with the attempt of following given
+                        instructions in recipe web apps in general. In my opinion, I met the student project’s
+                        objective since I created a design that allows the target users to satisfy their basic needs
+                        (find/save/share recipes and to follow preparation instructions).
+                    </p>
+                    <div>
+                        <h5>Roadblocks</h5>
+                        <p> I had some struggles with finding the optimal color palette. However, focusing on the
+                            vision made me realize that simplicity is the key in this project. According to this, I
+                            switched to another approach, and I changed my brighter color palette to a more toned
+                            down color palette. Thanks to the change, the imagery of the web app can have more
+                            emphasis.
+                        </p>
+                    </div>
+                    <div>
+                        <h5>Direction changes</h5>
+                        <p> I did not make major direction changes in this project. The only addition I made that I
+                            created the concept of an AI assistant (FlavorMate) in the app to make room for more
+                            potential features in the following iterations.
+                        </p>
+                    </div>
+                    <div>
+                        <h5>Next iteration</h5>
+                        <p> I would add the following features in the next iteration: </p>
+                        <ul>
+                            <li>Search filters</li>
+                            <li>Recipe recommendations/meal plans</li>
+                            <li>Shopping list</li>
+                            <li>Adjusting portion size/kitchen measurement</li>
+                            <li>Cooking mode</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recipe container">
+                    <picture>
+                        <source srcset="img/vitala/tablet-mockup_@1x.png" media="(max-width:767px)">
+                        <img src="img/vitala/tablet-mockup_@2x.png" alt="tablet mockup laying on a dining table">
                     </picture>
                 </div>
             </div>
-            <div>
-                <h1 id="health">Health.</h1>
-            </div>
-        </div>
-        <div class="container">
-            <div>
-                <h4>RESEARCH &amp; ANALYSIS</h4>
-            </div>
-            <div>
-                <h3>Objectives
-                </h3>
-            </div>
-            <div class="column-left">
-                <h5>Who?</h5>
-                <p> People who need guidance to learn
-                    cooking techniques and methods in
-                    order to eat healthy or keep a specific
-                    diet.
-                </p>
-                <h5>When?</h5>
-                <p> The website will be used before/during
-                    purchasing groceries and kitchen tools
-                    and during/after cooking the dishes.
-                </p>
-                <h5>What?</h5>
-                <p> The target users will be able to find/
-                    save/share recipes, to follow preparation
-                    instructions, to get meal plans/grocery
-                    list of each recipe/kitchen tips and to
-                    adjust recipes according to
-                    user preferences.
-                </p>
-            </div>
-            <div class="column-right">
-                <h5>Why?</h5>
-                <p> Committing to a new lifestyle is a hard
-                    task to do, therefore this website would
-                    be an optimal choice for those who want
-                    to go through this adjustment phase
-                    easier and more efficiently.
-                </p>
-                <h5>Where?</h5>
-                <p> The recipe website will be used in stores
-                    and in the kitchen of the users.​
-                </p>
-                <h5>How?</h5>
-                <p> By selecting their preferences like a
-                    specific diet, an allergen, portion size or
-                    kitchen measurement, users can choose
-                    from the recommended meal plans, then
-                    they can go grocery shopping and cook
-                    the customized recipes in their home.
-                </p>
-            </div>
-            <div>
-                <h3>Synthesis of the interview findings</h3>
-            </div>
-            <div class="table-container">
-                <table><!--I want create a table here that visually appealing as in my case study-->
-                    <thead>
-                        <tr>
-                            <th>Patterns</th>
-                            <th>Surprises</th>
-                            <th>Frustrations</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td> All of them want to eat
-                                a healthier diet</td>
-                            <td rowspan="2" class="middle"> There is a difference in preference for
-                                the type of video content according to
-                                the diverse age groups
-                                (older people: long format,
-                                younger people: short format)</td>
-                            <td> Advertisements shown
-                                in the app
-                                (distracting, slow page loading,
-                                more mobile data usage)</td>
-                        </tr>
-                        <tr>
-                            <td> Younger generation is more motivated</td>
-                            <td> Unlocking phone constantly</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="container">
-            <picture>
-                <source srcset="img/vitala/wireframes_@1x.png" media="(max-width:767px)">
-                <img src="img/vitala/wireframes_@2x.png" alt="floating medium-fidelity wireframes">
-            </picture>
-        </div>
-        <div class="container">
-            <div>
-                <h4>USERFLOWS &amp; FEATURES</h4>
-            </div>
-            <div>
-                <h3>Key features of the initial MVP
-                </h3>
-            </div>
-            <p> During the first iteration of the MVP, the goal was to create a recipe website which will
-                allow our target users to find/save/share recipes and to follow preparation instructions in
-                order to achieve a healthier diet.
-            </p>
-            <div>
-                <h5>Browsing recipes</h5>
-                <p><i>“When I have time to cook something new, I want to browse recipes so I can easily find a
-                        new meal to cook."</i></p>
-            </div>
-            <picture>
-                <source srcset="img/vitala/user-flow_1_@1x.png" media="(max-width:767px)">
-                <!--I would like to keep this image somewhat small in each scenario-->
-                <img src="img/vitala/user-flow_1_@2x.png" alt="userflow about how to browse in the app">
-            </picture>
-            <div>
-                <h6>Home</h6>
-                <h6>Search with categories</h6>
-                <h6>Results</h6>
-                <picture>
-                    <source srcset="img/vitala/browsing_@1x.png" media="(max-width:767px)">
-                    <img src="img/vitala/browsing_@2x.png" alt="showing step by step how search works">
-                </picture>
-            </div>
-            <div>
-                <h5>Following instructions</h5>
-                <p><i>“When I try to learn a complicated cooking method, I want to get easy-to-follow instructions
-                        (textual description,images, and video) so that I can master the technique.”</i></p>
-            </div>
-            <picture>
-                <source srcset="img/vitala/user-flow_3_@1x.png" media="(max-width:767px)">
-                <!--I would like to keep this image somewhat small in each scenario-->
-                <img src="img/vitala/user-flow_3_@2x.png" alt="userflow about accessing instructions">
-            </picture>
-            <div>
-                <div>
-                    <h5>Method 1</h5><!--I want to place these texts on the image-->
-                    <h6>Scrolling down or Internal link</h6>
-                </div>
-                <div>
-                    <h5>Method 2</h5>
-                    <h6>Tabs</h6>
-                </div>
-                <picture>
-                    <source srcset="img/vitala/instructions_@1x.png" media="(max-width:767px)">
-                    <img src="img/vitala/instructions_@2x.png" alt="how to access instructions in the app - 2 methods">
-                </picture>
-            </div>
-            <div>
-                <h5>Saving recipes</h5>
-                <p><i>“When I browse recipes, I want to save the recipe I like so that I can find it easily later.</i>
-                </p>
-            </div>
-            <picture>
-                <source srcset="img/vitala/user-flow_2_@1x.png" media="(max-width:767px)">
-                <!--I would like to keep this image somewhat small in each scenario-->
-                <img src="img/vitala/user-flow_2_@2x.png" alt="userflow about how to save a recipe">
-            </picture>
-            <div>
-                <h6>Recipe</h6>
-                <h6>Sign In</h6>
-                <h6>Save Recipe</h6>
-                <h6>Saved Recipes</h6><!--I want to place these texts on the image-->
-                <picture>
-                    <source srcset="img/vitala/Saving_@1x.png" media="(max-width:767px)">
-                    <img src="img/vitala/Saving_@2x.png" alt="showing step by step how to save a recipe">
-                </picture>
-            </div>
-        </div>
-        <div class="container">
-            <div>
-                <h4>TAKEAWAYS</h4>
-            </div>
-            <div>
-                <h3> Reflection on the project
-                </h3>
-            </div>
-            <p> My goal was to ease the pain which comes with the attempt of following given
-                instructions in recipe web apps in general. In my opinion, I met the student project’s
-                objective since I created a design that allows the target users to satisfy their basic needs
-                (find/save/share recipes and to follow preparation instructions).
-            </p>
-            <div>
-                <h5>Roadblocks</h5>
-                <p> I had some struggles with finding the optimal color palette. However, focusing on the
-                    vision made me realize that simplicity is the key in this project. According to this, I
-                    switched to another approach, and I changed my brighter color palette to a more toned
-                    down color palette. Thanks to the change, the imagery of the web app can have more
-                    emphasis.
-                </p>
-            </div>
-            <div>
-                <h5>Direction changes</h5>
-                <p> I did not make major direction changes in this project. The only addition I made that I
-                    created the concept of an AI assistant (FlavorMate) in the app to make room for more
-                    potential features in the following iterations.
-                </p>
-            </div>
-            <div>
-                <h5>Next iteration</h5>
-                <p> I would add the following features in the next iteration: </p>
-                <ul>
-                    <li>Search filters</li>
-                    <li>Recipe recommendations/meal plans</li>
-                    <li>Shopping list</li>
-                    <li>Adjusting portion size/kitchen measurement</li>
-                    <li>Cooking mode</li>
-                </ul>
-            </div>
-        </div>
-        <div class="recipe container">
-            <picture>
-                <source srcset="img/vitala/tablet-mockup_@1x.png" media="(max-width:767px)">
-                <img src="img/vitala/tablet-mockup_@2x.png" alt="tablet mockup laying on a dining table">
-            </picture>
         </div>
     </main>
     <footer id="contact" class="display">
