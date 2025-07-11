@@ -83,21 +83,14 @@
                 <div>
                     <hr>
                 </div>
-                <div>
-                    <hr>
-                </div>
                 <div id="cassette-case-study" class="container">
-                    <div class="image-container">
-                        <div>
-                            <h1 id="cassette-hero" class="overlay-text">Cassette</h1>
-                        </div>
-                        <div>
-                            <picture class="margin-gif">
-                                <source srcset="img/cassette/cover-cassette_@1x.png" media="(max-width:767px)">
-                                <img src="img/cassette/cover-cassette_@2x.png"
-                                    alt="smartphone showing the onboarding screen held by a hand">
-                            </picture>
-                        </div>
+                    <h1 id="hero" class="music">Cassette</h1>
+                    <div>
+                        <picture>
+                            <source srcset="img/cassette/cover-cassette_@1x.png" media="(max-width:767px)">
+                            <img src="img/cassette/cover-cassette_@2x.png"
+                                alt="smartphone showing the onboarding screen held by a hand">
+                        </picture>
                     </div>
                 </div>
                 <div class="container">
@@ -155,7 +148,7 @@
                         <h4>PROBLEM STATEMENT</h4>
                     </div>
                     <div>
-                        <h3> Loneliness epidemic
+                        <h3>Loneliness epidemic
                         </h3>
                     </div>
                     <p> As our world is more and more affected by the use of digital tools, we are becoming
@@ -174,8 +167,12 @@
                     </p>
                 </div>
                 <div class="container">
-                    <img src="img/cassette/mask-for-logo.png" alt="old tv is laid on the floor">
-                    <img src="img/cassette/logo-gif.gif" alt="gif that shows the logo animation">
+                    <div class="gif-container-animation">
+                        <img class="margin-both overlay-animation" src="img/cassette/mask-for-logo.png"
+                            alt="old tv is laid on the floor">
+                        <img src="img/cassette/logo-gif.gif" class="gif-image" alt="gif that shows the logo animation">
+
+                    </div>
                 </div>
                 <div class="container">
                     <div id="solution2">
@@ -217,33 +214,26 @@
                     <div>
                         <picture>
                             <source srcset="img/cassette/moodboard_@1x.png" media="(max-width:767px)">
-                            <img src="img/cassette/moodboard_@2x.png"
+                            <img class="margin-top" src="img/cassette/moodboard_@2x.png"
                                 alt="inspirational elements (colors, patterns, buttons, fonts) are put on a board">
                         </picture>
                     </div>
                 </div>
                 <div class="container">
-                    <div id="wireframe">
+                    <div>
                         <h4>WIREFRAME EVOLUTION</h4>
                     </div>
                     <div>
-                        <h3>From low-fidelity wireframes up to the last touch-ups</h3>
-                    </div>
-                    <div><!--I want to place this text on the image-->
-                        <h4>LO-FI</h4>
-                        <h4>MID-FI</h4>
-                        <h4>HI-FI</h4>
-                        <h4>FINAL</h4>
+                        <h3>From lo-fi up to the last touch-ups</h3>
                     </div>
                     <div>
                         <picture>
-                            <source srcset="img/cassette/evolution_@1x.png" media="(max-width:767px)">
-                            <img src="img/cassette/evolution_@2x.png"
+                            <source srcset="img/cassette/wireframe_@1x.png" media="(max-width:767px)">
+                            <img class="margin-top" src="img/cassette/wireframe_@2x.png"
                                 alt="Four wireframes showing the evolution of the search page ">
                         </picture>
                     </div>
                 </div>
-
                 <div class="container">
                     <div id="features">
                         <h4>KEY FEATURES</h4>
@@ -251,154 +241,131 @@
                     <div>
                         <h3>Results of the first MVP</h3>
                     </div>
-                    <div id="search">
-                        <div class="gif-container">
-                            <img class="gif" src="img/cassette/search-gif.gif" alt="how to search using keyword-gif">
-                            <img class="overlay" src="img/cassette/transparent-mask-for-gifs.png" alt="Overlay Image">
-                        </div>
-                        <div>
-                            <picture>
-                                <source srcset="img/cassette/highlight-left_@1x.png" media="(max-width:767px)">
-                                <img src="img/cassette/highlight-left_@2x.png" alt="highlight">
-                            </picture>
-
-                        </div>
-                        <div>
-                            <div><!--I want to place this text on the highlight image on its right side-->
-                                <h4>SEARCH FOR CONTENT</h4>
+                    <div id="search" class="margin-both highlight-right column-center">
+                        <div class="column-left-always">
+                            <div>
+                                <h5>SEARCH FOR CONTENT</h5>
                             </div>
                             <div>
-                                <h3>To find your favorite artist has never
-                                    been that easy!</h3>
+                                <p>To find your favorite artist has never
+                                    been that easy!</p>
+                            </div>
+                        </div>
+                        <div class="column-right-always">
+                            <div class="gif-container" style="margin: 0 auto">
+                                <img class="gif size" src="img/cassette/search-gif.gif"
+                                    alt="how to search using keyword-gif">
+                                <img class="overlay size" src="img/cassette/transparent-mask-for-gifs.png"
+                                    alt="Overlay Image">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="create" class="column-center">
+                        <div class="column-left-always">
+                            <div class="gif-container" style="margin: 0 auto">
+                                <img class="gif size" src="img/cassette/create-gif.gif"
+                                    alt="how to create a list - gif">
+                                <img class="overlay size" src="img/cassette/transparent-mask-for-gifs.png"
+                                    alt="Overlay Image">
+                            </div>
+                        </div>
+                        <div class="column-right-always">
+                            <div>
+                                <h5>CREATE PLAYLISTS</h5>
+                            </div>
+                            <div>
+                                <p>Just put your music on a loop and your
+                                    party never needs to be on hold!</p>
                             </div>
                         </div>
                     </div>
-                    <div id="create">
-                        <div class="gif-container">
-                            <img class="gif" src="img/cassette/create-gif.gif" alt="how to create a list - gif">
-                            <img class="overlay" src="img/cassette/transparent-mask-for-gifs.png" alt="Overlay Image">
-                        </div>
-                        <div>
+                    <div id="voice" class="margin-both column-center highlight-right">
+                        <div class="column-left-always">
                             <div>
-                                <picture>
-                                    <source srcset="img/cassette/highlight_right_@1x.png" media="(max-width:767px)">
-                                    <img src="img/cassette/highlight_right_@2x.png" alt="highlight">
-                                </picture>
-
+                                <h5>RECOVER SONGS USING AI</h5>
                             </div>
                             <div>
-                                <div><!--I want to place this text on the highlight image on its left side-->
-                                    <h4>CREATE PLAYLISTS</h4>
-                                </div>
-                                <div>
-                                    <h3>Just put your music on a loop and your
-                                        party never needs to be on hold!</h3>
-                                </div>
+                                <p>Humm or whistle! Our AI is going to
+                                    find that long lost song for you!
+                                </p>
                             </div>
                         </div>
-                        <div id="voice">
-                            <div class="gif-container">
-                                <img class="gif" src="img/cassette/voice-search-gif.gif"
+                        <div class="column-right-always ">
+                            <div class="gif-container" style="margin: 0 auto">
+                                <img class="gif size" src="img/cassette/voice-search-gif.gif"
                                     alt="how to find a song using voice search - gif">
-                                <img class="overlay" src="img/cassette/transparent-mask-for-gifs.png"
+                                <img class="overlay size" src="img/cassette/transparent-mask-for-gifs.png"
                                     alt="Overlay Image">
                             </div>
-                            <div>
-                                <div>
-                                    <picture>
-                                        <source srcset="img/cassette/highlight-left_@1x.png" media="(max-width:767px)">
-                                        <img src="img/cassette/highlight-left_@2x.png" alt="highlight">
-                                    </picture>
-                                </div>
-                                <div>
-                                    <div>
-                                        <!--I want to place this text on the highlight image on its right side-->
-                                        <h4>RECOVER SONGS USING AI</h4>
-                                    </div>
-                                    <div>
-                                        <h3>Humm or whistle! Our AI is going to
-                                            find that long lost song for you!</h3>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div id="lyrics" class="margin-both column-center">
+                        <div class="column-left-always">
+                            <div class="gif-container" style="margin: 0 auto">
+                                <img class="gif size" src="img/cassette/lyrics-gif.gif"
+                                    alt="how to do karaoke on smart TV - gif">
+                                <img class="overlay size" src="img/cassette/transparent-mask-for-gifs.png"
+                                    alt="Overlay Image">
                             </div>
-                            <div id="lyrics">
-                                <div class="gif-container">
-                                    <img class="gif" src="img/cassette/lyrics-gif.gif"
-                                        alt="how to do karaoke on smart TV - gif">
-                                    <img class="overlay" src="img/cassette/transparent-mask-for-gifs.png"
-                                        alt="Overlay Image">
-                                </div>
-                                <div>
-                                    <div>
-                                        <picture>
-                                            <source srcset="img/cassette/highlight_right_@1x.png"
-                                                media="(max-width:767px)">
-                                            <img src="img/cassette/highlight_right_@2x.png" alt="highlight">
-                                        </picture>
-
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <!--I want to place this text on the highlight image on its left side-->
-                                            <h4>STREAM LYRICS ONTO SMART TVS</h4>
-                                        </div>
-                                        <div>
-                                            <h3>You can transform any location into
-                                                your own karaoke bar!</h3>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="column-right-always">
+                            <div>
+                                <h5>STREAM LYRICS ONTO SMART TVS</h5>
                             </div>
                             <div>
-                                <div id="final">
-                                    <h4>FINAL DESIGN</h4>
-                                </div>
-                                <div>
-                                    <h3>Changes due to the feedback of usability testers</h3>
-                                </div>
-                                <div>
-                                    <picture>
-                                        <source srcset="img/cassette/mockups_@1x.png" media="(max-width:767px)">
-                                        <img src="img/cassette/mockups_@2x.png" alt="highlight">
-                                    </picture>
-                                </div>
-                            </div>
-                            <div>
-                                <div id="conclusion">
-                                    <h4>CONCLUSION
-                                    </h4>
-                                </div>
-                                <div>
-                                    <h3>Challenges</h3>
-                                    <p> Since Cassette was my first UI project, I had to go back to polish the
-                                        design
-                                        and add some animations a couple of months later. I noticed that I had
-                                        not
-                                        followed the proper rules for naming the documents at that time so I had
-                                        some difficulties to find them.
-                                    </p>
-                                </div>
-                                <div>
-                                    <h3>Next steps</h3>
-                                    <p> In the next iteration I would focus on creating the discussion boards.
-                                        This
-                                        feature would emphasize that this app is actually more about making
-                                        connections with others, and music is mainly the chemical bond that
-                                        creates
-                                        this connection between the app's users.
-                                    </p>
-                                </div>
+                                <p>You can transform any location into
+                                    your own karaoke bar!</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="container">
+                    <div id="final">
+                        <h4>FINAL DESIGN</h4>
+                    </div>
+                    <div>
+                        <h3>Changes due to the feedback of usability testers</h3>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="img/cassette/mockups_@1x.png" media="(max-width:767px)">
+                            <img class="margin-top" src="img/cassette/mockups_@2x.png" alt="highlight">
+                        </picture>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="conclusion">
+                        <h4>CONCLUSION
+                        </h4>
+                    </div>
+                    <div>
+                        <h3>Challenges</h3>
+                        <p> Since Cassette was my first UI project, I had to go back to polish the
+                            design
+                            and add some animations a couple of months later. I noticed that I had
+                            not
+                            followed the proper rules for naming the documents at that time so I had
+                            some difficulties to find them.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Next steps</h3>
+                        <p class="padding-bottom"> In the next iteration I would focus on creating the discussion
+                            boards.
+                            This
+                            feature would emphasize that this app is actually more about making
+                            connections with others, and music is mainly the chemical bond that
+                            creates
+                            this connection between the app's users.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
         </div>
     </main>
     <footer id="contact" class="display">
         <div class="container center-all">
-
             <h2>Get in Touch</h2>
             <p>Do you like my work and want to discuss opportunities? Please get in touch. Call:
                 <a href="tel:+12017365902" class="phone">+1 (201) 736-5902</a>. Prefer sending an email?
@@ -410,7 +377,7 @@
                 <ul class="center-social">
                     <li class="social"><a class="linkedin icon-circle"
                             href="https://www.linkedin.com/in/nikolett-muller" target="_blank">
-                            <svg fill="#000000" height="40px" width="40px" version="1.1" id="linkedin"
+                            <svg fill="#000000" height="50px" width="50px" version="1.1" id="linkedin"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 viewBox="-143 145 512 512" xml:space="preserve">
                                 <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9
@@ -421,7 +388,7 @@
                             </svg></a></li>
                     <li class="social"><a class="behance icon-circle" href="https://www.behance.net/nikolettmuller"
                             target="_blank">
-                            <svg fill="#000000" height="40px" width="40px" version="1.1" id="behance"
+                            <svg fill="#000000" height="50px" width="50px" version="1.1" id="behance"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 viewBox="0 0 512 512" xml:space="preserve">
                                 <g>
@@ -443,25 +410,23 @@
                             </svg></a></li>
                 </ul>
             </div>
+            <p class="copy">Copyright Nikolett Muller 2025</p>
+        </div>
+        <div>
             <div>
-                <div>
-                    <hr>
-                </div>
-                <div>
-                    <hr>
-                </div>
-                <div>
-                    <hr>
-                </div>
-                <div>
-                    <hr>
-                </div>
-                <div>
-                    <hr>
-                </div>
-                <div>
-                    <hr>
-                </div>
+                <hr>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div>
+                <hr>
             </div>
         </div>
     </footer>
