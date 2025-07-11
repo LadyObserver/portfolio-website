@@ -21,7 +21,7 @@ h5 {
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.3em;
+    font-size: 2.5em;
     font-weight: 900;
     color: #f4038c;
 }
@@ -43,7 +43,7 @@ h3 {
 
 h4 {
     font-size: 1.3em;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 h5 {
@@ -61,28 +61,51 @@ h6 {
     font-weight: 600;
 }
 
-
 /* Layout styling */
 
 img {
     width: 100%;
 }
 
+h4 {
+    padding-top: 1.2em;
+}
+
 .container {
     padding: 0 15px;
 }
+
 .margin-gif {
-    margin-top:62px;
-    margin-bottom:52px;
+    margin-top: 48px;
 }
 
-.margin-first{
-margin-top:px;
+/**#interview{
+    margin-top:30px;
+    margin-bottom:10px;
+}**/
+
+.margin-top {
+    margin-top: 35px;
 }
 
-.margin-last{
-    margin-bottom:30px;
+.margin-both {
+    margin-top: 35px;
+    margin-bottom: 35px
 }
+
+.padding-both {
+    margin-top: 35px;
+    padding-bottom: 35px;
+}
+
+.padding-bottom {
+    padding-bottom: 35px;
+}
+
+.padding-title {
+    padding-top: 20px
+}
+
 .photo-container {
     display: block;
     margin: 0 auto;
@@ -95,7 +118,6 @@ margin-top:px;
 }
 
 #projects .row {
-    padding-bottom: 14px;
     padding-top: 14px;
 }
 
@@ -104,7 +126,7 @@ margin-top:px;
 }
 
 .container-social {
-    margin-top: 48px;
+    margin-top: 40px;
 }
 
 #resume {
@@ -166,7 +188,6 @@ footer,
 .center-social {
     text-align: center;
     padding: 10px 0;
-    margin: 0 10px;
 }
 
 .social {
@@ -182,12 +203,12 @@ hr {
 }
 
 .copy {
-    margin-bottom: 38px;
+    margin-bottom: 32px;
 }
 
 #hero {
-    padding: 40px 0;
-    text-align:center;
+    padding: 12px 0;
+    text-align: center;
 }
 
 /** Overlay-text**/
@@ -207,34 +228,36 @@ hr {
 .overlay-text {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 35px;
     font-weight: 800;
     text-shadow: 1px 1px 5px #333f79;
     letter-spacing: 1px;
 }
 
 #change {
+    position: absolute;
     bottom: 150px;
     left: 20px;
+    font-weight: 800;
     color: white !important;
-    text-shadow: 1px 1px 4px #f56550
+    text-shadow: 1px 1px 4px #f56550;
+    letter-spacing: 1px;
 }
 
 #health {
     text-align: right;
-
 }
 
 #cassette-hero {
     color: white !important;
 }
 
-
 /** Table**/
 
 .table-container {
     width: 100%;
     overflow-x: auto;
+    margin: 35px 0;
 }
 
 table {
@@ -290,6 +313,66 @@ thead {
 
 }
 
+.gif-container-animation {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gif-image {
+    position: absolute;
+    top: 60%;
+    left: 43%;
+    width: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.overlay-animation {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.column-left-always {
+    width: 48%;
+    margin-right: 2%;
+    margin-left: 0;
+    float: left;
+}
+
+.column-right-always {
+    width: 48%;
+    margin-left: 2%;
+    margin-right: 0;
+    float: right;
+}
+
+.column-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.size {
+    max-width: 130px;
+}
+
+.highlight-right {
+    background: WHITE;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 20%, rgba(252, 67, 134, 1) 100%);
+    padding: 35px 0;
+}
 
 /** Specifics for vitala and cassette pages**/
 
@@ -323,7 +406,6 @@ footer p {
     color: #560591;
 }
 
-
 /** Links, buttons, pseudos **/
 
 a:link,
@@ -351,8 +433,6 @@ a:visited {
     padding-bottom: 4px;
 }
 
-.jump
-
 .social {
     display: inline-block;
 }
@@ -374,7 +454,6 @@ a:visited {
 .icon-circle.behance {
     background-color: transparent;
 }
-
 
 .linkedin:hover,
 .behance:hover {
@@ -435,20 +514,22 @@ a:visited {
     background-color: #f8e8ff;
     box-shadow: 1px 1px #f8e8ff;
     opacity: 0.8;
-
 }
 
-.phone:link, .jump:link {
+.phone:link,
+.jump:link {
     color: #f4038c;
     text-decoration: none;
 }
 
-.phone:hover, .jump:hover {
+.phone:hover,
+.jump:hover {
     text-decoration: underline;
     color: #f61bd2;
 }
 
-.phone:active, .jump:active {
+.phone:active,
+.jump:active {
     color: #f4038c;
 }
 
@@ -472,7 +553,6 @@ a:visited {
     }
 }
 
-
 /** Media queries **/
 
 @media only screen and (min-width: 640px) {
@@ -480,6 +560,10 @@ a:visited {
         max-width: 870px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    h4 {
+        padding-top: 2em;
     }
 
     header {
@@ -526,8 +610,12 @@ a:visited {
         display: table;
     }
 
+    .size {
+        max-width: 170px;
+    }
+
     h1 {
-        font-size: 2.5em;
+        font-size: 2.9em;
     }
 
     h2 {
@@ -539,12 +627,28 @@ a:visited {
     }
 
     h4 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
+    h5 {
+        font-size: 1.2em;
+    }
+
+    .features-p {
+
+        font-size: 1.1em;
+    }
+
+    .padding-title {
+        padding-top: 0px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
+
+    h4 {
+        padding-top: 3em;
+    }
 
     .col-lg-7 {
         width: 52%;
@@ -563,20 +667,10 @@ a:visited {
         margin: 0 !important;
     }
 
-   
-
-    .column-left {
-        width: 48%;
-        margin-right: 8px;
-        float: left;
+    .size {
+        max-width: 250px;
     }
 
-    .column-right {
-        width: 48%;
-        margin-left: 8px;
-        float: right;
-    } 
-    
     .col-1 {
         float: left;
         width: 32%;
@@ -601,7 +695,7 @@ a:visited {
     }
 
     h1 {
-        font-size: 2.8em;
+        font-size: 3.4em;
     }
 
     h2 {
@@ -612,7 +706,10 @@ a:visited {
 @media only screen and (min-width: 1440px) {
 
     h1 {
-        font-size: 3.2em;
+        font-size: 3.8em;
     }
 
+    h4 {
+        padding-top: 4em;
+    }
 }
