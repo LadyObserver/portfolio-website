@@ -11,6 +11,7 @@ body {
     color: #560591;
 }
 
+
 h1,
 h2,
 h3,
@@ -137,16 +138,13 @@ h4 {
 
 header {
     background-color: #f4038c;
-    text-align: center;
-    padding: 10px 0;
     position: relative;
-
 }
 
-header .logo {
-    max-width: 250px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+#svg-logo {
+    max-width: 170px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
 nav {
@@ -158,15 +156,39 @@ nav>ul {
     padding: 0;
 }
 
-nav>ul>li {
-    display: inline-block;
-}
-
 nav>ul>li>a {
-    padding: 0 15px;
+    padding: 0 20px;
     text-transform: lowercase;
     text-decoration: none;
     font-weight: 600;
+}
+
+.navtoggle li:not(:last-child) {
+    display: none;
+}
+
+.navtoggle,
+.navtoggle.responsive {
+    position: relative;
+}
+
+.navtoggle li .icon {
+    position: absolute;
+    right: 0;
+    top: 17px;
+    font-size: 20px;
+    padding-right: 0;
+}
+
+.navtoggle.responsive li {
+    display: block;
+}
+
+.jump_links {
+    position: sticky;
+    top: 0;
+    background: #fce9e5;
+    padding: 10px 30px;
 }
 
 footer,
@@ -409,7 +431,9 @@ footer p {
 /** Links, buttons, pseudos **/
 
 a:link,
-a:visited {
+a:visited,
+.page:link,
+.page:visited {
     color: white;
 }
 
@@ -419,10 +443,6 @@ a:visited {
     border-radius: 0px;
     padding-top: 4px;
     padding-bottom: 4px;
-}
-
-.page:active {
-    background-color: #f61bd2;
 }
 
 .page:hover {
@@ -516,22 +536,56 @@ a:visited {
     opacity: 0.8;
 }
 
-.phone:link,
-.jump:link {
+.phone:link {
     color: #f4038c;
     text-decoration: none;
 }
 
-.phone:hover,
-.jump:hover {
+.phone:hover {
     text-decoration: underline;
     color: #f61bd2;
 }
 
-.phone:active,
-.jump:active {
+.phone:active {
     color: #f4038c;
+    text-decoration: none;
 }
+
+.jump:link,
+.jump:visited {
+    color: #333f79;
+    text-decoration: none;
+}
+
+.jump:hover {
+    color: #f56550;
+    text-decoration: underline;
+}
+
+.jump:active {
+    color: #f56550;
+    text-decoration: none;
+}
+
+.jump.music:link {
+    color: #560591;
+    text-decoration: none;
+}
+
+.jump.music:hover {
+    color: #f61bd2;
+    text-decoration: underline;
+}
+
+.jump.music:active {
+    color: #f61bd2;
+    text-decoration: none;
+}
+
+.no_bullet {
+    list-style: none;
+}
+
 
 /** Animation **/
 
@@ -556,6 +610,26 @@ a:visited {
 /** Media queries **/
 
 @media only screen and (min-width: 640px) {
+    #svg-logo {
+        max-width: 250px;
+    }
+
+    nav>ul>li {
+        display: inline-block;
+    }
+
+    nav>ul {
+        margin: 1em 0;
+    }
+
+    .navtoggle li:not(:last-child) {
+        display: inline-block;
+    }
+
+    .navtoggle li:last-child {
+        display: none;
+    }
+
     .container {
         max-width: 870px;
         margin-left: auto;
@@ -568,7 +642,6 @@ a:visited {
 
     header {
         text-align: unset;
-        padding: 10px 0 13px;
     }
 
     nav {
