@@ -250,23 +250,16 @@ hr {
     display: block;
 }
 
-.overlay-text {
-    position: absolute;
-    bottom: 20px;
-    left: 35px;
-    font-weight: 800;
-    text-shadow: 1px 1px 5px #333f79;
-    letter-spacing: 1px;
-}
-
 #change {
     position: absolute;
-    bottom: 150px;
-    left: 20px;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+    text-align: center;
+    /* centers text within the available horizontal area */
     font-weight: 800;
     color: white !important;
-    text-shadow: 1px 1px 4px #f56550;
-    letter-spacing: 1px;
+    text-shadow: 2px 1px 2px #f56550;
 }
 
 #health {
