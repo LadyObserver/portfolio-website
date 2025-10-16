@@ -592,27 +592,9 @@ a:visited,
     text-decoration: none;
 }
 
-.jump:visited {
-    color: #333f79;
-    text-decoration: none;
-}
-
-.jump:hover {
-    color: #f56550;
-    text-decoration: underline;
-}
-
-.jump:active {
-    color: #f56550;
-    text-decoration: none;
-}
-
 .jump.music:link {
     text-decoration: none;
-
-.jump.music:hover {
-    color: #f61bd2;
-    text-decoration: underline;
+    color:#560591;
 }
 
 .jump.music:active {
