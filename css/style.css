@@ -184,12 +184,6 @@ nav>ul>li>a {
     padding-bottom: 15px;
 }
 
-.jump_links {
-    position: sticky;
-    top: 0;
-    background: #fce9e5;
-    padding: 10px 30px;
-}
 
 .top {
     background-color: #f3e13e;
@@ -234,6 +228,57 @@ hr {
 #hero {
     padding: 12px 0;
     text-align: center;
+}
+
+/*
+#dropdown {
+    position: sticky;
+    padding: 10px 30px;
+}*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    background: #333f79;
+}
+
+.cassette {
+background: #560591;
+}
+
+.dropbtn {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 180px;
+    border-radius: 4px;
+    list-style: none;
+    padding: 0;
+    z-index: 10;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #333f79;
+}
+
+.dropdown-content li a:hover {
+    background: #fce9e5;
+}
+
+/* class to show dropdown */
+.dropdown.show .dropdown-content {
+    display: block;
 }
 
 /** Overlay-text**/
@@ -547,7 +592,6 @@ a:visited,
     text-decoration: none;
 }
 
-.jump:link,
 .jump:visited {
     color: #333f79;
     text-decoration: none;
@@ -564,9 +608,7 @@ a:visited,
 }
 
 .jump.music:link {
-    color: #560591;
     text-decoration: none;
-}
 
 .jump.music:hover {
     color: #f61bd2;
@@ -575,11 +617,11 @@ a:visited,
 
 .jump.music:active {
     color: #f61bd2;
-    text-decoration: none;
 }
 
-.no_bullet {
-    list-style: none;
+.jump.recipe:active {
+    color: #f56550;
+
 }
 
 
