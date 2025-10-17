@@ -7,6 +7,7 @@ function menuToggle() {
   } else {
     x.className = 'navtoggle';
   }
+  updateStickyOffset();
 }
 
 // Dropdown for case study map
@@ -47,5 +48,7 @@ function updateStickyOffset() {
 
 // Run once and also whenever the navbar resizes
 updateStickyOffset();
+
 window.addEventListener('resize', updateStickyOffset);
 window.addEventListener('scroll', updateStickyOffset);
+
