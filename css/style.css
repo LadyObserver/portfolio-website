@@ -21,7 +21,7 @@ h5 {
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
+    font-size: 2.3em;
     font-weight: 900;
     color: #f4038c;
 }
@@ -68,7 +68,7 @@ img {
 }
 
 h4 {
-    padding-top: 1.2em;
+    padding-top: 1.1em;
 }
 
 .container {
@@ -77,6 +77,10 @@ h4 {
 
 .margin-gif {
     margin-top: 48px;
+}
+
+.padding-top {
+    padding-top: 35px;
 }
 
 .margin-top {
@@ -89,12 +93,12 @@ h4 {
 }
 
 .padding-both {
-    margin-top: 35px;
-    padding-bottom: 35px;
+    margin-top: 55px;
+    padding-bottom: 55px;
 }
 
 .padding-bottom {
-    padding-bottom: 35px;
+    padding-bottom: 55px;
 }
 
 .padding-title {
@@ -125,7 +129,7 @@ h4 {
 }
 
 #resume {
-    margin-bottom: 32px
+    margin-bottom: 32px;
 }
 
 /* NavBar and Footer */
@@ -328,6 +332,7 @@ hr {
     text-shadow: 2px 1px 2px #f56550;
 }
 
+
 #health {
     text-align: right;
 }
@@ -341,7 +346,12 @@ hr {
 .table-container {
     width: 100%;
     overflow-x: auto;
-    margin: 35px 0;
+    margin-bottom: 35px;
+}
+
+.title {
+    margin-top: 10px;
+    margin-bottom: 35px;
 }
 
 table {
@@ -680,10 +690,6 @@ a:visited,
         margin-right: auto;
     }
 
-    h4 {
-        padding-top: 2em;
-    }
-
     header {
         text-align: unset;
     }
@@ -763,9 +769,6 @@ a:visited,
 
 @media only screen and (min-width: 1024px) {
 
-    h4 {
-        padding-top: 3em;
-    }
 
     .col-lg-7 {
         width: 52%;
@@ -826,7 +829,4 @@ a:visited,
         font-size: 3.8em;
     }
 
-    h4 {
-        padding-top: 4em;
-    }
 }
