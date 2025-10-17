@@ -33,3 +33,19 @@ links.forEach(link => {
     dropdown.classList.remove('show');
   });
 });
+
+
+// Sticky dropdown (dynamic navbar above)
+
+const navbar = document.querySelector('header'); // your fixed navbar
+const root = document.documentElement;
+
+function updateStickyOffset() {
+  const height = navbar.offsetHeight;
+  root.style.setProperty('--navbar-height', `${height}px`);
+}
+
+// Run once and also whenever the navbar resizes
+updateStickyOffset();
+window.addEventListener('resize', updateStickyOffset);
+window.addEventListener('scroll', updateStickyOffset);
