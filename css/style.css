@@ -109,7 +109,7 @@ h4 {
 .photo-container {
     display: block;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 300px;
     opacity: 0.9
 }
 
@@ -775,6 +775,10 @@ a:visited,
     .padding-title {
         padding-top: 0px;
     }
+
+    .photo-container {
+        max-width:350px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -831,12 +835,19 @@ a:visited,
     h2 {
         font-size: 2.1em;
     }
+    .photo-container {
+        max-width:400px;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
 
     h1 {
         font-size: 3.8em;
+    }
+
+    .photo-container {
+        max-width:500px;
     }
 
 }
