@@ -143,10 +143,6 @@ header {
     z-index: 9999;
 }
 
-.lines {
-    margin-top: 69px;
-}
-
 #svg-logo {
     max-width: 170px;
     margin-top: 25px;
@@ -205,6 +201,7 @@ nav>ul>li>a {
 
 .top {
     background-color: #f3e13e;
+    margin-top: 110px;
 }
 
 footer {
