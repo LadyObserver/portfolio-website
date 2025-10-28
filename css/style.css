@@ -6,7 +6,7 @@
 body {
     background-color: #f3e13e;
     font-family: 'Roboto Slab', sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
     line-height: 1.6;
     color: #560591;
@@ -777,12 +777,15 @@ a:visited,
     }
 
     .photo-container {
-        max-width:350px;
+        max-width: 350px;
     }
 }
 
 @media only screen and (min-width: 1024px) {
 
+    body {
+        font-size: 19px;
+    }
 
     .col-lg-7 {
         width: 52%;
@@ -835,8 +838,9 @@ a:visited,
     h2 {
         font-size: 2.1em;
     }
+
     .photo-container {
-        max-width:400px;
+        max-width: 400px;
     }
 }
 
@@ -847,7 +851,6 @@ a:visited,
     }
 
     .photo-container {
-        max-width:500px;
+        max-width: 500px;
     }
-
 }
