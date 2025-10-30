@@ -781,6 +781,10 @@ a:visited {
         text-align: unset;
     }
 
+    .contact {
+    padding-bottom: 0px;
+}
+
     nav {
         width: auto;
         float: right;
