@@ -70,7 +70,7 @@ if (navMenu) {
 
   // Reset timer on click inside menu (except links)
   navMenu.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A' || e.target.closest('a')) return; 
+    if (e.target.tagName === 'A' || e.target.closest('a')) return;
     startMenuTimer();
   });
 }
@@ -79,7 +79,7 @@ if (navMenu) {
 window.addEventListener('click', (e) => {
   const nav = document.getElementById('myNavtoggle');
   const isMenu = nav.contains(e.target);
-  const isButton = e.target.matches('.hamburger, .hamburger *'); 
+  const isButton = e.target.matches('.hamburger, .hamburger *');
 
   if (!isMenu && !isButton) {
     closeMenu();
@@ -122,3 +122,69 @@ function updateStickyOffset() {
 updateStickyOffset();
 window.addEventListener('resize', updateStickyOffset);
 window.addEventListener('scroll', updateStickyOffset);
+
+// --- Pausing GIFs ---
+
+document.querySelectorAll('.gif-wrapper').forEach(wrapper => {
+  const gif = wrapper.querySelector('.gif-image');
+  const button = wrapper.querySelector('.pause');
+  const icon = button.querySelector('i');
+  let isPaused = false;
+
+  button.addEventListener('click', () => {
+    if (!isPaused) {
+      gif.src = gif.dataset.still;
+      icon.classList.remove('fa-stop');
+      icon.classList.add('fa-redo');
+      isPaused = true;
+    } else {
+      gif.src = gif.dataset.animated + '?t=' + Date.now();
+      icon.classList.remove('fa-redo');
+      icon.classList.add('fa-stop');
+      isPaused = false;
+    }
+  });
+});
+
+document.querySelectorAll('.gif-container-animation').forEach(wrapper => {
+  const gif = wrapper.querySelector('.gif-animation');
+  const button = wrapper.querySelector('.pause i'); // icon inside button
+  let isPaused = false;
+
+  wrapper.querySelector('.pause').addEventListener('click', () => {
+    if (!isPaused) {
+      // Show still frame
+      gif.src = gif.dataset.still;
+      button.classList.remove('fa-stop');
+      button.classList.add('fa-redo');
+      isPaused = true;
+    } else {
+      // Play GIF (cache-busting)
+      gif.src = gif.dataset.animated + '?t=' + Date.now();
+      button.classList.remove('fa-redo');
+      button.classList.add('fa-stop');
+      isPaused = false;
+    }
+  });
+});
+
+document.querySelectorAll('.gif-container').forEach(container => {
+  const gif = container.querySelector('.gif');
+  const button = container.querySelector('.pause');
+  const icon = button.querySelector('i');
+  let isPaused = false;
+
+  button.addEventListener('click', () => {
+    if (!isPaused) {
+      gif.src = gif.dataset.still;
+      icon.classList.remove('fa-stop');
+      icon.classList.add('fa-redo');
+      isPaused = true;
+    } else {
+      gif.src = gif.dataset.animated + '?t=' + Date.now();
+      icon.classList.remove('fa-redo');
+      icon.classList.add('fa-stop');
+      isPaused = false;
+    }
+  });
+});
