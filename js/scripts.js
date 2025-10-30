@@ -123,68 +123,42 @@ updateStickyOffset();
 window.addEventListener('resize', updateStickyOffset);
 window.addEventListener('scroll', updateStickyOffset);
 
-// --- Pausing GIFs ---
 
-document.querySelectorAll('.gif-wrapper').forEach(wrapper => {
-  const gif = wrapper.querySelector('.gif-image');
-  const button = wrapper.querySelector('.pause');
-  const icon = button.querySelector('i');
-  let isPaused = false;
+// --- Pausing / Restarting GIFs ---
 
-  button.addEventListener('click', () => {
-    if (!isPaused) {
-      gif.src = gif.dataset.still;
-      icon.classList.remove('fa-stop');
-      icon.classList.add('fa-redo');
-      isPaused = true;
-    } else {
-      gif.src = gif.dataset.animated + '?t=' + Date.now();
-      icon.classList.remove('fa-redo');
-      icon.classList.add('fa-stop');
-      isPaused = false;
+document.querySelectorAll('.gif-wrapper, .gif-container, .gif-container-animation').forEach(wrapper => {
+    // Detect the GIF inside this wrapper (any possible class)
+    const gif = wrapper.querySelector('.gif, .gif-animation, .gif-image');
+    const button = wrapper.querySelector('.pause');
+    if (!gif || !button) return; // skip if missing
+
+    const icon = button.querySelector('i');
+    const label = button.querySelector('.pause-label');
+    let isPaused = false;
+
+    // Update tooltip text based on current state
+    function updateTooltip() {
+        label.textContent = isPaused ? 'Restart' : 'Stop';
     }
-  });
-});
 
-document.querySelectorAll('.gif-container-animation').forEach(wrapper => {
-  const gif = wrapper.querySelector('.gif-animation');
-  const button = wrapper.querySelector('.pause i'); // icon inside button
-  let isPaused = false;
+    // Toggle GIF on click
+    button.addEventListener('click', () => {
+        if (!isPaused) {
+            // Pause GIF: show still frame
+            gif.src = gif.dataset.still;
+            icon.classList.remove('fa-stop');
+            icon.classList.add('fa-redo'); // redo icon
+            isPaused = true;
+        } else {
+            // Restart GIF: play animated GIF with cache-busting
+            gif.src = gif.dataset.animated + '?t=' + Date.now();
+            icon.classList.remove('fa-redo');
+            icon.classList.add('fa-stop'); // stop icon
+            isPaused = false;
+        }
+        updateTooltip(); // update label immediately
+    });
 
-  wrapper.querySelector('.pause').addEventListener('click', () => {
-    if (!isPaused) {
-      // Show still frame
-      gif.src = gif.dataset.still;
-      button.classList.remove('fa-stop');
-      button.classList.add('fa-redo');
-      isPaused = true;
-    } else {
-      // Play GIF (cache-busting)
-      gif.src = gif.dataset.animated + '?t=' + Date.now();
-      button.classList.remove('fa-redo');
-      button.classList.add('fa-stop');
-      isPaused = false;
-    }
-  });
-});
-
-document.querySelectorAll('.gif-container').forEach(container => {
-  const gif = container.querySelector('.gif');
-  const button = container.querySelector('.pause');
-  const icon = button.querySelector('i');
-  let isPaused = false;
-
-  button.addEventListener('click', () => {
-    if (!isPaused) {
-      gif.src = gif.dataset.still;
-      icon.classList.remove('fa-stop');
-      icon.classList.add('fa-redo');
-      isPaused = true;
-    } else {
-      gif.src = gif.dataset.animated + '?t=' + Date.now();
-      icon.classList.remove('fa-redo');
-      icon.classList.add('fa-stop');
-      isPaused = false;
-    }
-  });
+    // Update tooltip on hover
+    button.addEventListener('mouseenter', updateTooltip);
 });
