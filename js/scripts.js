@@ -86,27 +86,58 @@ window.addEventListener('click', (e) => {
   }
 });
 
-// --- Dropdown for case study map ---
-const dropdown = document.querySelector('.dropdown');
+// --- Dropdown for case study map with auto-close ---
+const caseDropdown = document.querySelector('.dropdown');
 
-if (dropdown) {
-  const button = dropdown.querySelector('.dropbtn');
-  const links = dropdown.querySelectorAll('.dropdown-content a');
 
-  button.addEventListener('click', () => {
-    dropdown.classList.toggle('show');
+  let dropdownTimer;
+  const AUTO_CLOSE_DROPDOWN = 3000; // 3 seconds
+
+  // Toggle dropdown
+  function toggleDropdown() {
+    caseDropdown.classList.toggle('show');
+    if (caseDropdown.classList.contains('show')) startDropdownTimer();
+    else clearDropdownTimer();
+  }
+
+  // Auto-close functions
+  function closeDropdown() {
+    caseDropdown.classList.remove('show');
+    clearDropdownTimer();
+  }
+
+  function startDropdownTimer() {
+    clearDropdownTimer();
+    dropdownTimer = setTimeout(closeDropdown, AUTO_CLOSE_DROPDOWN);
+  }
+
+  function clearDropdownTimer() {
+    clearTimeout(dropdownTimer);
+  }
+
+  // Reset timer on hover over links
+  links.forEach(link => {
+    link.addEventListener('mouseenter', startDropdownTimer);
+    // Also close dropdown when clicking a link
+    link.addEventListener('click', () => closeDropdown());
   });
 
+  // Reset timer if clicking inside dropdown but not links
+  caseDropdown.addEventListener('click', (e) => {
+    if (!e.target.closest('a')) startDropdownTimer();
+  });
+
+  // Close dropdown when clicking outside
   window.addEventListener('click', (e) => {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove('show');
+    if (!caseDropdown.contains(e.target) && !button.contains(e.target)) {
+      closeDropdown();
     }
   });
 
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      dropdown.classList.remove('show');
-    });
+  // Attach click to toggle
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDropdown();
   });
 }
 
@@ -161,7 +192,10 @@ document.querySelectorAll('.gif-wrapper, .gif-container, .gif-container-animatio
 
     // Update tooltip on hover
     button.addEventListener('mouseenter', updateTooltip);
-});//---Email dropdown---
+});
+
+
+//---Email dropdown---
 
 document.addEventListener('DOMContentLoaded', () => {
   const emailButton = document.getElementById('emailButton');
