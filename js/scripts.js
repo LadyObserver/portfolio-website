@@ -157,6 +157,27 @@ updateStickyOffset();
 window.addEventListener('resize', updateStickyOffset);
 window.addEventListener('scroll', updateStickyOffset);
 
+document.addEventListener('DOMContentLoaded', () => {
+  const stickyDropdown = document.querySelector('.dropdown'); // adjust selector if needed
+  const footer = document.querySelector('footer');
+
+  if (stickyDropdown && footer) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Footer visible → hide dropdown
+          stickyDropdown.classList.remove('show');
+          stickyDropdown.classList.add('hidden-by-footer');
+        } else {
+          // Footer out of view → restore dropdown visibility
+          stickyDropdown.classList.remove('hidden-by-footer');
+        }
+      });
+    }, { threshold: 0.7 });
+
+    observer.observe(footer);
+  }
+});
 
 // --- Pausing / Restarting GIFs ---
 
@@ -290,3 +311,5 @@ function handlePhoneClick(event) {
     });
   }
 }
+
+

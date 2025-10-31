@@ -297,7 +297,7 @@ hr {
     top: var(--navbar-height, 64px);
     padding-top: 5px;
     padding-bottom: 5px;
-    z-index: 100000;
+    z-index: 9000;
     background-color: white;
 }
 
@@ -326,6 +326,12 @@ hr {
 
 .cassette-dropdown {
     border: 3px solid #560591;
+}
+
+.dropdown.hidden-by-footer {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 /* Email dropdown */
