@@ -89,6 +89,9 @@ window.addEventListener('click', (e) => {
 // --- Dropdown for case study map with auto-close ---
 const caseDropdown = document.querySelector('.dropdown');
 
+if (caseDropdown) {
+  const button = caseDropdown.querySelector('.dropbtn');
+  const links = caseDropdown.querySelectorAll('.dropdown-content a');
 
   let dropdownTimer;
   const AUTO_CLOSE_DROPDOWN = 3000; // 3 seconds
@@ -271,3 +274,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+//Copy phone number
+
+function handlePhoneClick(event) {
+  event.preventDefault(); // prevent default anchor behavior
+
+  const number = '+12017365902';
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    window.location.href = 'tel:' + number; // trigger call
+  } else {
+    navigator.clipboard.writeText(number).then(() => {
+      alert('Phone number copied!');
+    });
+  }
+}
