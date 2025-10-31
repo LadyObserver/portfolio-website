@@ -144,6 +144,17 @@ if (caseDropdown) {
   });
 }
 
+// Down caret rotation
+
+const dropbtn = document.querySelector('.dropdown-toggle');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+dropbtn.addEventListener('click', () => {
+    dropbtn.classList.toggle('active'); // toggle the caret rotation
+    dropdownContent.classList.toggle('show'); // toggle the dropdown itself
+});
+
+
 // --- Sticky dropdown (dynamic navbar above) ---
 const navbar = document.querySelector('header');
 const root = document.documentElement;
@@ -157,6 +168,8 @@ updateStickyOffset();
 window.addEventListener('resize', updateStickyOffset);
 window.addEventListener('scroll', updateStickyOffset);
 
+
+// Hiding sticky bar when footer is close
 document.addEventListener('DOMContentLoaded', () => {
   const stickyDropdown = document.querySelector('.dropdown'); // adjust selector if needed
   const footer = document.querySelector('footer');
