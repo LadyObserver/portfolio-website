@@ -1,3 +1,4 @@
+/* Font */
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -66,7 +67,7 @@ strong {
     font-weight: 600;
 }
 
-/* Layout styling */
+/* Layout styling (margin, padding) */
 
 img {
     width: 100%;
@@ -151,6 +152,9 @@ header {
     max-width: 170px;
     margin-top: 25px;
     margin-bottom: 15px;
+}
+.navigation {
+    font-size:18px;
 }
 
 nav {
@@ -248,7 +252,7 @@ hr {
     text-align: center;
 }
 
-
+/* Case study dropdown */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -312,7 +316,6 @@ hr {
     scroll-margin-top: 130px;
 }
 
-/* class to show dropdown */
 .dropdown.show .dropdown-content {
     display: block;
 }
@@ -367,7 +370,6 @@ hr {
     left: 24px;
     transform: translateY(-50%);
     text-align: center;
-    /* centers text within the available horizontal area */
     font-weight: 800;
     color: white !important;
     text-shadow: 2px 1px 2px #f56550;
@@ -398,7 +400,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     min-width: 600px;
-    /* on smaller screens */
 }
 
 th {
@@ -420,7 +421,7 @@ thead {
     background-color: #fce9e5;
 }
 
-/** Gif and masks**/
+/** GIF and masks**/
 
 .gif-container {
     position: relative;
@@ -476,42 +477,37 @@ thead {
     display: inline-block;
     width: 100%;
     max-width: 1200px;
-    /* optional max size */
 }
 
 .gif-image {
     display: block;
     width: 100%;
-    /* GIF fills wrapper */
     height: auto;
-    /* keeps aspect ratio */
 }
 
 .pause {
     position: absolute;
     bottom: 5%;
     right: 5%;
-    width: 30px;           /* default size */
+    width: 30px;
     color: white;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 5;}
+    z-index: 5;
+}
 
 .gif-container .pause {
     bottom: 3%;
-    /* distance from top of GIF */
     left: 5%;
-    /* left corner of GIF */
 }
 
 .pause:hover {
     background: rgba(0, 0, 0, 0.8);
-    /* darkens background */
 }
 
 .pause i {
@@ -519,7 +515,7 @@ thead {
     line-height: 1;
 }
 
-/* Tooltip/label */
+/* GIF Tooltip */
 .pause-label {
     position: absolute;
     bottom: 110%;
@@ -539,6 +535,8 @@ thead {
 .pause:hover .pause-label {
     opacity: 0.8;
 }
+
+/* Columns */
 
 .column-left-always {
     width: 48%;
@@ -576,7 +574,7 @@ thead {
     padding: 35px 0;
 }
 
-/** Specifics for vitala and cassette pages**/
+/** Specifics for Vitala and Cassette pages**/
 
 #vitala,
 #cassette {
@@ -650,6 +648,7 @@ a:visited {
     height: 40px;
     border-radius: 50%;
     margin: 0 8px;
+    margin-top: 50px;
 }
 
 .icon-circle.linkedin {
@@ -680,7 +679,7 @@ a:visited {
     padding: 10px 20px;
     border-radius: 16px;
     box-shadow: 2px 5px blueviolet;
-    margin-top: 8px;
+    margin-top: 15px;
     transition-duration: 0.5s opacity;
 }
 
@@ -777,7 +776,6 @@ a:visited {
 
 /** Animation **/
 
-
 #svg-logo path {
     fill: none;
     stroke: white;
@@ -829,8 +827,8 @@ a:visited {
     }
 
     .contact {
-    padding-bottom: 0px;
-}
+        padding-bottom: 0px;
+    }
 
     nav {
         width: auto;
@@ -911,6 +909,7 @@ a:visited {
     .pause {
         width: 35px;
     }
+
     .pause i {
         font-size: 18px;
     }
@@ -981,6 +980,7 @@ a:visited {
     .pause {
         width: 40px;
     }
+
     .pause i {
         font-size: 20px;
     }
