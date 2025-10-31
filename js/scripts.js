@@ -161,4 +161,79 @@ document.querySelectorAll('.gif-wrapper, .gif-container, .gif-container-animatio
 
     // Update tooltip on hover
     button.addEventListener('mouseenter', updateTooltip);
+});//---Email dropdown---
+
+document.addEventListener('DOMContentLoaded', () => {
+  const emailButton = document.getElementById('emailButton');
+  const emailDropdown = document.getElementById('emailDropdown');
+  const email = 'nikolett.muller@gmail.com';
+
+  if (!emailButton || !emailDropdown) return; // safety check
+
+  // --- Auto-close timer setup ---
+  let emailTimer;
+  const AUTO_CLOSE_EMAIL = 3000;
+  function startEmailTimer() {
+    clearEmailTimer();
+    emailTimer = setTimeout(closeEmailDropdown, AUTO_CLOSE_EMAIL);
+  }
+  function clearEmailTimer() {
+    clearTimeout(emailTimer);
+  }
+  function closeEmailDropdown() {
+    emailDropdown.classList.remove('show');
+    clearEmailTimer();
+  }
+
+  // --- Toggle dropdown ---
+  function emailToggle() {
+    emailDropdown.classList.toggle('show');
+    if (emailDropdown.classList.contains('show')) startEmailTimer();
+    else clearEmailTimer();
+  }
+
+  // --- Close if clicking outside ---
+  window.addEventListener('click', e => {
+    if (!emailDropdown.contains(e.target) && !emailButton.contains(e.target)) {
+      closeEmailDropdown();
+    }
+  });
+
+  // --- Attach click to toggle dropdown ---
+  emailButton.addEventListener('click', e => {
+    e.stopPropagation(); // prevent closing immediately
+    emailToggle();
+  });
+
+  // --- Reset timer on hover inside dropdown ---
+  emailDropdown.querySelectorAll('a').forEach(link => {
+    link.addEventListener('mouseenter', startEmailTimer);
+
+    // Handle specific link actions and prevent default jump
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      closeEmailDropdown();
+
+      const id = link.id;
+
+      if (id === 'gmailLink') {
+        window.open(`https://mail.google.com/mail/?view=cm&to=${email}`, '_blank');
+      } else if (id === 'outlookLink') {
+        window.open(`https://outlook.office.com/mail/deeplink/compose?to=${email}`, '_blank');
+      } else if (id === 'yahooLink') {
+        window.open(`https://mail.yahoo.com/d/compose?to=${email}`, '_blank');
+      } else if (id === 'copyEmail') {
+        navigator.clipboard.writeText(email).then(() => {
+          alert('Email address copied!');
+        });
+      }
+    });
+  });
+
+  // --- Click inside dropdown (not links) resets timer ---
+  emailDropdown.addEventListener('click', (e) => {
+    if (e.target.tagName !== 'A') startEmailTimer();
+  });
+
 });
+

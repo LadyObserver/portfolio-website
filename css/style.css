@@ -325,6 +325,28 @@ hr {
     border: 3px solid #560591;
 }
 
+/* Email dropdown */
+.email-wrapper {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+.email-dropdown {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 160px;
+    max-width: 250px;
+    background-color: #f8e8ff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
 /** Overlay-text**/
 
 .image-container {
@@ -675,21 +697,22 @@ a:visited {
 }
 
 .button.contact {
+    all: unset;
+    /* removes all native button styles */
+    box-sizing: border-box;
     color: #f4038c;
-    display: inline-block;
     background-color: #f8e8ff;
-    text-decoration: none;
     font-weight: 500;
-    padding: 10px 20px;
     border-radius: 16px;
     box-shadow: 2px 5px #f4038c;
+    padding: 10px 20px;
+    margin-top: 15px;
     transition-duration: 0.5s opacity;
 }
 
 .button.contact:hover {
     color: white;
-    background: rgba(246, 27, 210, .6);
-    opacity: 0.8;
+    background: #f56a97;
 }
 
 .button.contact:active {
@@ -699,7 +722,31 @@ a:visited {
     opacity: 0.8;
 }
 
-.phone:link {
+.email-dropdown a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    color: #f4038c;
+    text-decoration: none;
+}
+
+.email-dropdown a:hover {
+    background: #f56a97;
+    color: white;
+}
+
+.email-dropdown a:active {
+    color: #f4038c;
+    background-color: #f1edc3;
+}
+
+.email-dropdown.show {
+    display: block;
+}
+
+.phone:link,
+.phone:visited {
     color: #f4038c;
     text-decoration: none;
 }
