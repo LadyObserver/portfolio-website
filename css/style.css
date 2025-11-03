@@ -337,34 +337,34 @@ hr {
 }
 
 .dropdown.hidden-by-footer {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 .dropdown-toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.4em;
-  cursor: pointer;
-  background: none;
-  border: none;
-  font: inherit;
-  color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
 }
 
 .caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid currentColor;
-  transition: transform 0.3s ease;
+    display: inline-block;
+    width: 0;
     height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid currentColor;
+    transition: transform 0.3s ease;
 }
+
 .dropdown-toggle.active .caret {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 /* Email dropdown */
