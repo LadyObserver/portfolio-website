@@ -213,45 +213,44 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- Pausing / Restarting GIFs ---
 
 document.querySelectorAll('.gif-wrapper, .gif-container, .gif-container-animation').forEach(wrapper => {
-    // Detect the GIF inside this wrapper (any possible class)
-    const gif = wrapper.querySelector('.gif, .gif-animation, .gif-image');
-    const button = wrapper.querySelector('.pause');
-    if (!gif || !button) return; // skip if missing
+  // Detect the GIF inside this wrapper (any possible class)
+  const gif = wrapper.querySelector('.gif, .gif-animation, .gif-image');
+  const button = wrapper.querySelector('.pause');
+  if (!gif || !button) return; // skip if missing
 
-    const icon = button.querySelector('i');
-    const label = button.querySelector('.pause-label');
-    let isPaused = false;
+  const icon = button.querySelector('i');
+  const label = button.querySelector('.pause-label');
+  let isPaused = false;
 
-    // Update tooltip text based on current state
-    function updateTooltip() {
-        label.textContent = isPaused ? 'Restart' : 'Stop';
+  // Update tooltip text based on current state
+  function updateTooltip() {
+    label.textContent = isPaused ? 'Restart' : 'Stop';
+  }
+
+  // Toggle GIF on click
+  button.addEventListener('click', () => {
+    if (!isPaused) {
+      // Pause GIF: show still frame
+      gif.src = gif.dataset.still;
+      icon.classList.remove('fa-stop');
+      icon.classList.add('fa-redo'); // redo icon
+      isPaused = true;
+    } else {
+      // Restart GIF: play animated GIF with cache-busting
+      gif.src = gif.dataset.animated + '?t=' + Date.now();
+      icon.classList.remove('fa-redo');
+      icon.classList.add('fa-stop'); // stop icon
+      isPaused = false;
     }
+    updateTooltip(); // update label immediately
+  });
 
-    // Toggle GIF on click
-    button.addEventListener('click', () => {
-        if (!isPaused) {
-            // Pause GIF: show still frame
-            gif.src = gif.dataset.still;
-            icon.classList.remove('fa-stop');
-            icon.classList.add('fa-redo'); // redo icon
-            isPaused = true;
-        } else {
-            // Restart GIF: play animated GIF with cache-busting
-            gif.src = gif.dataset.animated + '?t=' + Date.now();
-            icon.classList.remove('fa-redo');
-            icon.classList.add('fa-stop'); // stop icon
-            isPaused = false;
-        }
-        updateTooltip(); // update label immediately
-    });
-
-    // Update tooltip on hover
-    button.addEventListener('mouseenter', updateTooltip);
+  // Update tooltip on hover
+  button.addEventListener('mouseenter', updateTooltip);
 });
 
 
 //---Email dropdown---
-
 document.addEventListener('DOMContentLoaded', () => {
   const emailButton = document.getElementById('emailButton');
   const emailDropdown = document.getElementById('emailDropdown');
@@ -283,6 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Close if clicking outside ---
   window.addEventListener('click', e => {
+
     if (!emailDropdown.contains(e.target) && !emailButton.contains(e.target)) {
       closeEmailDropdown();
     }
