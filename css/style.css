@@ -86,7 +86,7 @@ img {
 }
 
 .padding-top {
-    padding-top: 35px;
+    padding-top: 20px;
 }
 
 .margin-top {
@@ -99,12 +99,12 @@ img {
 }
 
 .padding-both {
-    margin-top: 55px;
-    padding-bottom: 55px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .padding-bottom {
-    padding-bottom: 55px;
+    padding-bottom: 15px;
 }
 
 .padding-title {
@@ -136,6 +136,10 @@ img {
 
 #resume {
     margin-bottom: 32px;
+}
+
+#how {
+    margin-bottom: 0px !important;
 }
 
 /* NavBar and Footer */
@@ -251,10 +255,6 @@ hr {
     margin: 5px auto;
 }
 
-.copy {
-    margin-bottom: 32px;
-}
-
 #hero {
     padding: 12px 0;
     text-align: center;
@@ -283,7 +283,6 @@ hr {
     background: white;
     border: 3px solid #333f79;
     border-radius: 1px;
-    min-width: 180px;
     list-style: none;
     padding: 0;
     margin: 5px 0px;
@@ -726,7 +725,6 @@ a:visited {
     height: 40px;
     border-radius: 50%;
     margin: 0 8px;
-    margin-top: 50px;
 }
 
 .icon-circle.linkedin {
@@ -775,7 +773,6 @@ a:visited {
 
 .button.contact {
     all: unset;
-    /* removes all native button styles */
     box-sizing: border-box;
     color: #f4038c;
     background-color: #f8e8ff;
