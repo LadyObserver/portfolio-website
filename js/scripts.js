@@ -104,7 +104,11 @@ if (dropdown && dropbtn && dropdownContent) {
     resetTimer();
   }
 
-  const AUTO_CLOSE_DROPDOWN = 3000; // 3 seconds
+  function closeDropdown() {
+    dropdown.classList.remove('show');
+    dropbtn.classList.remove('active'); // reset caret
+    clearTimer();
+  }
 
   function toggleDropdown() {
     dropdown.classList.contains('show') ? closeDropdown() : openDropdown();
@@ -150,9 +154,6 @@ if (dropdown && dropbtn && dropdownContent) {
       resetTimer();
     }
   });
-}
-
-// Down caret rotation
 
   // --- Scroll anywhere → start 3s countdown only if mouse is outside dropdown ---
   window.addEventListener('scroll', () => {
