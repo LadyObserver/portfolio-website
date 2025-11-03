@@ -154,7 +154,6 @@ header {
     margin-bottom: 15px;
 }
 .navigation {
-    font-size:18px;
 }
 
 nav {
@@ -186,7 +185,6 @@ nav>ul>li>a {
 .navtoggle li .icon {
     position: absolute;
     right: 0;
-    top: 17px;
     font-size: 20px;
     padding-right: 0;
 }
