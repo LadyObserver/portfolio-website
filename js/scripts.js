@@ -87,73 +87,93 @@ window.addEventListener('click', (e) => {
 });
 
 // --- Dropdown for case study map with auto-close ---
-const caseDropdown = document.querySelector('.dropdown');
+const dropdown = document.querySelector('.dropdown');
+const dropbtn = dropdown?.querySelector('.dropdown-toggle, .dropbtn');
+const dropdownContent = dropdown?.querySelector('.dropdown-content');
+const links = dropdownContent?.querySelectorAll('a');
 
-if (caseDropdown) {
-  const button = caseDropdown.querySelector('.dropbtn');
-  const links = caseDropdown.querySelectorAll('.dropdown-content a');
+if (dropdown && dropbtn && dropdownContent) {
+  const AUTO_CLOSE_DELAY = 3000; // 3 seconds
+  let closeTimer;
+  let scrollTimer = null;
 
-  let dropdownTimer;
+  // --- Open / Close functions ---
+  function openDropdown() {
+    dropdown.classList.add('show');
+    dropbtn.classList.add('active'); // rotate caret
+    resetTimer();
+  }
+
   const AUTO_CLOSE_DROPDOWN = 3000; // 3 seconds
 
-  // Toggle dropdown
   function toggleDropdown() {
-    caseDropdown.classList.toggle('show');
-    if (caseDropdown.classList.contains('show')) startDropdownTimer();
-    else clearDropdownTimer();
+    dropdown.classList.contains('show') ? closeDropdown() : openDropdown();
   }
 
-  // Auto-close functions
-  function closeDropdown() {
-    caseDropdown.classList.remove('show');
-    clearDropdownTimer();
+  function resetTimer() {
+    clearTimer();
+    closeTimer = setTimeout(closeDropdown, AUTO_CLOSE_DELAY);
   }
 
-  function startDropdownTimer() {
-    clearDropdownTimer();
-    dropdownTimer = setTimeout(closeDropdown, AUTO_CLOSE_DROPDOWN);
+  function clearTimer() {
+    clearTimeout(closeTimer);
   }
 
-  function clearDropdownTimer() {
-    clearTimeout(dropdownTimer);
-  }
+  // --- Event listeners ---
 
-  // Reset timer on hover over links
+  dropbtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDropdown();
+  });
+
   links.forEach(link => {
-    link.addEventListener('mouseenter', startDropdownTimer);
-    // Also close dropdown when clicking a link
-    link.addEventListener('click', () => closeDropdown());
+    link.addEventListener('mouseenter', resetTimer);
+    link.addEventListener('click', closeDropdown);
   });
 
-  // Reset timer if clicking inside dropdown but not links
-  caseDropdown.addEventListener('click', (e) => {
-    if (!e.target.closest('a')) startDropdownTimer();
+  dropdown.addEventListener('click', (e) => {
+    if (!e.target.closest('a')) resetTimer();
   });
 
-  // Close dropdown when clicking outside
+  dropdown.addEventListener('mouseleave', () => {
+    if (dropdown.classList.contains('show')) resetTimer();
+  });
+
   window.addEventListener('click', (e) => {
-    if (!caseDropdown.contains(e.target) && !button.contains(e.target)) {
+    if (!dropdown.contains(e.target) && !dropbtn.contains(e.target)) {
       closeDropdown();
     }
   });
 
-  // Attach click to toggle
-  button.addEventListener('click', (e) => {
-    e.stopPropagation();
-    toggleDropdown();
+  window.addEventListener('mouseout', (e) => {
+    if (dropdown.classList.contains('show') && !e.relatedTarget) {
+      resetTimer();
+    }
   });
 }
 
 // Down caret rotation
 
-const dropbtn = document.querySelector('.dropdown-toggle');
-const dropdownContent = document.querySelector('.dropdown-content');
+  // --- Scroll anywhere → start 3s countdown only if mouse is outside dropdown ---
+  window.addEventListener('scroll', () => {
+    if (dropdown.classList.contains('show') && !dropdown.matches(':hover')) {
+      if (!scrollTimer) {
+        scrollTimer = setTimeout(() => {
+          closeDropdown();
+          scrollTimer = null;
+        }, AUTO_CLOSE_DELAY);
+      }
+    }
+  });
 
-dropbtn.addEventListener('click', () => {
-    dropbtn.classList.toggle('active'); // toggle the caret rotation
-    dropdownContent.classList.toggle('show'); // toggle the dropdown itself
-});
-
+  // --- Stop scroll timer when mouse enters dropdown ---
+  dropdown.addEventListener('mouseenter', () => {
+    if (scrollTimer) {
+      clearTimeout(scrollTimer);
+      scrollTimer = null;
+    }
+  });
+}
 
 // --- Sticky dropdown (dynamic navbar above) ---
 const navbar = document.querySelector('header');
@@ -168,21 +188,18 @@ updateStickyOffset();
 window.addEventListener('resize', updateStickyOffset);
 window.addEventListener('scroll', updateStickyOffset);
 
-
 // Hiding sticky bar when footer is close
 document.addEventListener('DOMContentLoaded', () => {
-  const stickyDropdown = document.querySelector('.dropdown'); // adjust selector if needed
+  const stickyDropdown = document.querySelector('.dropdown');
   const footer = document.querySelector('footer');
 
   if (stickyDropdown && footer) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Footer visible → hide dropdown
           stickyDropdown.classList.remove('show');
           stickyDropdown.classList.add('hidden-by-footer');
         } else {
-          // Footer out of view → restore dropdown visibility
           stickyDropdown.classList.remove('hidden-by-footer');
         }
       });
