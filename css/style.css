@@ -389,7 +389,12 @@ hr {
     z-index: 100;
 }
 
-/** Overlay-text**/
+.email-dropdown.show {
+  display: block;
+}
+
+
+/* Overlay-text, decoration*/
 
 .image-container {
     position: relative;
