@@ -7,9 +7,9 @@
 body {
     background-color: #f3e13e;
     font-family: 'Roboto Slab', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.5em;
     color: #560591;
 }
 
@@ -18,7 +18,7 @@ h2,
 h3,
 h4,
 h5 {
-    line-height: 1.4;
+    line-height: 1.2em;
 }
 
 h1 {
@@ -36,20 +36,19 @@ h2 {
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 800;
     letter-spacing: 1px;
     color: #f4038c;
-    margin-bottom: 0;
 }
 
 h4 {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 500;
 }
 
 h5 {
-    font-size: 1.1em;
+    font-size: 1.05em;
     font-weight: 600;
     margin: 0.5em 0;
 }
@@ -57,6 +56,7 @@ h5 {
 h6 {
     font-size: 1.05em;
     font-weight: 400;
+    margin: 0.5em 0;
 }
 
 .description {
@@ -153,7 +153,9 @@ header {
     margin-top: 25px;
     margin-bottom: 15px;
 }
+
 .navigation {
+    font-size: 18px;
 }
 
 nav {
@@ -351,6 +353,7 @@ hr {
   border-right: 5px solid transparent;
   border-top: 5px solid currentColor;
   transition: transform 0.3s ease;
+    height: 0;
 }
 .dropdown-toggle.active .caret {
   transform: rotate(180deg);
@@ -864,7 +867,7 @@ a:visited {
     }
 
     body {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .col-md-6-left {
@@ -902,7 +905,7 @@ a:visited {
     }
 
     h1 {
-        font-size: 2.9em;
+        font-size: 2.6em;
     }
 
     h2 {
@@ -910,14 +913,14 @@ a:visited {
     }
 
     h3 {
-        font-size: 1.7em;
+        font-size: 1.6em;
     }
 
     h4 {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
 
-    h5 {
+    h5,h6 {
         font-size: 1.2em;
     }
 
@@ -946,7 +949,7 @@ a:visited {
 @media only screen and (min-width: 1024px) {
 
     body {
-        font-size: 19px;
+        font-size: 18px;
     }
 
     .col-lg-7 {
@@ -994,11 +997,23 @@ a:visited {
     }
 
     h1 {
-        font-size: 3.4em;
+        font-size: 3em;
     }
 
     h2 {
-        font-size: 2.1em;
+        font-size: 2.3em;
+    }
+
+    h3 {
+        font-size: 1.9em;
+    }
+
+    h4 {
+        font-size: 1.6em;
+    }
+
+    h5,h6 {
+        font-size: 1.3em;
     }
 
     .photo-container {
@@ -1017,7 +1032,7 @@ a:visited {
 @media only screen and (min-width: 1440px) {
 
     h1 {
-        font-size: 3.8em;
+        font-size: 3.4em;
     }
 
     .photo-container {
