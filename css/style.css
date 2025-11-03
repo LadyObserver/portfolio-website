@@ -419,7 +419,8 @@ hr {
     text-shadow: 2px 1px 2px #f56550;
 }
 
-#health {
+#health,
+#effort {
     text-align: right;
 }
 
@@ -470,7 +471,23 @@ hr {
 .table-container {
     width: 100%;
     overflow-x: auto;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+}
+
+.table-container-no-scroll {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 28px;
+    /* hide scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.table-container-no-scroll::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Edge */
 }
 
 .title {
