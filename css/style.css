@@ -513,10 +513,44 @@ thead {
 
 /** GIF and masks**/
 
+.key-features-row {
+    display: flex;
+    justify-content: space-between;
+    /* spread text and gif evenly */
+    align-items: center;
+    /* vertical centering */
+    padding: 0 10%;
+    /* responsive margin on sides */
+    gap: clamp(20px, 5vw, 80px);
+    /* responsive gap between text and gif */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* center row */
+    box-sizing: border-box;
+}
+
+.feature-text {
+    flex: 1 1 0;
+    /* text grows/shrinks */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertical centering */
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
 .gif-container {
     position: relative;
-    width: 200px;
-    overflow: hidden;
+    width: clamp(120px, 30%, 200px);
+    /* responsive width */
+    flex-shrink: 0;
 }
 
 .gif {
