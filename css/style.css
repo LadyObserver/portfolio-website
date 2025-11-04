@@ -872,7 +872,7 @@ a:visited {
     stroke-dashoffset: 400px;
     stroke-linejoin: round;
     stroke-linecap: round;
-    animation: draw-stroke 14s linear forwards;
+    animation: draw-stroke 6s linear forwards;
 }
 
 @keyframes draw-stroke {
