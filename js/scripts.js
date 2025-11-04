@@ -282,7 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Close if clicking outside ---
   window.addEventListener('click', e => {
-
     if (!emailDropdown.contains(e.target) && !emailButton.contains(e.target)) {
       closeEmailDropdown();
     }
