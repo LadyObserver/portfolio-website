@@ -948,16 +948,32 @@ a:visited {
         float: right;
     }
 
-    .column-left {
-        width: 48%;
-        margin-right: 8px;
-        float: left;
+    .row {
+        display: flex;
+        align-items: center;
+        /* vertically centers image and text */
+        justify-content: space-between;
+        /* spacing between left and right */
+        gap: 30px;
+        /* optional, adds space between image and text */
+        flex-wrap: wrap;
+        /* keeps layout responsive on smaller screens */
     }
 
+    .column-left,
     .column-right {
-        width: 48%;
-        margin-left: 8px;
-        float: right;
+        flex: 1;
+        /* allow both sides to grow/shrink */
+    }
+
+    .column-left picture,
+    .column-left img {
+        width: 100%;
+        height: auto;
+        display: block;
+        min-width: 290px;
+        /* image never smaller than this */
+        margin: 0 auto;
     }
 
     .row::after {
@@ -1032,12 +1048,12 @@ a:visited {
     }
 
     .col-lg-7 {
-        width: 52%;
+        width: 50%;
         float: left;
     }
 
     .col-lg-5 {
-        width: 38%;
+        width: 45%;
         float: right;
     }
 
