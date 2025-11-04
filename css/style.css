@@ -36,25 +36,25 @@ h2 {
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: 800;
     letter-spacing: 1px;
     color: #f4038c;
 }
 
 h4 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 500;
 }
 
 h5 {
-    font-size: 1.05em;
+    font-size: 1.1em;
     font-weight: 600;
     margin: 0.5em 0;
 }
 
 h6 {
-    font-size: 1.05em;
+    font-size: 1.1em;
     font-weight: 400;
     margin: 0.5em 0;
 }
@@ -81,16 +81,8 @@ img {
     padding: 0 15px;
 }
 
-.margin-gif {
-    margin-top: 48px;
-}
-
 .padding-top {
     padding-top: 20px;
-}
-
-.margin-top {
-    margin-top: 35px;
 }
 
 .margin-both {
@@ -100,7 +92,7 @@ img {
 
 .padding-both {
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 .padding-bottom {
@@ -108,7 +100,7 @@ img {
 }
 
 .padding-title {
-    padding-top: 20px
+    padding-top: 25px;
 }
 
 .photo-container {
@@ -122,7 +114,7 @@ img {
     margin: 24px 0;
 }
 
-#projects .row {
+#vitala-cover .row {
     padding-top: 14px;
 }
 
@@ -135,7 +127,7 @@ img {
 }
 
 #resume {
-    margin-bottom: 32px;
+    margin-bottom: 35px;
 }
 
 #how {
@@ -240,8 +232,7 @@ footer {
 }
 
 .center-social {
-    text-align: center;
-    padding: 10px 0;
+    padding: 15px 0 0 0;
 }
 
 .social {
@@ -777,7 +768,7 @@ a:visited {
     padding: 10px 20px;
     border-radius: 16px;
     box-shadow: 2px 5px blueviolet;
-    margin-top: 15px;
+    margin-top: 12px;
     transition-duration: 0.5s opacity;
 }
 
@@ -802,7 +793,7 @@ a:visited {
     border-radius: 16px;
     box-shadow: 2px 5px #f4038c;
     padding: 10px 20px;
-    margin-top: 15px;
+    margin-top: 8px;
     transition-duration: 0.5s opacity;
 }
 
@@ -1002,8 +993,9 @@ a:visited {
         font-size: 1.3em;
     }
 
-    h5,h6 {
-        font-size: 1.2em;
+    h5,
+    h6 {
+        font-size: 1.15em;
     }
 
     .features-p {
@@ -1107,8 +1099,9 @@ a:visited {
         font-size: 1.6em;
     }
 
-    h5,h6 {
-        font-size: 1.3em;
+    h5,
+    h6 {
+        font-size: 1.2em;
     }
 
     .photo-container {
