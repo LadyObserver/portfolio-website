@@ -371,8 +371,7 @@ hr {
     top: 120%;
     left: 50%;
     transform: translateX(-50%);
-    min-width: 160px;
-    max-width: 250px;
+    min-width: 140px;
     background-color: #f8e8ff;
     border-radius: 16px;
     overflow: hidden;
@@ -381,7 +380,7 @@ hr {
 }
 
 .email-dropdown.show {
-  display: block;
+    display: block;
 }
 
 
