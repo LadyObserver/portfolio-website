@@ -190,28 +190,29 @@ window.addEventListener("resize", updateStickyOffset);
 window.addEventListener("scroll", updateStickyOffset);
 
 // Hiding sticky bar when footer is close
-document.addEventListener("DOMContentLoaded", () => {
-  const stickyDropdown = document.querySelector(".dropdown");
-  const footer = document.querySelector("footer");
+const stickyContainer = document.querySelector("#sticky"); // parent container
+const stickyDropdown = document.querySelector(".dropdown");
+const footer = document.querySelector("footer");
 
-  if (stickyDropdown && footer) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            stickyDropdown.classList.remove("show");
-            stickyDropdown.classList.add("hidden-by-footer");
-          } else {
-            stickyDropdown.classList.remove("hidden-by-footer");
-          }
-        });
-      },
-      { threshold: 0.7 }
-    );
+if (stickyDropdown && footer && stickyContainer) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          stickyDropdown.classList.remove("show");
+          stickyDropdown.classList.add("hidden-by-footer"); // hide dropdown
+          stickyContainer.classList.add("hidden-by-footer"); // transparent sticky background
+        } else {
+          stickyDropdown.classList.remove("hidden-by-footer"); // show dropdown again
+          stickyContainer.classList.remove("hidden-by-footer"); // restore background
+        }
+      });
+    },
+    { threshold: 0.8 }
+  );
 
-    observer.observe(footer);
-  }
-});
+  observer.observe(footer);
+}
 
 // --- Pausing / Restarting GIFs ---
 
