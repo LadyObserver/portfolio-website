@@ -1,465 +1,610 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Nikolett Muller">
-    <meta name="description"
-        content="Music Player App - Cassette is a music player app that gives the opportunity for the listeners to join to a community.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nikolett Muller" />
+    <meta
+      name="description"
+      content="Music Player App - Cassette is a music player app that gives the opportunity for the listeners to join to a community."
+    />
     <title>Project Vitala</title>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
-        rel="stylesheet">
-    <link href="img/favicon.ico" rel="shortcut icon">
-    <script src="https://kit.fontawesome.com/cbac8f2dea.js" crossorigin="anonymous"></script>
-</head>
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="img/favicon.ico" rel="shortcut icon" />
+    <script
+      src="https://kit.fontawesome.com/cbac8f2dea.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="container-nav">
-            <div class="navtoggle" id="myNavtoggle"><a href="index.html">
-                    <svg id="svg-logo" width="210" height="16" viewBox="0 0 210 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M204.941 15L202.141 9.8H201.721V15H197.801V0.900002H203.981C205.114 0.900002 206.074 1.1 206.861 1.5C207.647 1.88667 208.241 2.42667 208.641 3.12C209.041 3.8 209.241 4.56666 209.241 5.42C209.241 6.38 208.974 7.22667 208.441 7.96C207.921 8.68 207.154 9.19333 206.141 9.5L209.321 15H204.941ZM201.721 7.12H203.661C204.194 7.12 204.594 6.99333 204.861 6.74C205.127 6.48666 205.261 6.12 205.261 5.64C205.261 5.18667 205.121 4.83334 204.841 4.58C204.574 4.31334 204.181 4.18 203.661 4.18H201.721V7.12Z"
-                            fill="white" />
-                        <path
-                            d="M188.364 4.04V6.34H192.864V9.32H188.364V11.86H193.464V15H184.444V0.900002H193.464V4.04H188.364Z"
-                            fill="white" />
-                        <path d="M176.14 12H180.52V15H172.22V0.900002H176.14V12Z" fill="white" />
-                        <path d="M163.915 12H168.295V15H159.995V0.900002H163.915V12Z" fill="white" />
-                        <path
-                            d="M147.197 0.900002V9.08C147.197 9.84 147.37 10.4267 147.717 10.84C148.077 11.2533 148.617 11.46 149.337 11.46C150.057 11.46 150.597 11.2533 150.957 10.84C151.33 10.4133 151.517 9.82667 151.517 9.08V0.900002H155.437V9.08C155.437 10.3733 155.164 11.48 154.617 12.4C154.07 13.3067 153.324 13.9933 152.377 14.46C151.444 14.9133 150.404 15.14 149.257 15.14C148.11 15.14 147.084 14.9133 146.177 14.46C145.284 13.9933 144.577 13.3067 144.057 12.4C143.55 11.4933 143.297 10.3867 143.297 9.08V0.900002H147.197Z"
-                            fill="white" />
-                        <path
-                            d="M138.726 0.900002V15H134.806V7.22L132.146 15H128.866L126.186 7.16V15H122.266V0.900002H127.006L130.546 10.06L134.006 0.900002H138.726Z"
-                            fill="white" />
-                        <path d="M112.187 0.900002V4.02H108.427V15H104.507V4.02H100.787V0.900002H112.187Z"
-                            fill="white" />
-                        <path d="M97.7169 0.900002V4.02H93.9569V15H90.0369V4.02H86.3169V0.900002H97.7169Z"
-                            fill="white" />
-                        <path
-                            d="M77.6599 4.04V6.34H82.1599V9.32H77.6599V11.86H82.7599V15H73.7399V0.900002H82.7599V4.04H77.6599Z"
-                            fill="white" />
-                        <path d="M65.4356 12H69.8156V15H61.5156V0.900002H65.4356V12Z" fill="white" />
-                        <path
-                            d="M50.1336 15.14C48.8136 15.14 47.6002 14.8333 46.4936 14.22C45.3869 13.5933 44.5069 12.7333 43.8536 11.64C43.2136 10.5333 42.8936 9.28667 42.8936 7.9C42.8936 6.51333 43.2136 5.27333 43.8536 4.18C44.5069 3.07333 45.3869 2.21333 46.4936 1.6C47.6002 0.986665 48.8136 0.68 50.1336 0.68C51.4669 0.68 52.6802 0.986665 53.7736 1.6C54.8802 2.21333 55.7536 3.07333 56.3936 4.18C57.0336 5.27333 57.3536 6.51333 57.3536 7.9C57.3536 9.28667 57.0336 10.5333 56.3936 11.64C55.7536 12.7333 54.8802 13.5933 53.7736 14.22C52.6669 14.8333 51.4536 15.14 50.1336 15.14ZM50.1336 11.5C51.1336 11.5 51.9202 11.1733 52.4936 10.52C53.0802 9.86666 53.3736 8.99334 53.3736 7.9C53.3736 6.78 53.0802 5.9 52.4936 5.26C51.9202 4.60667 51.1336 4.28 50.1336 4.28C49.1202 4.28 48.3269 4.60667 47.7536 5.26C47.1802 5.9 46.8936 6.78 46.8936 7.9C46.8936 9.00667 47.1802 9.88667 47.7536 10.54C48.3269 11.18 49.1202 11.5 50.1336 11.5Z"
-                            fill="white" />
-                        <path
-                            d="M34.8018 15L30.3818 8.82V15H26.4618V0.900002H30.3818V6.98L34.7618 0.900002H39.2818L34.1018 7.74L39.5418 15H34.8018Z"
-                            fill="white" />
-                        <path d="M21.8294 0.900002V15H17.9094V0.900002H21.8294Z" fill="white" />
-                        <path
-                            d="M13.2764 15H9.35643L4.13643 7.12V15H0.216431V0.900002H4.13643L9.35643 8.88V0.900002H13.2764V15Z"
-                            fill="white" />
-                    </svg></a>
-                <nav>
-                    <ul class="navigation">
-                        <li><a class="page active" href="index.html">work</a></li>
-                        <li><a class="page" href="about.html">about</a></li>
-                        <li class="contact"><a class="page" href="#contact">contact</a></li>
-                        <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i
-                                    class="fa-solid fa-bars"></i></a></li>
-                    </ul>
-                </nav>
-            </div>
+      <div class="container-nav">
+        <div class="navtoggle" id="myNavtoggle">
+          <a href="index.html">
+            <svg
+              id="svg-logo"
+              width="210"
+              height="16"
+              viewBox="0 0 210 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M204.941 15L202.141 9.8H201.721V15H197.801V0.900002H203.981C205.114 0.900002 206.074 1.1 206.861 1.5C207.647 1.88667 208.241 2.42667 208.641 3.12C209.041 3.8 209.241 4.56666 209.241 5.42C209.241 6.38 208.974 7.22667 208.441 7.96C207.921 8.68 207.154 9.19333 206.141 9.5L209.321 15H204.941ZM201.721 7.12H203.661C204.194 7.12 204.594 6.99333 204.861 6.74C205.127 6.48666 205.261 6.12 205.261 5.64C205.261 5.18667 205.121 4.83334 204.841 4.58C204.574 4.31334 204.181 4.18 203.661 4.18H201.721V7.12Z"
+                fill="white"
+              />
+              <path
+                d="M188.364 4.04V6.34H192.864V9.32H188.364V11.86H193.464V15H184.444V0.900002H193.464V4.04H188.364Z"
+                fill="white"
+              />
+              <path
+                d="M176.14 12H180.52V15H172.22V0.900002H176.14V12Z"
+                fill="white"
+              />
+              <path
+                d="M163.915 12H168.295V15H159.995V0.900002H163.915V12Z"
+                fill="white"
+              />
+              <path
+                d="M147.197 0.900002V9.08C147.197 9.84 147.37 10.4267 147.717 10.84C148.077 11.2533 148.617 11.46 149.337 11.46C150.057 11.46 150.597 11.2533 150.957 10.84C151.33 10.4133 151.517 9.82667 151.517 9.08V0.900002H155.437V9.08C155.437 10.3733 155.164 11.48 154.617 12.4C154.07 13.3067 153.324 13.9933 152.377 14.46C151.444 14.9133 150.404 15.14 149.257 15.14C148.11 15.14 147.084 14.9133 146.177 14.46C145.284 13.9933 144.577 13.3067 144.057 12.4C143.55 11.4933 143.297 10.3867 143.297 9.08V0.900002H147.197Z"
+                fill="white"
+              />
+              <path
+                d="M138.726 0.900002V15H134.806V7.22L132.146 15H128.866L126.186 7.16V15H122.266V0.900002H127.006L130.546 10.06L134.006 0.900002H138.726Z"
+                fill="white"
+              />
+              <path
+                d="M112.187 0.900002V4.02H108.427V15H104.507V4.02H100.787V0.900002H112.187Z"
+                fill="white"
+              />
+              <path
+                d="M97.7169 0.900002V4.02H93.9569V15H90.0369V4.02H86.3169V0.900002H97.7169Z"
+                fill="white"
+              />
+              <path
+                d="M77.6599 4.04V6.34H82.1599V9.32H77.6599V11.86H82.7599V15H73.7399V0.900002H82.7599V4.04H77.6599Z"
+                fill="white"
+              />
+              <path
+                d="M65.4356 12H69.8156V15H61.5156V0.900002H65.4356V12Z"
+                fill="white"
+              />
+              <path
+                d="M50.1336 15.14C48.8136 15.14 47.6002 14.8333 46.4936 14.22C45.3869 13.5933 44.5069 12.7333 43.8536 11.64C43.2136 10.5333 42.8936 9.28667 42.8936 7.9C42.8936 6.51333 43.2136 5.27333 43.8536 4.18C44.5069 3.07333 45.3869 2.21333 46.4936 1.6C47.6002 0.986665 48.8136 0.68 50.1336 0.68C51.4669 0.68 52.6802 0.986665 53.7736 1.6C54.8802 2.21333 55.7536 3.07333 56.3936 4.18C57.0336 5.27333 57.3536 6.51333 57.3536 7.9C57.3536 9.28667 57.0336 10.5333 56.3936 11.64C55.7536 12.7333 54.8802 13.5933 53.7736 14.22C52.6669 14.8333 51.4536 15.14 50.1336 15.14ZM50.1336 11.5C51.1336 11.5 51.9202 11.1733 52.4936 10.52C53.0802 9.86666 53.3736 8.99334 53.3736 7.9C53.3736 6.78 53.0802 5.9 52.4936 5.26C51.9202 4.60667 51.1336 4.28 50.1336 4.28C49.1202 4.28 48.3269 4.60667 47.7536 5.26C47.1802 5.9 46.8936 6.78 46.8936 7.9C46.8936 9.00667 47.1802 9.88667 47.7536 10.54C48.3269 11.18 49.1202 11.5 50.1336 11.5Z"
+                fill="white"
+              />
+              <path
+                d="M34.8018 15L30.3818 8.82V15H26.4618V0.900002H30.3818V6.98L34.7618 0.900002H39.2818L34.1018 7.74L39.5418 15H34.8018Z"
+                fill="white"
+              />
+              <path
+                d="M21.8294 0.900002V15H17.9094V0.900002H21.8294Z"
+                fill="white"
+              />
+              <path
+                d="M13.2764 15H9.35643L4.13643 7.12V15H0.216431V0.900002H4.13643L9.35643 8.88V0.900002H13.2764V15Z"
+                fill="white"
+              /></svg
+          ></a>
+          <nav>
+            <ul class="navigation">
+              <li><a class="page active" href="index.html">work</a></li>
+              <li><a class="page" href="about.html">about</a></li>
+              <li class="contact">
+                <a class="page" href="#contact">contact</a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon"
+                  onclick="menuToggle()"
+                  ><i class="fa-solid fa-bars"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
         </div>
+      </div>
     </header>
     <main id="cassette">
-        <div class="top">
-            <div id="cassette-case-study" class="container">
-                <h1 id="hero" class="music">Cassette</h1>
-                <div>
-                    <picture>
-                        <source srcset="img/cassette/cover-cassette_1x.png" media="(max-width:767px)">
-                        <img src="img/cassette/cover-cassette_2x.png"
-                            alt="smartphone showing the onboarding screen held by a hand">
-                    </picture>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="column-left col-1">
-                        <div>
-                            <h5>DESIGNER</h5>
-                            <p>Nikolett Muller</p>
-                        </div>
-                    </div>
-                    <div class="column-right col-2">
-                        <div>
-                            <h5>ROLE</h5>
-                            <p>UX Design, UI Design</p>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div>
-                            <h5>TOOLS</h5>
-                            <p>Adobe XD, Canva, Freepik, Lyssna, Figma, Mockuuups Studio, EzGif</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="top">
+        <div id="cassette-case-study" class="container">
+          <h1 id="hero" class="music">Cassette</h1>
+          <div>
+            <picture>
+              <source
+                srcset="img/cassette/cover-cassette_1x.png"
+                media="(max-width:767px)"
+              />
+              <img
+                src="img/cassette/cover-cassette_2x.png"
+                alt="smartphone showing the onboarding screen held by a hand"
+              />
+            </picture>
+          </div>
         </div>
-        <div id="sticky" class="container">
-            <div id="dropdown" class="dropdown cassette-button">
-                <h5 class="dropbtn dropdown-toggle" style="color:white">Explore case study<span class="caret"></span>
-                </h5>
-                <ul class="dropdown-content cassette-dropdown">
-                    <li><a class="jump music" href="#objective">Objective</a></li>
-                    <li><a class="jump music" href="#problem">Problem Statement</a></li>
-                    <li><a class="jump music" href="#solution">Solution</a></li>
-                    <li><a class="jump music" href="#inspiration">Inspiration</a></li>
-                    <li><a class="jump music" href="#wireframe">Wireframe Evolution</a></li>
-                    <li><a class="jump music" href="#features">Key Features</a></li>
-                    <li><a class="jump music" href="#final">Final Design</a></li>
-                    <li><a class="jump music" href="#conclusion">Conclusion</a></li>
-                </ul>
+        <div class="container">
+          <div class="row">
+            <div class="column-left col-1">
+              <div>
+                <h5>DESIGNER</h5>
+                <p>Nikolett Muller</p>
+              </div>
             </div>
+            <div class="column-right col-2">
+              <div>
+                <h5>ROLE</h5>
+                <p>UX Design, UI Design</p>
+              </div>
+            </div>
+            <div class="col-3">
+              <div>
+                <h5>TOOLS</h5>
+                <p>
+                  Adobe XD, Canva, Freepik, Lyssna, Figma, Mockuuups Studio,
+                  EzGif
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sticky" class="container">
+        <div id="dropdown" class="dropdown cassette-button">
+          <h5 class="dropbtn dropdown-toggle" style="color: white">
+            Explore case study<span class="caret"></span>
+          </h5>
+          <ul class="dropdown-content cassette-dropdown">
+            <li><a class="jump music" href="#objective">Objective</a></li>
+            <li><a class="jump music" href="#problem">Problem Statement</a></li>
+            <li><a class="jump music" href="#solution">Solution</a></li>
+            <li><a class="jump music" href="#inspiration">Inspiration</a></li>
+            <li>
+              <a class="jump music" href="#wireframe">Wireframe Evolution</a>
+            </li>
+            <li><a class="jump music" href="#features">Key Features</a></li>
+            <li><a class="jump music" href="#final">Final Design</a></li>
+            <li><a class="jump music" href="#conclusion">Conclusion</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="container">
+          <div id="objective">
+            <h4>OBJECTIVE</h4>
+          </div>
+          <div>
+            <h3>'80s music player app</h3>
+          </div>
+          <p style="margin-bottom:0px">
+            According to the Design Brief, the objective of this project was to
+            design the UI for an '80s music player mobile app that is targeted
+            primarily at an audience between 35 and 55 years old.
+          </p>
+        </div>
+        <div class="container chapter">
+          <div id="problem">
+            <h4>PROBLEM STATEMENT</h4>
+          </div>
+          <div>
+            <h3>Loneliness epidemic</h3>
+          </div>
+          <p>
+            As our world is more and more affected by the use of digital tools,
+            we are becoming lonelier year by year. In fact, this loneliness
+            epidemic can cause more harm than smoking a pack of cigarettes a day
+            does to your body. Furthermore, surveys say that people over 30 tend
+            to become isolated more easily since making friends gets harder as
+            we age.
+          </p>
+          <p class="padding-bottom">
+            What can we do about this? We must create environments — even
+            digital ones — where adult relationships can grow organically.
+          </p>
+          <div class="gif-container-animation">
+            <img
+              class="overlay-animation"
+              src="img/cassette/mask-for-logo.png"
+              alt="old tv is laid on the floor"
+            />
+            <img
+              src="img/cassette/logo-gif.gif"
+              class="gif-animation"
+              data-still="img/cassette/logo-gif.png"
+              data-animated="img/cassette/logo-gif.gif"
+              alt="gif that shows the logo animation"
+            />
+            <div class="pause-wrapper">
+              <button class="pause">
+                <i class="fa fa-stop"></i>
+                <span class="pause-label">Stop GIF</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container chapter">
+        <div id="solution">
+          <h4>SOLUTION</h4>
         </div>
         <div>
-            <div class="container">
-                <div id="objective">
-                    <h4>OBJECTIVE</h4>
-                </div>
-                <div>
-                    <h3>'80s music player app
-                    </h3>
-                </div>
-                <p> According to the Design Brief, the objective of this project was to design the UI for an
-                    '80s
-                    music
-                    player mobile app that is targeted primarily at an audience between 35 and 55 years old.
+          <h3>Being in synch with others</h3>
+        </div>
+        <p>
+          The Cassette mobile app offers a solution for the chronic loneliness
+          by offering tools that produce a massive hit of endorphins. As we sing
+          and dance to the best '80s tunes with others in synch, we start
+          bonding with them deeply. By using Cassette, it is guaranteed that you
+          are going to find a concert buddy; going solo will be all in the past.
+        </p>
+        <p>Cassette has the following key features:</p>
+        <ul style="margin-bottom:0px">
+          <li>Searching for content</li>
+          <li>Listening to content offline</li>
+          <li>Creating playlists</li>
+          <li>Streaming lyrics to smart Tvs</li>
+          <li>Group sessions</li>
+          <li>Discussion boards</li>
+          <li>Marketplace of '80s relics</li>
+        </ul>
+      </div>
+      <div class="container chapter">
+        <div id="inspiration">
+          <h4>INSPIRATION</h4>
+        </div>
+        <div>
+          <h3>Moodboard</h3>
+        </div>
+        <div>
+          <picture>
+            <source
+              srcset="img/cassette/moodboard_@1x.png"
+              media="(max-width:767px)"
+            />
+            <img
+              src="img/cassette/moodboard_@2x.png"
+              alt="inspirational elements (colors, patterns, buttons, fonts) are put on a board"
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="container chapter">
+        <div id="wireframe">
+          <h4>WIREFRAME EVOLUTION</h4>
+        </div>
+        <div>
+          <h3>From lo-fi up to the last touch-ups</h3>
+        </div>
+        <div>
+          <picture>
+            <source
+              srcset="img/cassette/wireframe_@1x.png"
+              media="(max-width:767px)"
+            />
+            <img
+              src="img/cassette/wireframe_@2x.png"
+              alt="Four wireframes showing the evolution of the search page "
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="container chapter">
+        <div id="features">
+          <h4>KEY FEATURES</h4>
+        </div>
+        <div>
+          <h3>Results of the first MVP</h3>
+        </div>
+        <div id="search" class="highlight-right margin-both">
+          <div class="key-features-row">
+            <div class="feature-text left">
+              <h5>SEARCH FOR CONTENT</h5>
+              <p class="features-p">
+                To find your favorite artist has never been that easy!
+              </p>
+            </div>
+            <div class="gif-container">
+              <img
+                class="gif size"
+                src="img/cassette/search-gif.gif"
+                data-still="img/cassette/search-gif.png"
+                data-animated="img/cassette/search-gif.gif"
+                alt="how to search using keyword-gif"
+              />
+              <img
+                class="overlay size"
+                src="img/cassette/transparent-mask-for-gifs.png"
+                alt="Overlay Image"
+              /><button class="pause">
+                <i class="fa fa-stop"></i><span class="pause-label">Stop</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="create" class="gif-wrapper">
+          <div class="key-features-row">
+            <div class="gif-container">
+              <img
+                class="gif size"
+                src="img/cassette/create-gif.gif"
+                data-still="img/cassette/create-gif.png"
+                data-animated="img/cassette/create-gif.gif"
+                alt="how to create a list - gif"
+              />
+              <img
+                class="overlay size"
+                src="img/cassette/transparent-mask-for-gifs.png"
+                alt="Overlay Image"
+              /><button class="pause">
+                <i class="fa fa-stop"></i><span class="pause-label">Stop</span>
+              </button>
+            </div>
+            <div class="feature-text right">
+              <h5>CREATE PLAYLISTS</h5>
+              <p class="features-p">
+                Just put your music on a loop and your party never needs to be
+                on hold!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="voice" class="highlight-right margin-both">
+          <div class="key-features-row">
+            <div class="feature-text left">
+              <div>
+                <h5>RECOVER SONGS USING AI</h5>
+              </div>
+              <div>
+                <p class="features-p">
+                  Humm or whistle! Our AI is going to find that long lost song
+                  for you!
                 </p>
+              </div>
             </div>
-            <div class="container">
-                <div id="problem">
-                    <h4>PROBLEM STATEMENT</h4>
-                </div>
-                <div>
-                    <h3>Loneliness epidemic
-                    </h3>
-                </div>
-                <p> As our world is more and more affected by the use of digital tools, we are becoming
-                    lonelier
-                    year by
-                    year. In fact, this loneliness epidemic can cause more harm than smoking a pack of
-                    cigarettes a
-                    day
-                    does to your body. Furthermore, surveys say that people over 30 tend to become isolated
-                    more
-                    easily
-                    since making friends gets harder as we age.
-                </p>
-                <p> What can we do about this? We must create environments — even digital ones — where adult
-                    relationships can grow organically.
-                </p>
+            <div class="gif-container">
+              <img
+                class="gif size"
+                src="img/cassette/voice-search-gif.gif"
+                data-still="img/cassette/voice-search-gif.png"
+                data-animated="img/cassette/voice-search-gif.gif"
+                alt="how to find a song using voice search - gif"
+              />
+              <img
+                class="overlay size"
+                src="img/cassette/transparent-mask-for-gifs.png"
+                alt="Overlay Image"
+              /><button class="pause">
+                <i class="fa fa-stop"></i><span class="pause-label">Stop</span>
+              </button>
             </div>
-            <div class="container" style="margin-top:20px">
-                <div class="gif-container-animation decorated-image">
-                    <img class="margin-both overlay-animation" src="img/cassette/mask-for-logo.png"
-                        alt="old tv is laid on the floor">
-                    <img src="img/cassette/logo-gif.gif" class="gif-animation" data-still="img/cassette/logo-gif.png"
-                        data-animated="img/cassette/logo-gif.gif" alt="gif that shows the logo animation">
-                    <div class="pause-wrapper">
-                        <button class="pause">
-                            <i class="fa fa-stop"></i>
-                            <span class="pause-label">Stop GIF</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="container">
-            <div id="solution">
-                <h4>SOLUTION</h4>
-            </div>
-            <div>
-                <h3>Being in synch with others</h3>
-            </div>
-            <p> The Cassette mobile app offers a solution for the chronic loneliness by offering tools
-                that
-                produce
-                a
-                massive hit of endorphins. As we sing and dance to the best '80s tunes with others in
-                synch,
-                we
-                start bonding with them deeply. By using Cassette, it is guaranteed that you are going
-                to
-                find a
-                concert buddy; going solo will be all in the past.
-            </p>
-            <p> Cassette has the following key features:</p>
-            <ul>
-                <li>Searching for content</li>
-                <li>Listening to content offline</li>
-                <li>Creating playlists</li>
-                <li>Streaming lyrics to smart Tvs</li>
-                <li>Group sessions</li>
-                <li>Discussion boards</li>
-                <li>Marketplace of '80s relics</li>
-            </ul>
-        </div>
-        <div class="container">
-            <div id="inspiration">
-                <h4>INSPIRATION</h4>
-            </div>
-            <div>
-                <h3>Moodboard</h3>
-            </div>
-            <div>
-                <picture>
-                    <source srcset="img/cassette/moodboard_@1x.png" media="(max-width:767px)">
-                    <img src="img/cassette/moodboard_@2x.png"
-                        alt="inspirational elements (colors, patterns, buttons, fonts) are put on a board">
-                </picture>
-            </div>
-        </div>
-        <div class="container">
-            <div id="wireframe">
-                <h4>WIREFRAME EVOLUTION</h4>
-            </div>
-            <div>
-                <h3>From lo-fi up to the last touch-ups</h3>
-            </div>
-            <div>
-                <picture>
-                    <source srcset="img/cassette/wireframe_@1x.png" media="(max-width:767px)">
-                    <img src="img/cassette/wireframe_@2x.png"
-                        alt="Four wireframes showing the evolution of the search page ">
-                </picture>
-            </div>
-        </div>
-        <div class="container">
-            <div id="features">
-                <h4>KEY FEATURES</h4>
-            </div>
-            <div>
-                <h3>Results of the first MVP</h3>
-            </div>
-            <div id="search" class="highlight-right margin-both">
-                <div class="key-features-row">
-                    <div class="feature-text left">
-                        <h5>SEARCH FOR CONTENT</h5>
-                        <p class="features-p">To find your favorite artist has never
-                            been that easy!</p>
-                    </div>
-                    <div class="gif-container">
-                        <img class="gif size" src="img/cassette/search-gif.gif" data-still="img/cassette/search-gif.png"
-                            data-animated="img/cassette/search-gif.gif" alt="how to search using keyword-gif">
-                        <img class="overlay size" src="img/cassette/transparent-mask-for-gifs.png"
-                            alt="Overlay Image"><button class="pause">
-                            <i class="fa fa-stop"></i><span class="pause-label">Stop</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div id="create" class="gif-wrapper">
-                <div class="key-features-row">
-                    <div class="gif-container">
-                        <img class="gif size" src="img/cassette/create-gif.gif" data-still="img/cassette/create-gif.png"
-                            data-animated="img/cassette/create-gif.gif" alt="how to create a list - gif">
-                        <img class="overlay size" src="img/cassette/transparent-mask-for-gifs.png"
-                            alt="Overlay Image"><button class="pause">
-                            <i class="fa fa-stop"></i><span class="pause-label">Stop</span>
-                        </button>
-                    </div>
-                    <div class="feature-text right">
-                        <h5>CREATE PLAYLISTS</h5>
-                        <p class="features-p">Just put your music on a loop and your
-                            party never needs to be on hold!</p>
-                    </div>
-                </div>
-            </div>
-            <div id="voice" class="highlight-right margin-both">
-                <div class="key-features-row">
-                    <div class="feature-text left">
-                        <div>
-                            <h5>RECOVER SONGS USING AI</h5>
-                        </div>
-                        <div>
-                            <p class="features-p">Humm or whistle! Our AI is going to
-                                find that long lost song for you!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="gif-container">
-                        <img class="gif size" src="img/cassette/voice-search-gif.gif"
-                            data-still="img/cassette/voice-search-gif.png"
-                            data-animated="img/cassette/voice-search-gif.gif"
-                            alt="how to find a song using voice search - gif">
-                        <img class="overlay size" src="img/cassette/transparent-mask-for-gifs.png"
-                            alt="Overlay Image"><button class="pause">
-                            <i class="fa fa-stop"></i><span class="pause-label">Stop</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
 
-            <div id="lyrics" class="gif-wrapper">
-                <div class="key-features-row">
-                    <div class="gif-container">
-                        <img class="gif size" src="img/cassette/lyrics-gif.gif" data-still="img/cassette/lyrics-gif.png"
-                            data-animated="img/cassette/lyrics-gif.gif" alt="how to do karaoke on smart TV - gif">
-                        <img class="overlay size" src="img/cassette/transparent-mask-for-gifs.png"
-                            alt="Overlay Image"><button class="pause">
-                            <i class="fa fa-stop"></i><span class="pause-label">Stop</span>
-                        </button>
-                    </div>
-                    <div class="feature-text right">
-                        <div>
-                            <h5>STREAM LYRICS ONTO SMART TVS</h5>
-                        </div>
-                        <div>
-                            <p class="features-p">You can transform any location into
-                                your own karaoke bar!</p>
-                        </div>
-                    </div>
-                </div>
+        <div id="lyrics" class="gif-wrapper">
+          <div class="key-features-row">
+            <div class="gif-container">
+              <img
+                class="gif size"
+                src="img/cassette/lyrics-gif.gif"
+                data-still="img/cassette/lyrics-gif.png"
+                data-animated="img/cassette/lyrics-gif.gif"
+                alt="how to do karaoke on smart TV - gif"
+              />
+              <img
+                class="overlay size"
+                src="img/cassette/transparent-mask-for-gifs.png"
+                alt="Overlay Image"
+              /><button class="pause">
+                <i class="fa fa-stop"></i><span class="pause-label">Stop</span>
+              </button>
             </div>
-        </div>
-        <div class="container">
-            <div id="final">
-                <h4>FINAL DESIGN</h4>
-            </div>
-            <div>
-                <h3>Changes due to the feedback of usability testers</h3>
-            </div>
-            <div class="padding-top">
-                <picture>
-                    <source srcset="img/cassette/mockups_@1x.png" media="(max-width:767px)">
-                    <img src="img/cassette/mockups_@2x.png" alt="highlight">
-                </picture>
-            </div>
-        </div>
-        <div class="container">
-            <div id="conclusion">
-                <h4>CONCLUSION
-                </h4>
-            </div>
-            <div>
-                <h3>Challenges</h3>
-                <p> Since Cassette was my first UI project, I had to go back to polish the
-                    design
-                    and add some animations a couple of months later. I noticed that I had
-                    not
-                    followed the proper rules for naming the documents at that time so I had
-                    some difficulties to find them.
+            <div class="feature-text right">
+              <div>
+                <h5>STREAM LYRICS ONTO SMART TVS</h5>
+              </div>
+              <div>
+                <p class="features-p">
+                  You can transform any location into your own karaoke bar!
                 </p>
+              </div>
             </div>
-            <div>
-                <h3>Next steps</h3>
-                <p class="padding-bottom"> In the next iteration I would focus on creating the discussion
-                    boards.
-                    This
-                    feature would emphasize that this app is actually more about making
-                    connections with others, and music is mainly the chemical bond that
-                    creates
-                    this connection between the app's users.
-                </p>
-            </div>
+          </div>
         </div>
+      </div>
+      <div class="container chapter">
+        <div id="final">
+          <h4>FINAL DESIGN</h4>
+        </div>
+        <div>
+          <h3>Changes due to the feedback of usability testers</h3>
+        </div>
+        <div class="padding-top">
+          <picture>
+            <source
+              srcset="img/cassette/mockups_@1x.png"
+              media="(max-width:767px)"
+            />
+            <img src="img/cassette/mockups_@2x.png" alt="highlight" />
+          </picture>
+        </div>
+      </div>
+      <div class="container chapter">
+        <div id="conclusion">
+          <h4>CONCLUSION</h4>
+        </div>
+        <div>
+          <h3>Challenges</h3>
+          <p>
+            Since Cassette was my first UI project, I had to go back to polish
+            the design and add some animations a couple of months later. I
+            noticed that I had not followed the proper rules for naming the
+            documents at that time so I had some difficulties to find them.
+          </p>
+        </div>
+        <div>
+          <h3>Next steps</h3>
+          <p class="padding-bottom">
+            In the next iteration I would focus on creating the discussion
+            boards. This feature would emphasize that this app is actually more
+            about making connections with others, and music is mainly the
+            chemical bond that creates this connection between the app's users.
+          </p>
+        </div>
+      </div>
     </main>
     <footer id="contact" class="display">
-        <div>
-            <hr>
+      <div>
+        <hr />
+      </div>
+      <div>
+        <hr />
+      </div>
+      <div>
+        <hr />
+      </div>
+      <div>
+        <hr />
+      </div>
+      <div>
+        <hr />
+      </div>
+      <div class="container center-all">
+        <h2>Get in Touch</h2>
+        <p>
+          Do you like my work and want to discuss opportunities? Please get in
+          touch.
+          <br />
+          Call:
+          <a
+            href="#"
+            class="phone"
+            onclick="handlePhoneClick(event)"
+            title="Click to copy phone number"
+            >+1 (201) 736-5902</a
+          >.
+          <br />
+          Prefer sending an email?
+        </p>
+        <div class="email-wrapper">
+          <button class="button contact" id="emailButton">Email me</button>
+          <div class="email-dropdown" id="emailDropdown">
+            <a href="#" id="gmailLink">Gmail</a>
+            <a href="#" id="outlookLink">Outlook</a>
+            <a href="#" id="yahooLink">Yahoo Mail</a>
+            <a href="#" id="copyEmail">Copy email</a>
+          </div>
         </div>
-        <div>
-            <hr>
-        </div>
-        <div>
-            <hr>
-        </div>
-        <div>
-            <hr>
-        </div>
-        <div>
-            <hr>
-        </div>
-        <div class="container center-all">
-            <h2>Get in Touch</h2>
-            <p>Do you like my work and want to discuss opportunities? Please get in touch.
-                <br>
-                Call:
-                <a href="#" class="phone" onclick="handlePhoneClick(event)" title="Click to copy phone number">+1 (201)
-                    736-5902</a>.
-                <br>
-                Prefer sending an email?
-            </p>
-            <div class="email-wrapper">
-                <button class="button contact" id="emailButton">Email me</button>
-                <div class="email-dropdown" id="emailDropdown">
-                    <a href="#" id="gmailLink">Gmail</a>
-                    <a href="#" id="outlookLink">Outlook</a>
-                    <a href="#" id="yahooLink">Yahoo Mail</a>
-                    <a href="#" id="copyEmail">Copy email</a>
-                </div>
-            </div>
-            <div class="container-social">
-                <ul class="center-social">
-                    <li class="social"><a class="linkedin icon-circle"
-                            href="https://www.linkedin.com/in/nikolett-muller" target="_blank">
-                            <svg fill="#000000" height="50px" width="50px" version="1.1" id="linkedin"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="-143 145 512 512" xml:space="preserve">
-                                <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9
+        <div class="container-social">
+          <ul class="center-social">
+            <li class="social">
+              <a
+                class="linkedin icon-circle"
+                href="https://www.linkedin.com/in/nikolett-muller"
+                target="_blank"
+              >
+                <svg
+                  fill="#000000"
+                  height="50px"
+                  width="50px"
+                  version="1.1"
+                  id="linkedin"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="-143 145 512 512"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9
                        V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7
                        C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6
                        c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z
-                       " />
-                            </svg></a></li>
-                    <li class="social"><a class="behance icon-circle" href="https://www.behance.net/nikolettmuller"
-                            target="_blank">
-                            <svg fill="#000000" height="50px" width="50px" version="1.1" id="behance"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="0 0 512 512" xml:space="preserve">
-                                <g>
-                                    <path d="M344.1,244.5c-4.9-4.2-11-6.3-18.2-6.3c-7.8,0-13.9,2.2-18.3,6.7c-4.3,4.5-7,10.5-8.2,18.1h52.7
-                           C351.7,254.9,348.9,248.8,344.1,244.5z" />
-                                    <path d="M214.3,266.1c-3.8-1.7-9-2.6-15.8-2.7h-39v42.2H198c6.9,0,12.2-0.9,16-2.8c7-3.5,10.4-10,10.4-19.7
-                           C224.4,274.9,221,269.2,214.3,266.1z" />
-                                    <path
-                                        d="M256,0C114.6,0,0,114.6,0,256s114.6,256,256,256s256-114.6,256-256S397.4,0,256,0z M291.6,182.3h67.8V202h-67.8
+                       "
+                  /></svg
+              ></a>
+            </li>
+            <li class="social">
+              <a
+                class="behance icon-circle"
+                href="https://www.behance.net/nikolettmuller"
+                target="_blank"
+              >
+                <svg
+                  fill="#000000"
+                  height="50px"
+                  width="50px"
+                  version="1.1"
+                  id="behance"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M344.1,244.5c-4.9-4.2-11-6.3-18.2-6.3c-7.8,0-13.9,2.2-18.3,6.7c-4.3,4.5-7,10.5-8.2,18.1h52.7
+                           C351.7,254.9,348.9,248.8,344.1,244.5z"
+                    />
+                    <path
+                      d="M214.3,266.1c-3.8-1.7-9-2.6-15.8-2.7h-39v42.2H198c6.9,0,12.2-0.9,16-2.8c7-3.5,10.4-10,10.4-19.7
+                           C224.4,274.9,221,269.2,214.3,266.1z"
+                    />
+                    <path
+                      d="M256,0C114.6,0,0,114.6,0,256s114.6,256,256,256s256-114.6,256-256S397.4,0,256,0z M291.6,182.3h67.8V202h-67.8
                            L291.6,182.3L291.6,182.3z M250.7,310.6c-3,4.9-6.7,9.1-11.2,12.4c-5,3.9-11,6.5-17.9,8c-6.9,1.4-14.3,2.1-22.4,2.1H128V174.9h76.5
                            c19.3,0.3,33,5.9,41,16.9c4.8,6.7,7.2,14.8,7.2,24.2c0,9.6-2.4,17.4-7.3,23.3c-2.7,3.3-6.8,6.3-12.1,9c8.1,3,14.2,7.6,18.3,14
                            s6.2,14.1,6.2,23.2C257.8,294.7,255.4,303.1,250.7,310.6z M384,283.2h-85.2c0.5,11.7,4.5,20,12.2,24.7c4.7,2.9,10.3,4.4,16.9,4.4
                            c6.9,0,12.6-1.8,17-5.4c2.4-1.9,4.5-4.6,6.3-8.1h31.2c-0.8,6.9-4.6,14-11.3,21.2c-10.5,11.4-25.1,17.1-44,17.1
                            c-15.6,0-29.3-4.8-41.2-14.4c-11.9-9.6-17.9-25.2-17.9-46.8c0-20.3,5.4-35.8,16.1-46.6c10.8-10.8,24.7-16.2,41.8-16.2
-                           c10.2,0,19.4,1.8,27.5,5.5c8.2,3.6,14.9,9.4,20.2,17.3c4.8,6.9,7.9,15,9.3,24.2C383.8,265.4,384.1,273.1,384,283.2z" />
-                                    <path d="M214.8,233.3c4.3-2.6,6.4-7.3,6.4-13.9c0-7.4-2.8-12.2-8.5-14.6c-4.9-1.6-11.1-2.5-18.7-2.5h-34.4v34.9H198
-                           C204.9,237.3,210.4,236,214.8,233.3z" />
-                                </g>
-                            </svg></a></li>
-                </ul>
-            </div>
-            <p>Copyright Nikolett Muller 2025</p>
+                           c10.2,0,19.4,1.8,27.5,5.5c8.2,3.6,14.9,9.4,20.2,17.3c4.8,6.9,7.9,15,9.3,24.2C383.8,265.4,384.1,273.1,384,283.2z"
+                    />
+                    <path
+                      d="M214.8,233.3c4.3-2.6,6.4-7.3,6.4-13.9c0-7.4-2.8-12.2-8.5-14.6c-4.9-1.6-11.1-2.5-18.7-2.5h-34.4v34.9H198
+                           C204.9,237.3,210.4,236,214.8,233.3z"
+                    />
+                  </g></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <p>Copyright Nikolett Muller 2025</p>
+      </div>
+      <div>
+        <div>
+          <hr />
         </div>
         <div>
-            <div>
-                <hr>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div>
-                <hr>
-            </div>
+          <hr />
         </div>
+        <div>
+          <hr />
+        </div>
+        <div>
+          <hr />
+        </div>
+        <div>
+          <hr />
+        </div>
+      </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <script src="js/scripts.js"></script>
-</body>
-
+  </body>
 </html>

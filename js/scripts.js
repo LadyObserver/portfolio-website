@@ -3,30 +3,30 @@ let menuTimer; // for inactivity timeout
 const AUTO_CLOSE_TIME = 3000; // 3 seconds auto-close
 
 function safeUpdateStickyOffset() {
-  if (typeof updateStickyOffset === 'function') {
+  if (typeof updateStickyOffset === "function") {
     updateStickyOffset();
   }
 }
 
 // --- Hamburger toggle ---
 function menuToggle() {
-  const nav = document.getElementById('myNavtoggle');
-  const icon = document.querySelector('.navigation .icon i');
+  const nav = document.getElementById("myNavtoggle");
+  const icon = document.querySelector(".navigation .icon i");
 
-  nav.classList.toggle('responsive');
+  nav.classList.toggle("responsive");
   safeUpdateStickyOffset();
 
   // Swap Font Awesome icon
-  if (nav.classList.contains('responsive')) {
+  if (nav.classList.contains("responsive")) {
     if (icon) {
-      icon.classList.remove('fa-bars');
-      icon.classList.add('fa-x');
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-x");
     }
     startMenuTimer();
   } else {
     if (icon) {
-      icon.classList.remove('fa-x');
-      icon.classList.add('fa-bars');
+      icon.classList.remove("fa-x");
+      icon.classList.add("fa-bars");
     }
     clearMenuTimer();
   }
@@ -34,18 +34,18 @@ function menuToggle() {
 
 // --- Auto-close functions ---
 function closeMenu() {
-  const nav = document.getElementById('myNavtoggle');
-  const icon = document.querySelector('.navigation .icon i');
+  const nav = document.getElementById("myNavtoggle");
+  const icon = document.querySelector(".navigation .icon i");
 
-  if (nav.classList.contains('responsive')) {
-    nav.classList.remove('responsive');
+  if (nav.classList.contains("responsive")) {
+    nav.classList.remove("responsive");
     safeUpdateStickyOffset();
     clearMenuTimer();
 
     // Swap back to hamburger icon
     if (icon) {
-      icon.classList.remove('fa-x');
-      icon.classList.add('fa-bars');
+      icon.classList.remove("fa-x");
+      icon.classList.add("fa-bars");
     }
   }
 }
@@ -60,26 +60,26 @@ function clearMenuTimer() {
 }
 
 // --- Reset timer on hover or click inside menu ---
-const navMenu = document.getElementById('myNavtoggle');
+const navMenu = document.getElementById("myNavtoggle");
 if (navMenu) {
   // Reset timer on hover over links
-  const menuItems = navMenu.querySelectorAll('a');
-  menuItems.forEach(item => {
-    item.addEventListener('mouseenter', startMenuTimer);
+  const menuItems = navMenu.querySelectorAll("a");
+  menuItems.forEach((item) => {
+    item.addEventListener("mouseenter", startMenuTimer);
   });
 
   // Reset timer on click inside menu (except links)
-  navMenu.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A' || e.target.closest('a')) return;
+  navMenu.addEventListener("click", (e) => {
+    if (e.target.tagName === "A" || e.target.closest("a")) return;
     startMenuTimer();
   });
 }
 
 // --- Detect clicks outside menu ---
-window.addEventListener('click', (e) => {
-  const nav = document.getElementById('myNavtoggle');
+window.addEventListener("click", (e) => {
+  const nav = document.getElementById("myNavtoggle");
   const isMenu = nav.contains(e.target);
-  const isButton = e.target.matches('.hamburger, .hamburger *');
+  const isButton = e.target.matches(".hamburger, .hamburger *");
 
   if (!isMenu && !isButton) {
     closeMenu();
@@ -87,10 +87,10 @@ window.addEventListener('click', (e) => {
 });
 
 // --- Dropdown for case study map with auto-close ---
-const dropdown = document.querySelector('.dropdown');
-const dropbtn = dropdown?.querySelector('.dropdown-toggle, .dropbtn');
-const dropdownContent = dropdown?.querySelector('.dropdown-content');
-const links = dropdownContent?.querySelectorAll('a');
+const dropdown = document.querySelector(".dropdown");
+const dropbtn = dropdown?.querySelector(".dropdown-toggle, .dropbtn");
+const dropdownContent = dropdown?.querySelector(".dropdown-content");
+const links = dropdownContent?.querySelectorAll("a");
 
 if (dropdown && dropbtn && dropdownContent) {
   const AUTO_CLOSE_DELAY = 3000; // 3 seconds
@@ -99,19 +99,19 @@ if (dropdown && dropbtn && dropdownContent) {
 
   // --- Open / Close functions ---
   function openDropdown() {
-    dropdown.classList.add('show');
-    dropbtn.classList.add('active'); // rotate caret
+    dropdown.classList.add("show");
+    dropbtn.classList.add("active"); // rotate caret
     resetTimer();
   }
 
   function closeDropdown() {
-    dropdown.classList.remove('show');
-    dropbtn.classList.remove('active'); // reset caret
+    dropdown.classList.remove("show");
+    dropbtn.classList.remove("active"); // reset caret
     clearTimer();
   }
 
   function toggleDropdown() {
-    dropdown.classList.contains('show') ? closeDropdown() : openDropdown();
+    dropdown.classList.contains("show") ? closeDropdown() : openDropdown();
   }
 
   function resetTimer() {
@@ -125,39 +125,39 @@ if (dropdown && dropbtn && dropdownContent) {
 
   // --- Event listeners ---
 
-  dropbtn.addEventListener('click', (e) => {
+  dropbtn.addEventListener("click", (e) => {
     e.stopPropagation();
     toggleDropdown();
   });
 
-  links.forEach(link => {
-    link.addEventListener('mouseenter', resetTimer);
-    link.addEventListener('click', closeDropdown);
+  links.forEach((link) => {
+    link.addEventListener("mouseenter", resetTimer);
+    link.addEventListener("click", closeDropdown);
   });
 
-  dropdown.addEventListener('click', (e) => {
-    if (!e.target.closest('a')) resetTimer();
+  dropdown.addEventListener("click", (e) => {
+    if (!e.target.closest("a")) resetTimer();
   });
 
-  dropdown.addEventListener('mouseleave', () => {
-    if (dropdown.classList.contains('show')) resetTimer();
+  dropdown.addEventListener("mouseleave", () => {
+    if (dropdown.classList.contains("show")) resetTimer();
   });
 
-  window.addEventListener('click', (e) => {
+  window.addEventListener("click", (e) => {
     if (!dropdown.contains(e.target) && !dropbtn.contains(e.target)) {
       closeDropdown();
     }
   });
 
-  window.addEventListener('mouseout', (e) => {
-    if (dropdown.classList.contains('show') && !e.relatedTarget) {
+  window.addEventListener("mouseout", (e) => {
+    if (dropdown.classList.contains("show") && !e.relatedTarget) {
       resetTimer();
     }
   });
 
   // --- Scroll anywhere → start 3s countdown only if mouse is outside dropdown ---
-  window.addEventListener('scroll', () => {
-    if (dropdown.classList.contains('show') && !dropdown.matches(':hover')) {
+  window.addEventListener("scroll", () => {
+    if (dropdown.classList.contains("show") && !dropdown.matches(":hover")) {
       if (!scrollTimer) {
         scrollTimer = setTimeout(() => {
           closeDropdown();
@@ -168,7 +168,7 @@ if (dropdown && dropbtn && dropdownContent) {
   });
 
   // --- Stop scroll timer when mouse enters dropdown ---
-  dropdown.addEventListener('mouseenter', () => {
+  dropdown.addEventListener("mouseenter", () => {
     if (scrollTimer) {
       clearTimeout(scrollTimer);
       scrollTimer = null;
@@ -177,34 +177,37 @@ if (dropdown && dropbtn && dropdownContent) {
 }
 
 // --- Sticky dropdown (dynamic navbar above) ---
-const navbar = document.querySelector('header');
+const navbar = document.querySelector("header");
 const root = document.documentElement;
 
 function updateStickyOffset() {
   const height = navbar.offsetHeight;
-  root.style.setProperty('--navbar-height', `${height}px`);
+  root.style.setProperty("--navbar-height", `${height}px`);
 }
 
 updateStickyOffset();
-window.addEventListener('resize', updateStickyOffset);
-window.addEventListener('scroll', updateStickyOffset);
+window.addEventListener("resize", updateStickyOffset);
+window.addEventListener("scroll", updateStickyOffset);
 
 // Hiding sticky bar when footer is close
-document.addEventListener('DOMContentLoaded', () => {
-  const stickyDropdown = document.querySelector('.dropdown');
-  const footer = document.querySelector('footer');
+document.addEventListener("DOMContentLoaded", () => {
+  const stickyDropdown = document.querySelector(".dropdown");
+  const footer = document.querySelector("footer");
 
   if (stickyDropdown && footer) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          stickyDropdown.classList.remove('show');
-          stickyDropdown.classList.add('hidden-by-footer');
-        } else {
-          stickyDropdown.classList.remove('hidden-by-footer');
-        }
-      });
-    }, { threshold: 0.7 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            stickyDropdown.classList.remove("show");
+            stickyDropdown.classList.add("hidden-by-footer");
+          } else {
+            stickyDropdown.classList.remove("hidden-by-footer");
+          }
+        });
+      },
+      { threshold: 0.7 }
+    );
 
     observer.observe(footer);
   }
@@ -212,49 +215,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // --- Pausing / Restarting GIFs ---
 
-document.querySelectorAll('.gif-wrapper, .gif-container, .gif-container-animation').forEach(wrapper => {
-  // Detect the GIF inside this wrapper (any possible class)
-  const gif = wrapper.querySelector('.gif, .gif-animation, .gif-image');
-  const button = wrapper.querySelector('.pause');
-  if (!gif || !button) return; // skip if missing
+document
+  .querySelectorAll(".gif-wrapper, .gif-container, .gif-container-animation")
+  .forEach((wrapper) => {
+    // Detect the GIF inside this wrapper (any possible class)
+    const gif = wrapper.querySelector(".gif, .gif-animation, .gif-image");
+    const button = wrapper.querySelector(".pause");
+    if (!gif || !button) return; // skip if missing
 
-  const icon = button.querySelector('i');
-  const label = button.querySelector('.pause-label');
-  let isPaused = false;
+    const icon = button.querySelector("i");
+    const label = button.querySelector(".pause-label");
+    let isPaused = false;
 
-  // Update tooltip text based on current state
-  function updateTooltip() {
-    label.textContent = isPaused ? 'Restart' : 'Stop';
-  }
-
-  // Toggle GIF on click
-  button.addEventListener('click', () => {
-    if (!isPaused) {
-      // Pause GIF: show still frame
-      gif.src = gif.dataset.still;
-      icon.classList.remove('fa-stop');
-      icon.classList.add('fa-redo'); // redo icon
-      isPaused = true;
-    } else {
-      // Restart GIF: play animated GIF with cache-busting
-      gif.src = gif.dataset.animated + '?t=' + Date.now();
-      icon.classList.remove('fa-redo');
-      icon.classList.add('fa-stop'); // stop icon
-      isPaused = false;
+    // Update tooltip text based on current state
+    function updateTooltip() {
+      label.textContent = isPaused ? "Restart" : "Stop";
     }
-    updateTooltip(); // update label immediately
+
+    // Toggle GIF on click
+    button.addEventListener("click", () => {
+      if (!isPaused) {
+        // Pause GIF: show still frame
+        gif.src = gif.dataset.still;
+        icon.classList.remove("fa-stop");
+        icon.classList.add("fa-redo"); // redo icon
+        isPaused = true;
+      } else {
+        // Restart GIF: play animated GIF with cache-busting
+        gif.src = gif.dataset.animated + "?t=" + Date.now();
+        icon.classList.remove("fa-redo");
+        icon.classList.add("fa-stop"); // stop icon
+        isPaused = false;
+      }
+      updateTooltip(); // update label immediately
+    });
+
+    // Update tooltip on hover
+    button.addEventListener("mouseenter", updateTooltip);
   });
 
-  // Update tooltip on hover
-  button.addEventListener('mouseenter', updateTooltip);
-});
-
-
 //---Email dropdown---
-document.addEventListener('DOMContentLoaded', () => {
-  const emailButton = document.getElementById('emailButton');
-  const emailDropdown = document.getElementById('emailDropdown');
-  const email = 'nikolett.muller@gmail.com';
+document.addEventListener("DOMContentLoaded", () => {
+  const emailButton = document.getElementById("emailButton");
+  const emailDropdown = document.getElementById("emailDropdown");
+  const email = "nikolett.muller@gmail.com";
 
   if (!emailButton || !emailDropdown) return; // safety check
 
@@ -269,60 +273,65 @@ document.addEventListener('DOMContentLoaded', () => {
     clearTimeout(emailTimer);
   }
   function closeEmailDropdown() {
-    emailDropdown.classList.remove('show');
+    emailDropdown.classList.remove("show");
     clearEmailTimer();
   }
 
   // --- Toggle dropdown ---
   function emailToggle() {
-    emailDropdown.classList.toggle('show');
-    if (emailDropdown.classList.contains('show')) startEmailTimer();
+    emailDropdown.classList.toggle("show");
+    if (emailDropdown.classList.contains("show")) startEmailTimer();
     else clearEmailTimer();
   }
 
   // --- Close if clicking outside ---
-  window.addEventListener('click', e => {
+  window.addEventListener("click", (e) => {
     if (!emailDropdown.contains(e.target) && !emailButton.contains(e.target)) {
       closeEmailDropdown();
     }
   });
 
   // --- Attach click to toggle dropdown ---
-  emailButton.addEventListener('click', e => {
+  emailButton.addEventListener("click", (e) => {
     e.stopPropagation(); // prevent closing immediately
     emailToggle();
   });
 
   // --- Reset timer on hover inside dropdown ---
-  emailDropdown.querySelectorAll('a').forEach(link => {
-    link.addEventListener('mouseenter', startEmailTimer);
+  emailDropdown.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("mouseenter", startEmailTimer);
 
     // Handle specific link actions and prevent default jump
-    link.addEventListener('click', e => {
+    link.addEventListener("click", (e) => {
       e.preventDefault();
       closeEmailDropdown();
 
       const id = link.id;
 
-      if (id === 'gmailLink') {
-        window.open(`https://mail.google.com/mail/?view=cm&to=${email}`, '_blank');
-      } else if (id === 'outlookLink') {
-        window.open(`https://outlook.office.com/mail/deeplink/compose?to=${email}`, '_blank');
-      } else if (id === 'yahooLink') {
-        window.open(`https://mail.yahoo.com/d/compose?to=${email}`, '_blank');
-      } else if (id === 'copyEmail') {
+      if (id === "gmailLink") {
+        window.open(
+          `https://mail.google.com/mail/?view=cm&to=${email}`,
+          "_blank"
+        );
+      } else if (id === "outlookLink") {
+        window.open(
+          `https://outlook.office.com/mail/deeplink/compose?to=${email}`,
+          "_blank"
+        );
+      } else if (id === "yahooLink") {
+        window.open(`https://mail.yahoo.com/d/compose?to=${email}`, "_blank");
+      } else if (id === "copyEmail") {
         navigator.clipboard.writeText(email).then(() => {
-          alert('Email address copied!');
+          alert("Email address copied!");
         });
       }
     });
   });
 
   // --- Click inside dropdown (not links) resets timer ---
-  emailDropdown.addEventListener('click', (e) => {
-    if (e.target.tagName !== 'A') startEmailTimer();
+  emailDropdown.addEventListener("click", (e) => {
+    if (e.target.tagName !== "A") startEmailTimer();
   });
-
 });
 
 //Copy phone number
@@ -330,16 +339,14 @@ document.addEventListener('DOMContentLoaded', () => {
 function handlePhoneClick(event) {
   event.preventDefault(); // prevent default anchor behavior
 
-  const number = '+12017365902';
+  const number = "+12017365902";
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
   if (isMobile) {
-    window.location.href = 'tel:' + number; // trigger call
+    window.location.href = "tel:" + number; // trigger call
   } else {
     navigator.clipboard.writeText(number).then(() => {
-      alert('Phone number copied!');
+      alert("Phone number copied!");
     });
   }
 }
-
-
