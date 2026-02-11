@@ -299,7 +299,37 @@ hr {
 }
 
 .dropdown-content li a:hover {
-  background: #fce9e5;
+  transition: all 0.3s ease;
+  background: rgba(245, 101, 80, 0.85);
+  color: white;
+}
+
+.cassette-button {
+  background: #560591;
+}
+.cassette-content {
+  border: 3px solid #560591;
+}
+.cassette-content li a {
+  color: #560591;
+}
+.cassette-content li a:hover {
+  background: rgba(252, 67, 134, 0.9);
+  color: white;
+}
+
+.momsoon-button {
+  background: #333333;
+}
+.momsoon-content {
+  border: 3px solid #333333;
+}
+.momsoon-content li a {
+  color: #333333;
+}
+.momsoon-content li a:hover {
+  background: #e3a8e6;
+  color: white;
 }
 
 #sticky {
@@ -344,14 +374,6 @@ hr {
 
 .dropdown.show .dropdown-content {
   display: block;
-}
-
-.cassette-button {
-  background: #560591;
-}
-
-.cassette-dropdown {
-  border: 3px solid #560591;
 }
 
 .dropdown.hidden-by-footer {
@@ -909,7 +931,6 @@ footer p {
 .recipe h4 {
   color: #f56550;
 }
-
 .recipe h3,
 .recipe h5,
 .recipe h6,
