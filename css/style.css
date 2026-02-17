@@ -317,7 +317,6 @@ hr {
   background: rgba(252, 67, 134, 0.9);
   color: white;
 }
-
 .momsoon-button {
   background: #333333;
 }
@@ -543,9 +542,9 @@ thead {
   /* spread text and gif evenly */
   align-items: center;
   /* vertical centering */
-  padding: 0 10%;
+  padding: 0 5%;
   /* responsive margin on sides */
-  gap: clamp(20px, 5vw, 80px);
+  gap: clamp(8px, 2vw, 28px);
   /* responsive gap between text and gif */
   max-width: 1200px;
   margin: 0 auto;
@@ -553,21 +552,60 @@ thead {
   box-sizing: border-box;
 }
 
+.key-features-tight {
+  padding: 0;
+  gap: clamp(8px, 2vw, 24px);
+}
+
+.key-features-row picture {
+  flex: 1.4 1 0; /* let it share space */
+  min-width: 0; /* important: allows shrinking */
+}
+
 .feature-text {
-  flex: 1 1 0;
+  flex: 0.6 1 0;
   /* text grows/shrinks */
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* vertical centering */
+  min-width: 0;
+}
+
+.right {
+  text-align: right;
 }
 
 .left {
   text-align: left;
 }
 
-.right {
+.right-percentage {
+  width: 75%;
+  margin-left: auto;
   text-align: right;
+}
+
+.left-percentage {
+  width: 75%;
+  margin-right: auto;
+  text-align: left;
+}
+
+.clothing #stories ~ .margin-both .key-features-row {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.clothing #stories ~ .margin-both .key-features-row picture {
+  order: 2;
+  width: 100%;
+}
+
+.clothing #stories ~ .margin-both .key-features-row .feature-text {
+  order: 1;
+  width: 100%;
+  text-align: left;
 }
 
 .gif-container {
@@ -910,6 +948,26 @@ thead {
   padding: 35px 0;
 }
 
+.highlight-momsoon-right {
+  background: WHITE;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(168, 230, 207, 1) 100%
+  );
+  padding: 35px 0;
+}
+
+.highlight-momsoon-right {
+  background: WHITE;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(168, 230, 207, 1) 100%
+  );
+  padding: 35px 0;
+}
+
 /** Specifics for project pages**/
 
 #vitala,
@@ -981,7 +1039,9 @@ a:visited {
   background-color: #8828e2;
   padding: 2px 0;
   transform: scale(1.05);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
   transform-origin: center;
 }
 
@@ -1313,6 +1373,71 @@ a:visited {
 
   .decoration-image {
     padding-top: 25px;
+  }
+
+  .key-features-row {
+    padding: 0 15%;
+  }
+
+  .key-features-row.key-features-tight {
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  #momsoon .stories-row {
+    flex-direction: column !important;
+    align-items: flex-start !important; /* stop horizontal stretching */
+  }
+
+  #momsoon .stories-row .feature-text {
+    order: 1;
+    align-self: flex-start !important;
+
+    /* ACT LIKE left-percentage */
+    flex: 0 0 auto !important;     /* overrides flex: 0.6 1 0 */
+    flex-basis: auto !important;   /* important: kills the “0” basis */
+    width: 75% !important;
+    max-width: 75% !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+
+  #momsoon .stories-row picture {
+    order: 2;
+    align-self: stretch !important;
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .clothing #stories ~ .margin-both .key-features-row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .clothing #stories ~ .margin-both .key-features-row picture,
+  .clothing #stories ~ .margin-both .key-features-row .feature-text {
+    order: 0;
+  }
+
+  #momsoon .stories-section .key-features-row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #momsoon .stories-section .key-features-row .feature-text {
+    order: 0;
+    width: auto;
+    margin: 0;
+    text-align: left;
+    flex: 0.6 1 0; /* back to feature-text behavior */
+  }
+
+  #momsoon .stories-section .key-features-row picture {
+    order: 0;
+    flex: 1.4 1 0;
+    width: auto;
   }
 }
 
