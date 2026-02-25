@@ -331,6 +331,21 @@ hr {
   color: white;
 }
 
+.finlit-button {
+  background: #3F3367;
+}
+.finlit-content {
+  border: 3px solid #3F3367;
+}
+.finlit-content li a {
+  color: #3F3367;
+}
+.finlit-content li a:hover {
+  background: #D154E4;
+  color: white;
+}
+
+
 #sticky {
   position: sticky;
   top: var(--navbar-height, 64px);
@@ -356,7 +371,11 @@ hr {
 #concept,
 #approach,
 #ideation,
-#stories {
+#stories,
+#idea,
+#iteration,
+#context,
+#user {
   scroll-margin-top: 130px;
 }
 
@@ -972,7 +991,8 @@ thead {
 
 #vitala,
 #cassette,
-#momsoon {
+#momsoon,
+#finlit {
   background-color: white;
 }
 
@@ -1011,6 +1031,19 @@ footer p {
 
 .clothing h3 {
   color: #e3a8e6;
+}
+
+.finance h1,
+.finance h2,
+.finance h4,
+.finance h5,
+.finance h6,
+.finance p,
+.finance li {
+  color: #3f3367;
+}
+.finance h3 {
+  color: #d154e4;
 }
 
 /** Links, buttons, pseudos **/
