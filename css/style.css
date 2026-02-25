@@ -956,37 +956,6 @@ thead {
 .size {
   max-width: 130px;
 }
-
-.highlight-right {
-  background: WHITE;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 20%,
-    rgba(252, 67, 134, 1) 100%
-  );
-  padding: 35px 0;
-}
-
-.highlight-momsoon-right {
-  background: WHITE;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 20%,
-    rgba(168, 230, 207, 1) 100%
-  );
-  padding: 35px 0;
-}
-
-.highlight-momsoon-right {
-  background: WHITE;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 20%,
-    rgba(168, 230, 207, 1) 100%
-  );
-  padding: 35px 0;
-}
-
 /** Specifics for project pages**/
 
 #vitala,
