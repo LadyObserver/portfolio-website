@@ -854,13 +854,6 @@ thead {
   pointer-events: none;
 }
 
-.gif-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  max-width: 1200px;
-}
-
 .gif-image {
   display: block;
   width: 100%;
@@ -953,9 +946,6 @@ thead {
   display: table;
 }
 
-.size {
-  max-width: 130px;
-}
 /** Specifics for project pages**/
 
 #vitala,

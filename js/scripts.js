@@ -217,7 +217,7 @@ if (stickyDropdown && footer && stickyContainer) {
 // --- Pausing / Restarting GIFs ---
 
 document
-  .querySelectorAll(".gif-wrapper, .gif-container, .gif-container-animation")
+  .querySelectorAll(".gif-container, .gif-container-animation")
   .forEach((wrapper) => {
     // Detect the GIF inside this wrapper (any possible class)
     const gif = wrapper.querySelector(".gif, .gif-animation, .gif-image");
