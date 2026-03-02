@@ -332,19 +332,18 @@ hr {
 }
 
 .finlit-button {
-  background: #3F3367;
+  background: #3f3367;
 }
 .finlit-content {
-  border: 3px solid #3F3367;
+  border: 3px solid #3f3367;
 }
 .finlit-content li a {
-  color: #3F3367;
+  color: #3f3367;
 }
 .finlit-content li a:hover {
-  background: #D154E4;
+  background: #d154e4;
   color: white;
 }
-
 
 #sticky {
   position: sticky;
@@ -1385,8 +1384,8 @@ a:visited {
     align-self: flex-start !important;
 
     /* ACT LIKE left-percentage */
-    flex: 0 0 auto !important;     /* overrides flex: 0.6 1 0 */
-    flex-basis: auto !important;   /* important: kills the “0” basis */
+    flex: 0 0 auto !important; /* overrides flex: 0.6 1 0 */
+    flex-basis: auto !important; /* important: kills the “0” basis */
     width: 75% !important;
     max-width: 75% !important;
     margin-right: auto !important;
