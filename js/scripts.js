@@ -208,7 +208,7 @@ if (stickyDropdown && footer && stickyContainer) {
         }
       });
     },
-    { threshold: 0.8 }
+    { threshold: 0.8 },
   );
 
   observer.observe(footer);
@@ -217,7 +217,9 @@ if (stickyDropdown && footer && stickyContainer) {
 // --- Pausing / Restarting GIFs ---
 
 document
-  .querySelectorAll(".gif-container, .gif-container-animation, .profile-gif-container")
+  .querySelectorAll(
+    ".gif-container, .gif-container-animation, .profile-gif-container",
+  )
   .forEach((wrapper) => {
     // Detect the GIF inside this wrapper (any possible class)
     const gif = wrapper.querySelector(".gif, .gif-animation, .gif-image");
@@ -312,12 +314,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (id === "gmailLink") {
         window.open(
           `https://mail.google.com/mail/?view=cm&to=${email}`,
-          "_blank"
+          "_blank",
         );
       } else if (id === "outlookLink") {
         window.open(
           `https://outlook.office.com/mail/deeplink/compose?to=${email}`,
-          "_blank"
+          "_blank",
         );
       } else if (id === "yahooLink") {
         window.open(`https://mail.yahoo.com/d/compose?to=${email}`, "_blank");

@@ -1250,112 +1250,113 @@ a:visited {
     max-width: 300px;
     margin: 0;
   }
+
+  .project-row {
+    display: flex;
+    align-items: center;
+    /* vertically centers image and text */
+    justify-content: space-between;
+    /* spacing between left and right */
+    gap: 30px;
+    /* optional, adds space between image and text */
+    flex-wrap: wrap;
+    /* keeps layout responsive on smaller screens */
+  }
+
+  .project-column-left,
+  .project-column-right {
+    flex: 1;
+    /* allow both sides to grow/shrink */
+  }
+
+  .project-column-left picture,
+  .project-column-left img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-width: 290px;
+    /* image never smaller than this */
+    margin: 0 auto;
+  }
+
+  .column-left {
+    width: 48%;
+    margin-right: 8px;
+    float: left;
+  }
+
+  .column-right {
+    width: 48%;
+    margin-left: 8px;
+    float: right;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  h1 {
+    font-size: 2.6em;
+  }
+
+  h2 {
+    font-size: 2.2em;
+  }
+
+  h3 {
+    font-size: 1.7em;
+  }
+
+  h4 {
+    font-size: 1.2em;
+  }
+
+  h5,
+  h6 {
+    font-size: 1.1em;
+  }
+
+  .features-p {
+    font-size: 1.1em;
+  }
+
+  .padding-title {
+    padding-top: 0px;
+  }
+
+  .photo-container {
+    max-width: 350px;
+  }
+
+  .pause {
+    width: 35px;
+    height: 35px;
+  }
+
+  .pause i {
+    width: 50%;
+    height: 50%;
+  }
+
+  .chapter {
+    padding-top: 30px;
+  }
+
+  .decoration-image {
+    padding-top: 25px;
+  }
+
+  .key-features-row {
+    padding: 0 8%;
+  }
+
+  .key-features-row.key-features-tight {
+    padding: 0;
+  }
 }
 
-.project-row {
-  display: flex;
-  align-items: center;
-  /* vertically centers image and text */
-  justify-content: space-between;
-  /* spacing between left and right */
-  gap: 30px;
-  /* optional, adds space between image and text */
-  flex-wrap: wrap;
-  /* keeps layout responsive on smaller screens */
-}
-
-.project-column-left,
-.project-column-right {
-  flex: 1;
-  /* allow both sides to grow/shrink */
-}
-
-.project-column-left picture,
-.project-column-left img {
-  width: 100%;
-  height: auto;
-  display: block;
-  min-width: 290px;
-  /* image never smaller than this */
-  margin: 0 auto;
-}
-
-.column-left {
-  width: 48%;
-  margin-right: 8px;
-  float: left;
-}
-
-.column-right {
-  width: 48%;
-  margin-left: 8px;
-  float: right;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-h1 {
-  font-size: 2.6em;
-}
-
-h2 {
-  font-size: 2.2em;
-}
-
-h3 {
-  font-size: 1.7em;
-}
-
-h4 {
-  font-size: 1.2em;
-}
-
-h5,
-h6 {
-  font-size: 1.1em;
-}
-
-.features-p {
-  font-size: 1.1em;
-}
-
-.padding-title {
-  padding-top: 0px;
-}
-
-.photo-container {
-  max-width: 350px;
-}
-
-.pause {
-  width: 35px;
-  height: 35px;
-}
-
-.pause i {
-  width: 50%;
-  height: 50%;
-}
-
-.chapter {
-  padding-top: 30px;
-}
-
-.decoration-image {
-  padding-top: 25px;
-}
-
-.key-features-row {
-  padding: 0 8%;
-}
-
-.key-features-row.key-features-tight {
-  padding: 0;
-}
 @media (max-width: 640px) {
   #momsoon .stories-row {
     flex-direction: column !important;
