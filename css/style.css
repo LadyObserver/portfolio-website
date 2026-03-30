@@ -112,6 +112,7 @@ img {
 }
 
 .photo-container {
+  position: relative;
   display: block;
   margin: 0 auto;
   max-width: 300px;
@@ -120,6 +121,18 @@ img {
 
 .row {
   margin: 24px 0;
+}
+
+.assets-row {
+  display: block;
+}
+
+.assets-text {
+  width: 100%;
+}
+
+.assets-row .profile-gif-container {
+  margin-top: 30px;
 }
 
 .project-row {
@@ -304,16 +317,20 @@ hr {
   color: white;
 }
 
-.cassette-button {
+.cassette-button,
+.portfolio-button {
   background: #560591;
 }
-.cassette-content {
+.cassette-content,
+.portfolio-content {
   border: 3px solid #560591;
 }
-.cassette-content li a {
+.cassette-content li a,
+.portfolio-content li a {
   color: #560591;
 }
-.cassette-content li a:hover {
+.cassette-content li a:hover,
+.portfolio-content li a:hover {
   background: rgba(252, 67, 134, 0.9);
   color: white;
 }
@@ -581,6 +598,13 @@ hr {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.profile-gif-container {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  max-width: 230px;
 }
 
 .gif {
@@ -908,7 +932,8 @@ footer h2,
 footer p {
   color: #560591;
 }
-.music {
+.music,
+.portfolio {
   color: #560591;
 }
 
@@ -1214,40 +1239,33 @@ a:visited {
     margin-left: 8px;
     float: right;
   }
-
-  .project-row {
+  .assets-row {
     display: flex;
     align-items: center;
-    /* vertically centers image and text */
-    justify-content: space-between;
-    /* spacing between left and right */
-    gap: 30px;
-    /* optional, adds space between image and text */
-    flex-wrap: wrap;
-    /* keeps layout responsive on smaller screens */
+    gap: clamp(48px, 8vw, 140px);
   }
 
-  .project-column-left,
-  .project-column-right {
-    flex: 1;
-    /* allow both sides to grow/shrink */
+  .assets-text {
+    flex: 1 1 52%;
   }
 
-  .project-column-left picture,
-  .project-column-left img {
-    width: 100%;
-    height: auto;
-    display: block;
-    min-width: 290px;
-    /* image never smaller than this */
-    margin: 0 auto;
+  .assets-row .profile-gif-container {
+    flex: 0 0 230px;
+    max-width: 300px;
+    margin: 0;
   }
 
-  .column-left {
-    width: 48%;
-    margin-right: 8px;
-    float: left;
-  }
+.project-row {
+  display: flex;
+  align-items: center;
+  /* vertically centers image and text */
+  justify-content: space-between;
+  /* spacing between left and right */
+  gap: 30px;
+  /* optional, adds space between image and text */
+  flex-wrap: wrap;
+  /* keeps layout responsive on smaller screens */
+}
 
   .column-right {
     width: 48%;
@@ -1255,11 +1273,15 @@ a:visited {
     float: right;
   }
 
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+.project-column-left picture,
+.project-column-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-width: 290px;
+  /* image never smaller than this */
+  margin: 0 auto;
+}
 
   h1 {
     font-size: 2.6em;
@@ -1465,6 +1487,11 @@ a:visited {
   .decoration-image {
     padding-top: 45px;
   }
+
+  .assets-row .profile-gif-container {
+    flex-basis: 260px;
+    max-width: 340px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -1486,5 +1513,10 @@ a:visited {
 
   .decoration-image {
     padding-top: 35px;
+  }
+
+  .assets-row .profile-gif-container {
+    flex-basis: 300px;
+    max-width: 380px;
   }
 }
