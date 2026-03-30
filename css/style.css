@@ -1254,6 +1254,7 @@ a:visited {
     max-width: 300px;
     margin: 0;
   }
+}
 
 .project-row {
   display: flex;
@@ -1267,11 +1268,11 @@ a:visited {
   /* keeps layout responsive on smaller screens */
 }
 
-  .column-right {
-    width: 48%;
-    margin-left: 8px;
-    float: right;
-  }
+.project-column-left,
+.project-column-right {
+  flex: 1;
+  /* allow both sides to grow/shrink */
+}
 
 .project-column-left picture,
 .project-column-left img {
@@ -1283,64 +1284,81 @@ a:visited {
   margin: 0 auto;
 }
 
-  h1 {
-    font-size: 2.6em;
-  }
+.column-left {
+  width: 48%;
+  margin-right: 8px;
+  float: left;
+}
 
-  h2 {
-    font-size: 2.2em;
-  }
+.column-right {
+  width: 48%;
+  margin-left: 8px;
+  float: right;
+}
 
-  h3 {
-    font-size: 1.7em;
-  }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-  h4 {
-    font-size: 1.2em;
-  }
+h1 {
+  font-size: 2.6em;
+}
 
-  h5,
-  h6 {
-    font-size: 1.1em;
-  }
+h2 {
+  font-size: 2.2em;
+}
 
-  .features-p {
-    font-size: 1.1em;
-  }
+h3 {
+  font-size: 1.7em;
+}
 
-  .padding-title {
-    padding-top: 0px;
-  }
+h4 {
+  font-size: 1.2em;
+}
 
-  .photo-container {
-    max-width: 350px;
-  }
+h5,
+h6 {
+  font-size: 1.1em;
+}
 
-  .pause {
-    width: 35px;
-    height: 35px;
-  }
+.features-p {
+  font-size: 1.1em;
+}
 
-  .pause i {
-    width: 50%;
-    height: 50%;
-  }
+.padding-title {
+  padding-top: 0px;
+}
 
-  .chapter {
-    padding-top: 30px;
-  }
+.photo-container {
+  max-width: 350px;
+}
 
-  .decoration-image {
-    padding-top: 25px;
-  }
+.pause {
+  width: 35px;
+  height: 35px;
+}
 
-  .key-features-row {
-    padding: 0 8%;
-  }
+.pause i {
+  width: 50%;
+  height: 50%;
+}
 
-  .key-features-row.key-features-tight {
-    padding: 0;
-  }
+.chapter {
+  padding-top: 30px;
+}
+
+.decoration-image {
+  padding-top: 25px;
+}
+
+.key-features-row {
+  padding: 0 8%;
+}
+
+.key-features-row.key-features-tight {
+  padding: 0;
 }
 @media (max-width: 640px) {
   #momsoon .stories-row {
