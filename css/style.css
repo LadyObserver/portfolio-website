@@ -1416,6 +1416,17 @@ h6 {
     flex: 1.4 1 0;
     width: auto;
   }
+  .column-left-vitala {
+    width: 48%;
+    margin-right: 8px;
+    float: left;
+  }
+
+  .column-right-vitala {
+    width: 48%;
+    margin-left: 8px;
+    float: right;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
