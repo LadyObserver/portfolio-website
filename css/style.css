@@ -115,6 +115,10 @@ img {
   opacity: 0.9;
 }
 
+#findings {
+  clear: both;
+}
+
 .row {
   margin: 24px 0;
 }
@@ -382,13 +386,17 @@ hr {
 #conclusion,
 #concept,
 #approach,
-#ideation,
 #stories,
 #idea,
 #iteration,
 #context,
-#user, 
-#testing {
+#user,
+#testing,
+#begin,
+#brief,
+#visual,
+#content,
+#front-end {
   scroll-margin-top: 130px;
 }
 
@@ -833,6 +841,7 @@ hr {
   position: absolute;
   bottom: 3%;
   right: 3%;
+  left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -848,7 +857,8 @@ hr {
 
 .gif-container .pause {
   bottom: 3%;
-  left: 5%;
+  right: 8%;
+  left: auto;
 }
 
 .pause:hover {
@@ -920,7 +930,8 @@ hr {
 #vitala,
 #cassette,
 #momsoon,
-#finlit {
+#finlit,
+#portfolio {
   background-color: white;
 }
 
